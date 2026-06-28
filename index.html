@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>golf-underpar — 골프 레슨 일지</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fairway: {
+              DEFAULT: '#1b5e20',
+              dark: '#004d40',
+              light: '#e8f5e9',
+            }
+          },
+          fontFamily: {
+            sans: ['"Pretendard"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    .nav-link.active { color: #1b5e20; font-weight: 600; }
+    .nav-link.active::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #1b5e20;
+      border-radius: 1px;
+      margin-top: 2px;
+    }
+    .lesson-card:hover { transform: translateY(-2px); }
+    .day-tab.active {
+      background: #1b5e20;
+      color: white;
+      border-color: #1b5e20;
+    }
+    .term-block { border-left: 3px solid #1b5e20; }
+    .video-frame { aspect-ratio: 16 / 9; }
+    textarea:focus { outline: none; box-shadow: 0 0 0 2px #1b5e20; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#top" class="flex items-center gap-2 group">
+          <span class="w-8 h-8 rounded-full bg-fairway flex items-center justify-center text-white text-sm font-bold">⛳</span>
+          <span class="text-lg font-bold text-fairway-dark tracking-tight group-hover:text-fairway transition-colors">golf-underpar</span>
+        </a>
+        <nav class="hidden sm:flex items-center gap-6 text-sm text-gray-600">
+          <a href="#lesson-logs" class="nav-link hover:text-fairway transition-colors">Lesson Logs</a>
+          <a href="#swing-videos" class="nav-link hover:text-fairway transition-colors">Swing Videos</a>
+          <a href="#my-stats" class="nav-link hover:text-fairway transition-colors">My Stats</a>
+          <a href="#field-notes" class="nav-link hover:text-fairway transition-colors">Field Notes</a>
+        </nav>
+        <button id="menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="메뉴 열기">
+          <svg class="w-6 h-6 text-fairway" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <nav id="mobile-nav" class="hidden sm:hidden pb-4 flex flex-col gap-2 text-sm">
+        <a href="#lesson-logs" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">Lesson Logs</a>
+        <a href="#swing-videos" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">Swing Videos</a>
+        <a href="#my-stats" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">My Stats</a>
+        <a href="#field-notes" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">Field Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-fairway-light to-gray-50 py-12 sm:py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-fairway-dark mb-3">나만의 골프 레슨 일지</h1>
+        <p class="text-gray-600 max-w-xl mx-auto">레슨 기록, 스윙 영상, 클럽별 비거리, 필드 감각까지 — 한 페이지에서 관리하세요.</p>
+      </div>
+    </section>
+
+    <!-- Section 1: Lesson Logs -->
+    <section id="lesson-logs" class="py-14 scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-fairway rounded-full"></div>
+          <div>
+            <h2 class="text-2xl font-bold text-fairway-dark">Lesson Logs</h2>
+            <p class="text-sm text-gray-500 mt-0.5">레슨 일지 — 일차별로 확인하세요</p>
+          </div>
+        </div>
+
+        <!-- Day selector -->
+        <div id="day-tabs" class="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="레슨 일차 선택">
+          <button type="button" role="tab" aria-selected="true" data-day="2"
+            class="day-tab active px-4 py-2 text-sm font-medium rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-colors">
+            Day 2 · 드라이버 &amp; 우드
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-day="1"
+            class="day-tab px-4 py-2 text-sm font-medium rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-colors">
+            Day 1 · 드라이버 기본 자세
+          </button>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- Day 2 -->
+          <article id="lesson-day-2" role="tabpanel" class="lesson-panel lesson-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/5 bg-gray-100 flex items-center justify-center min-h-[180px] md:min-h-0">
+                <div class="text-center p-6 text-gray-400">
+                  <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  <p class="text-sm">스윙 영상 / 사진</p>
+                </div>
+              </div>
+              <div class="md:w-3/5 p-6">
+                <div class="flex flex-wrap items-center gap-2 mb-4">
+                  <span class="inline-block px-3 py-1 bg-fairway text-white text-xs font-semibold rounded-full">최신</span>
+                  <span class="inline-block px-3 py-1 bg-fairway-light text-fairway text-xs font-semibold rounded-full">Day 2</span>
+                </div>
+                <h3 class="font-semibold text-lg text-gray-900 mb-2">드라이버 &amp; 우드 — 그립·스웨이 교정</h3>
+                <p class="text-sm text-gray-600 mb-4">레슨 2일차 — 훅 교정을 위해 그립(스트롱)과 백스윙(스웨이)을 연습했습니다. 하체 우측 지지·다운스윙 체중 이동은 계속 연습할 예정입니다.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 그립: 스트롱 그립은 훅 유발 — 스퀘어(중립) 또는 위크 그립, 오른손을 클럽 위쪽으로 덮어 잡기</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 어드레스: 볼-바디 간격 확장, 척추각 유지, 클럽 페이스 스퀘어 정렬</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 백스윙: 스웨이(Sway) 방지, 오른발 안쪽 체중으로 우측 지지축(Brace) 유지</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 다운스윙: 상체 선행 임팩트 방지, 왼발로 체중 이동 후 피니시</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 우드: 완만한 입사각(Shallowing), 드라이버식 어퍼 블로우 금지</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-100 bg-gray-50/60 px-6 py-5 space-y-5">
+              <p class="text-xs font-semibold text-fairway uppercase tracking-wide">전문 용어 정리 (AI 정리)</p>
+
+              <div>
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">1. 드라이버 메커니즘 교정 (Driver Swing Mechanics)</h4>
+                <div class="term-block pl-4 space-y-4 text-sm text-gray-700">
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">1) 그립 변경: 스트롱 그립 → 뉴트럴/위크 그립 (Neutral to Weak Grip)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 왼손 너클이 1~2개만 보이고 오른손 장선(V자 라인)이 턱이나 왼쪽 어깨를 향하도록 덮어 잡는 뉴트럴(Neutral) 그립 또는 위크(Weak) 그립 시술입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 스트롱 그립(Hook Grip)은 임팩트 순간 클럽 페이스가 급격히 닫히는 페이스 로테이션(Face Rotation)을 과도하게 유발합니다. 오른손을 클럽 위로 덮어주면 임팩트 구간에서 페이스가 스퀘어로 유지되는 시간이 길어져 좌측으로 감기는 악성 훅(Pull Hook)을 직관적으로 방지할 수 있습니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">2) 셋업 공간 확보: 볼-바디 간격 확장 → 핸드 룸 및 스윙 플레인 공간 확보 (Hand Room &amp; Swing Plane Space)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 어드레스 시 허벅지와 그립 사이의 공간을 주먹 하나 반에서 두 개 정도로 확보하는 핸드 룸(Hand Room) 세팅입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 몸과 공이 가까우면(Too Close to the Ball) 다운스윙 시 양손이 지나갈 공간이 없어 팔이 몸에 막히는 블로킹(Blocking) 현상이 생깁니다. 이를 피하기 위해 보상 동작으로 손목을 급격히 돌려 때리게 되면서 헤드 밑부분(Heel 쪽) 타격과 훅이 발생합니다. 공간을 넓히는 것만으로도 다운스윙 궤도가 완만해집니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">3) 백스윙 오류 교정: 스웨이 → 코일링(Coiling)과 측면 슬웨이(Lateral Sway) 차단</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 백스윙 시 골반과 상체의 회전(Pivot)이 아닌, 타겟 반대 방향으로 중심이 밀려나는 래터럴 스웨이(Lateral Sway) 현상입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 하체 우측면이 버티지 못하고 밀리면 척추 축이 타겟 쪽으로 꺾이는 리버스 피벗(Reverse Pivot)이 발생하여 올바른 꼬임인 X-팩터(X-Factor, 상하체 회전 차이)를 만들 수 없습니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">4) 하체 견고화: 우측 지지축 → 오른쪽 고관절 로딩 및 트레일 사이드 브레이스 (Trail-side Brace &amp; Hip Loading)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 백스윙 탑으로 갈 때 오른발 안쪽(Inner Edge)과 오른쪽 고관절(Trail Hip)에 체중을 강하게 압착시키는 힙 로딩(Hip Loading) 및 트레일 사이드 브레이싱(Trail-side Bracing)입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 우측 다리에 단단한 벽(Brace)을 세우면 골반의 회전이 제한되면서 상체와의 비틀림 토크(Torque)가 극대화됩니다. 이 에너지가 축적되어야 다운스윙 때 강력한 지면 반력을 쓸 수 있습니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">5) 다운스윙 오류 교정: 상체 선행 임팩트 → 오버 더 탑(Over the Top) 및 스티프 엔트리(Steep Entry)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 백스윙 때 밀려 나간 몸을 공에 맞추기 위해 상체가 타겟 방향으로 먼저 덤벼드는 오버 더 탑(Over the Top) 현상과 이로 인해 궤도가 가파라지는 스티프 엔트리(Steep Entry)입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 드라이버의 핵심은 스테이 비하인드 더 볼(Stay Behind the Ball), 즉 머리를 공 뒤에 두고 상향 타격하는 것인데, 상체가 선행하면 궤도가 가파라져 찍혀 맞거나(Pop-up Shot, 뽕샷) 클럽 페이스가 닫혀 심한 훅이 발생합니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">6) 릴리스 및 피니시 오류: 체중 이동 미흡 → 행잉 백(Hanging Back) 방지 및 레프트 사이드 클리어런스 (Left-side Clearance)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 임팩트 이후에도 체중이 오른발에 머무는 행잉 백(Hanging Back) 현상을 교정하고, 타겟 방향으로 체중의 중심(CoP, Center of Pressure)을 완전히 이동시키는 레프트 사이드 클리어런스(Left-side Clearance) 단계입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 확실한 체중 이동(Weight Transfer)이 밀어주어야 왼발 축을 중심으로 클럽을 타겟으로 던지는 익스텐션(Extension)과 안정적인 피니시 밸런스가 완성됩니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">2. 우드 메커니즘 교정 (Fairway Wood Mechanics)</h4>
+                <div class="term-block pl-4 space-y-4 text-sm text-gray-700">
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">1) 완만한 진입: 완만한 입사각 → 샬로잉(Shallowing)과 와이드 아크 디센트 (Wide Arc Descent)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 헤드가 가파르게 떨어지지 않고 지면과 수평에 가깝게 완만한 각도로 진입하는 완만한 입사각(Shallow Angle of Attack) 형성입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 우드는 바닥에 놓인 공을 쳐야 하므로 드라이버처럼 올려 쳐서도 안 되고, 아이언처럼 찍어 쳐서도 안 됩니다. 쓸어 치기 위해서는 다운스윙 전환 시 클럽 샤프트가 완만하게 눕혀져 내려오는 샬로잉(Shallowing) 궤도가 필수적입니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">2) 타격점 설정: 최저점의 이동 → 로 포인트(Low Point) 제어 및 플랫 스팟(Flat Spot) 확장</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 용어 및 역학 설명:</strong> 클럽 헤드가 그리는 원형 궤도의 가장 낮은 지점인 로 포인트(Low Point)를 공 바로 직전 또는 공 아래에 형성하고, 헤드가 지면을 길게 쓸고 나가는 플랫 스팟(Flat Spot)을 만드는 스윙입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">추가 설명:</strong> 우드를 드라이버처럼 어퍼 블로우(Upper Blow)로 치게 되면 원의 최저점이 공보다 훨씬 뒤에 형성되어 토핑(Topping)이나 뒤땅(Fat Shot)이 유발됩니다. 척추 축이 과도하게 우측에 남지 않도록 약간의 체중 이동과 함께 완만하게 쓸어 쳐야(Sweep) 정타가 납니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-fairway-light/60 rounded-xl p-4 space-y-3">
+                <p class="text-xs font-semibold text-fairway">핵심 링크 처방 요약</p>
+                <ul class="text-sm text-gray-700 space-y-1.5">
+                  <li><strong class="text-gray-800">[원인]</strong> 클로즈 어드레스(공간 부족) + 스트롱 그립 → 백스윙 공간 부족으로 우측 탈출(스웨이)</li>
+                  <li><strong class="text-gray-800">[결과]</strong> 우측으로 도망간 몸 때문에 상체가 급격히 진입(오버 더 탑, 찍어 치기, 훅) → 오른발에 체중 잔류(행잉 백, 피니시 무너짐)</li>
+                </ul>
+                <p class="text-sm font-medium text-fairway-dark border-t border-fairway/20 pt-3">
+                  오늘의 마법 처방: 핸드 룸 확보(공과 거리 두기) ➡️ 뉴트럴 그립(오른손 덮기) ➡️ 트레일 사이드 브레이스(오른발 안쪽 지지)
+                </p>
+                <p class="text-sm text-gray-600">이 세 가지만 지키면 덤비지 않고 공 뒤에서 완만하게 진입하며, 인사이드 아웃 드라이버 샷과 우드의 샬로우 스윕(Shallow Sweep)을 동시에 완성할 수 있습니다.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Day 1 -->
+          <article id="lesson-day-1" role="tabpanel" hidden class="lesson-panel lesson-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-2/5 bg-gray-100 flex items-center justify-center min-h-[180px] md:min-h-0">
+                <div class="text-center p-6 text-gray-400">
+                  <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  <p class="text-sm">스윙 영상 / 사진</p>
+                </div>
+              </div>
+              <div class="md:w-3/5 p-6">
+                <div class="flex flex-wrap items-center gap-2 mb-4">
+                  <span class="inline-block px-3 py-1 bg-fairway-light text-fairway text-xs font-semibold rounded-full">Day 1</span>
+                  <time class="text-sm text-gray-500" datetime="2026-06-28">2026. 06. 28 (토)</time>
+                </div>
+                <h3 class="font-semibold text-lg text-gray-900 mb-2">드라이버 기본 자세</h3>
+                <p class="text-sm text-gray-600 mb-4">레슨 1일차 — 정타 불안 교정을 위해 무릎·허리·샤프트를 세우고 연습을 시작했습니다. 백스윙·다운스윙 기본 자세를 지속적으로 연습할 예정입니다.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 업라이트 셋업: 무릎과 허리를 펴고, 척추 각도 유지, 골반은 오리 엉덩이 유지</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 라이각 정렬: 샤프트를 세워서 라이각 조절</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 백스윙: 드라이버를 낮게, 왼팔이 오른쪽으로 이동 — 머리 숙이지 말고 왼쪽 어깨가 먼저 빠지지 않게</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 다운스윙: 덤비지(업어치지) 말고 등지고 휘두르기, 힘 빼고 툭 던지기</li>
+                  <li class="flex gap-2"><span class="text-fairway font-bold shrink-0">•</span> 연습하기: 오른손을 왼손 밑에 위치하고 낮게 스윙 연습</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-100 bg-gray-50/60 px-6 py-5 space-y-5">
+              <p class="text-xs font-semibold text-fairway uppercase tracking-wide">전문 용어 정리 (AI 정리)</p>
+
+              <div>
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">1. 어드레스 및 셋업 (Address &amp; Setup)</h4>
+                <div class="term-block pl-4 space-y-3 text-sm text-gray-700">
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">업라이트 셋업 → 포스처 및 척추 각 유지 (Posture &amp; Spine Angle)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 무릎과 척추를 곧게 펴고 골반을 전방 경사(Anterior Pelvic Tilt)시켜 척추 각(Spine Angle)과 고관절(Hinge)의 각도를 확보하는 자세입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 상체를 무리하게 숙이지 않고 척추를 바르게 세우는 것은 드라이버 샷 특유의 상향 타격(Ascending Blow / AoA)을 만들기 위한 필수적인 준비 단계입니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">라이각 정렬 → 샤프트 라이각 세팅 (Shaft Lie Angle Alignment)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 클럽 헤드의 솔(Sole)이 지면과 평행을 이루거나 토(Toe)가 살짝 들리도록 샤프트의 라이각(Lie Angle)을 올바르게 세워 정렬하는 과정입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 드라이버는 클럽이 길기 때문에 라이각을 올바르게 맞춰야 임팩트 시 클럽 페이스가 열리거나 닫히는 현상을 방지하고 일정한 방향성을 확보할 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">2. 백스윙 (Backswing)</h4>
+                <div class="term-block pl-4 space-y-3 text-sm text-gray-700">
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">낮고 긴 백스윙 → 와이드 테이크어웨이 (Wide Takeaway / Low and Slow)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 손목 코킹을 바로 가하지 않고, 클럽 헤드를 지면과 가깝고 길게 밀어내며 회전을 시작하는 테이크어웨이(Takeaway) 단계입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 왼팔과 클럽이 이루는 반지름을 크게 유지하며(Wide) 우측으로 이동해야 백스윙의 회전 반경이 커지고, 드라이버 비거리를 위한 충분한 아크(Arc)가 확보됩니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">머리와 어깨 움직임 제어 → 축 유지(Axial Retention) 및 바디 턴(Body Turn)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 척추의 중심축(Spine Axis)을 고정한 채 머리의 고도를 유지하고, 상체의 어깨 턴(Shoulder Turn)을 순차적으로 가져가는 동작입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 왼쪽 어깨가 타겟 방향으로 먼저 덤비거나 머리가 숙여지면 궤도가 망가집니다. 척추 축을 잡고 어깨를 회전시켜야 올바른 꼬임(X-Factor)이 발생합니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">3. 다운스윙 및 임팩트 (Downswing &amp; Impact)</h4>
+                <div class="term-block pl-4 space-y-3 text-sm text-gray-700">
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">덤비지 말고 등지고 휘두르기 → 인사이드 아웃 궤도 (Inside-Out Path) 및 비하인드 더 볼 (Behind the Ball)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 상체가 타겟을 향해 먼저 열리는 오버 더 탑(Over the Top) 동작을 방지하고, 가슴이 우측을 바라본 상태에서 클럽을 안쪽에서 바깥쪽으로 궤도를 그리는 인사이드 아웃(Inside-to-Out) 스윙 패스를 형성하는 과정입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 머리와 척추 축을 공보다 뒤에 머무르게 하는 비하인드 더 볼(Behind the Ball) 자세를 유지해야 드라이버 특유의 이상적인 상향 타격과 슬라이스를 방지하는 드로우성 구질을 만들 수 있습니다.</p>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">힘 빼고 툭 던지기 → 릴리즈 (Release)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 임팩트 구간에서 양손과 손목의 긴장을 풀고 클럽 헤드의 무게와 원심력을 이용해 타겟 방향으로 헤드를 뿌려주는 릴리즈(Release) 동작입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 인위적으로 힘을 주어 때리려고 하면 헤드 스피드가 감소합니다. 원심력에 클럽을 맡겨 던져주어야 임팩트 순간 최대 스피드가 나옵니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">4. 훈련법 (Drill)</h4>
+                <div class="term-block pl-4 space-y-3 text-sm text-gray-700">
+                  <div>
+                    <p class="font-medium text-gray-800 mb-1">오른손을 왼손 밑에 두고 스윙 → 언더핸드 패스 드릴 (Underhand Pass Drill / 샬로잉 연습)</p>
+                    <p class="text-gray-600 mb-1"><strong class="text-gray-700">전문 표현:</strong> 오른손을 왼손보다 낮은 위치에 두고 낮게 스윙 궤도를 가져가는 이 연습은 드라이버 스윙의 입사각을 완만하게 만드는(Shallowing) 감각을 익히기 위한 대표적인 드릴(Drill)입니다.</p>
+                    <p class="text-gray-600"><strong class="text-gray-700">의미:</strong> 상체가 덤비거나 아웃사이드 인(Outside-In)으로 가파르게 깎여 맞지 않도록, 클럽이 밑에서 위로 완만하게 올라가며 공을 타격하는 우측 측면의 공간 확보(Side Bend) 감각을 몸에 익히는 데 매우 효과적입니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Swing Videos -->
+    <section id="swing-videos" class="py-14 bg-white scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-fairway rounded-full"></div>
+          <div>
+            <h2 class="text-2xl font-bold text-fairway-dark">Swing Videos</h2>
+            <p class="text-sm text-gray-500 mt-0.5">정면 / 측면 스윙 비교</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <p class="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-fairway"></span> 정면 (Face-on)
+            </p>
+            <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow-md">
+              <video class="w-full h-full object-cover" controls poster="">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                브라우저가 비디오 태그를 지원하지 않습니다.
+              </video>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-fairway-dark"></span> 측면 (Down-the-line)
+            </p>
+            <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow-md">
+              <video class="w-full h-full object-cover" controls>
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+                브라우저가 비디오 태그를 지원하지 않습니다.
+              </video>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-4 text-center">샘플 영상입니다. 실제 스윙 영상으로 교체해 사용하세요.</p>
+      </div>
+    </section>
+
+    <!-- Section 3: My Stats -->
+    <section id="my-stats" class="py-14 scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-fairway rounded-full"></div>
+          <div>
+            <h2 class="text-2xl font-bold text-fairway-dark">My Stats</h2>
+            <p class="text-sm text-gray-500 mt-0.5">클럽별 현재 비거리 vs 목표 비거리</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-fairway text-white">
+                  <th class="text-left px-5 py-3 font-semibold">클럽</th>
+                  <th class="text-center px-5 py-3 font-semibold">현재 비거리</th>
+                  <th class="text-center px-5 py-3 font-semibold">목표 비거리</th>
+                  <th class="text-center px-5 py-3 font-semibold hidden sm:table-cell">차이</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">드라이버 (Driver)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">210 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">230 yd</td>
+                  <td class="px-5 py-4 text-center text-orange-600 hidden sm:table-cell">−20 yd</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">3번 우드 (3W)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">185 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">200 yd</td>
+                  <td class="px-5 py-4 text-center text-orange-600 hidden sm:table-cell">−15 yd</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">5번 아이언 (5I)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">155 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">165 yd</td>
+                  <td class="px-5 py-4 text-center text-orange-600 hidden sm:table-cell">−10 yd</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">7번 아이언 (7I)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">135 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">145 yd</td>
+                  <td class="px-5 py-4 text-center text-orange-600 hidden sm:table-cell">−10 yd</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">9번 아이언 (9I)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">115 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">125 yd</td>
+                  <td class="px-5 py-4 text-center text-orange-600 hidden sm:table-cell">−10 yd</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">PW (Pitching Wedge)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">95 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">105 yd</td>
+                  <td class="px-5 py-4 text-center text-orange-600 hidden sm:table-cell">−10 yd</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/50 transition-colors">
+                  <td class="px-5 py-4 font-medium text-gray-900">SW (Sand Wedge)</td>
+                  <td class="px-5 py-4 text-center text-gray-700">70 yd</td>
+                  <td class="px-5 py-4 text-center text-fairway font-semibold">80 yd</td>
+                  <td class="px-5 py-4 text-center text-green-600 hidden sm:table-cell">−10 yd</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Field Notes -->
+    <section id="field-notes" class="py-14 bg-white scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-1 h-8 bg-fairway rounded-full"></div>
+          <div>
+            <h2 class="text-2xl font-bold text-fairway-dark">Field Notes</h2>
+            <p class="text-sm text-gray-500 mt-0.5">연습장 · 라운딩에서 느낀 스윙 감각</p>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-5">
+            <div class="flex items-center justify-between mb-3">
+              <time class="text-sm text-gray-500" datetime="2026-06-27">2026. 06. 27 — 연습장</time>
+              <span class="text-xs px-2 py-1 bg-fairway-light text-fairway rounded-full">연습</span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              7번 아이언 50볼 연습. 레슨 때 배운 체중 이동을 의식하니 볼이 왼쪽으로 더 일정하게 떨어짐.
+              다만 스윙 속도를 올리면 다시 오른쪽으로 밀리는 경향 — 템포 유지가 핵심.
+              내일은 5번 아이언으로 같은 느낌 연습 예정.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-5">
+            <div class="flex items-center justify-between mb-3">
+              <time class="text-sm text-gray-500" datetime="2026-06-22">2026. 06. 22 — XX CC 18홀</time>
+              <span class="text-xs px-2 py-1 bg-teal-50 text-teal-700 rounded-full">라운딩</span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              전반 9홀은 드라이버가 안정적 (FW 6/7). 후반 들어가며 긴장해서 스윙이 짧아짐.
+              14번홀 PAR3에서 7I — 바람 대비 클럽 한 단 업이 맞았음.
+              퍼팅: 3-putt 2번, 거리감 아직 부족. 다음 라운딩 전 그린 주변 30분 연습 필요.
+            </p>
+          </div>
+
+          <div>
+            <label for="new-note" class="block text-sm font-medium text-gray-700 mb-2">새 필드 노트 작성</label>
+            <textarea
+              id="new-note"
+              rows="5"
+              placeholder="오늘 연습이나 라운딩에서 느낀 스윙 감각, 날씨, 컨디션 등을 자유롭게 적어 보세요..."
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-sm text-gray-700 placeholder-gray-400 resize-y transition-shadow"
+            ></textarea>
+            <div class="flex justify-end mt-3">
+              <button
+                id="save-note-btn"
+                class="px-5 py-2.5 bg-fairway hover:bg-fairway-dark text-white text-sm font-medium rounded-xl transition-colors shadow-sm"
+              >
+                저장 (로컬)
+              </button>
+            </div>
+            <div id="saved-notes" class="mt-6 space-y-4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-gray-50 py-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-gray-500">
+      <p class="font-semibold text-fairway-dark mb-1">golf-underpar</p>
+      <p>골프 레슨 일지 — 기록하고, 비교하고, 성장하세요.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.add('hidden'));
+    });
+
+    // Lesson day tabs
+    const dayTabs = document.querySelectorAll('.day-tab');
+    const lessonPanels = document.querySelectorAll('.lesson-panel');
+
+    dayTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const day = tab.dataset.day;
+        dayTabs.forEach(t => {
+          const isActive = t.dataset.day === day;
+          t.classList.toggle('active', isActive);
+          t.setAttribute('aria-selected', isActive);
+        });
+        lessonPanels.forEach(panel => {
+          const show = panel.id === 'lesson-day-' + day;
+          panel.hidden = !show;
+        });
+      });
+    });
+
+    // Active nav highlight on scroll
+    const sections = ['lesson-logs', 'swing-videos', 'my-stats', 'field-notes'];
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 80;
+      let current = sections[0];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) current = id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // Field notes — local save
+    const noteInput = document.getElementById('new-note');
+    const saveBtn = document.getElementById('save-note-btn');
+    const savedNotesEl = document.getElementById('saved-notes');
+
+    function renderSavedNotes() {
+      const notes = JSON.parse(localStorage.getItem('golf-underpar-notes') || '[]');
+      savedNotesEl.innerHTML = notes.map(n => `
+        <div class="bg-white rounded-xl border border-gray-200 p-4">
+          <time class="text-xs text-gray-400 block mb-2">${n.date}</time>
+          <p class="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">${n.text}</p>
+        </div>
+      `).join('');
+    }
+
+    saveBtn.addEventListener('click', () => {
+      const text = noteInput.value.trim();
+      if (!text) return;
+      const notes = JSON.parse(localStorage.getItem('golf-underpar-notes') || '[]');
+      const now = new Date();
+      const dateStr = now.getFullYear() + '. '
+        + String(now.getMonth() + 1).padStart(2, '0') + '. '
+        + String(now.getDate()).padStart(2, '0') + ' '
+        + ['일','월','화','수','목','금','토'][now.getDay()];
+      notes.unshift({ date: dateStr, text });
+      localStorage.setItem('golf-underpar-notes', JSON.stringify(notes));
+      noteInput.value = '';
+      renderSavedNotes();
+    });
+
+    renderSavedNotes();
+  </script>
+</body>
+</html>
