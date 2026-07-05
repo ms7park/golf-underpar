@@ -44,5 +44,9 @@
  - 추가할 동영상 URL과 간단한 설명 추가했어요. 동영상 아래에 간단한 설명도 추가해 주세요.
 3. My Stats 
  - 클럽 종류도 추가하고, 실제 나의 현재 비거리와 목표 비거리를 정리했어요. 차이는 직접 계산해서 입력해 주세요.
-4. Field Notes 는 삭제해 주세요.
+4. Field Notes 
+ - docs/fieldnotes 폴더 하위에 field-*.txt 파일 참고
+5. Practice Logs 
+ - docs/practice 폴더 하위에 practice-*.txt 파일 참고
+
 
