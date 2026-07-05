@@ -2,15 +2,12 @@
  - 레슨 1일차 ~ 35일차 
 
 2. Swing Videos 
- 1) 2026.06.26 레슨 1일차 - 드라이버 
-  - https://res.cloudinary.com/dn8qzpehj/video/upload/v1782637246/2026_06_26_07_16_53_pbb5z9.mp4
-  - 드라이버 완전한 슬라이스 
- 2) 2026.06.27 레슨 2일차 - 드라이버 
-  - https://res.cloudinary.com/dn8qzpehj/video/upload/v1782637259/2026_06_27_11_43_01_at4a9f.mp4
-  - 드라이버 백스윙(sway) / 다운스윙(체중이동) 미흡
- 3) 2026.06.27 필드 
+ 1) 2026.06.27 한원 CC - 드라이브  
   - https://res.cloudinary.com/dn8qzpehj/video/upload/v1782637295/2026_06_28_11_45_w4wknz.mp4
-  - 드라이버 다운스윙 Finish 미흡 
+  - 드라이버 슬라이스 - Finish 미흡 
+ 2) 2026.06.27 한원 CC - 드라이브
+  - https://res.cloudinary.com/dn8qzpehj/video/upload/v1782647973/2026-06-28-20-53-12-driver-hook-full_lv9qpg.mp4
+  - 드라이버 완전한 훅 -  백스윙 스웨이 
 
 3. My Stats 
  1) 클럽별 현재와 목표 비거리, 차이를 미터 단위로 표현
@@ -28,13 +25,3 @@
   - SW (Send Wedge-52) : 90 / 90 
   - SW (Send Wedge-54) : - / 80 
   - SW (Send Wedge-56) : 70 / 70 
-
-
-
- 
-메인 페이지의 구성 요소를 정리했어요. 홈페이지에 반영해 주세요.
-1. Swing Videos 
- - 추가할 동영상 URL과 간단한 설명 추가했어요. 동영상 아래에 간단한 설명도 추가해 주세요.
-2. My Stats 
- - 클럽 종류도 추가하고, 실제 나의 현재 비거리와 목표 비거리를 정리했어요. 차이는 직접 계산해서 입력해 주세요.
-3. Field Notes 는 삭제해 주세요.
