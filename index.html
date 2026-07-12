@@ -42,6 +42,16 @@
       border-color: #1b5e20;
     }
     .term-block { border-left: 3px solid #1b5e20; }
+    .goal-tab.active {
+      background: #1b5e20;
+      color: white;
+      border-color: #1b5e20;
+    }
+    .paginate-item.hidden-page { display: none; }
+    .page-btn.active { background: #1b5e20; color: white; }
+    .mission-details summary { cursor: pointer; list-style: none; }
+    .mission-details summary::-webkit-details-marker { display: none; }
+    .mission-details[open] summary .chevron { transform: rotate(180deg); }
     .video-frame { aspect-ratio: 16 / 9; }
   </style>
 </head>
@@ -55,7 +65,8 @@
           <span class="w-8 h-8 rounded-full bg-fairway flex items-center justify-center text-white text-sm font-bold">⛳</span>
           <span class="text-lg font-bold text-fairway-dark tracking-tight group-hover:text-fairway transition-colors">golf-underpar</span>
         </a>
-        <nav class="hidden sm:flex items-center gap-5 text-sm text-gray-600">
+        <nav class="hidden sm:flex items-center gap-4 text-sm text-gray-600">
+          <a href="#swing-mission" class="nav-link hover:text-fairway transition-colors">Mission</a>
           <a href="#lesson-logs" class="nav-link hover:text-fairway transition-colors">Lesson Logs</a>
           <a href="#swing-videos" class="nav-link hover:text-fairway transition-colors">Swing Videos</a>
           <a href="#my-stats" class="nav-link hover:text-fairway transition-colors">My Stats</a>
@@ -69,6 +80,7 @@
         </button>
       </div>
       <nav id="mobile-nav" class="hidden sm:hidden pb-4 flex flex-col gap-2 text-sm">
+        <a href="#swing-mission" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">Mission</a>
         <a href="#lesson-logs" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">Lesson Logs</a>
         <a href="#swing-videos" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">Swing Videos</a>
         <a href="#my-stats" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-fairway-light hover:text-fairway">My Stats</a>
