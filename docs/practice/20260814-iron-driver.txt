@@ -1,0 +1,64 @@
+
+1. 2026.08.14 iron 연습
+ 1) wedge p 95/97m
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742730/2026_08_14_20_22_36_iiqhro.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742743/2026_08_14_20_22_39_cireip.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742752/20260814_202251_msc6wv.jpg
+  - 장점 : 완벽한 거리 갭핑 (Distance Gapping) : 9번 아이언(Carry 110m)과 15m 차이를 정확히 형성하며 풀스윙 기준 신뢰할 수 있는 100m 안쪽 기준점을 마련함.
+         다운블로우 컴프레션 (Down Blow Compression) : 핸드 퍼스트(Forward Lean) 임팩트를 통해 8,000rpm 이상의 강력한 스핀과 안정적인 디센딩 궤적 형성.
+  - 교정 : 오버 스윙 & 스쿠핑 방지 (Controlled Finish) : 비거리를 100m 채우려는 무리한 풀스윙 대신 3/4 백스윙(Three-Quarter Swing)과 단단한 체간 회전(Core Rotation)으로 일관된 볼 스트라이킹(Smash Factor) 유지.
+
+ 2) wedge w 84/88m
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742760/2026_08_14_20_26_57_pn8sse.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742769/2026_08_14_20_27_00_gz2jcc.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742778/20260814_202711_yln0fo.jpg
+  - 장점 : 스핀 로프트 & 스톱핑 파워 (Stopping Power) : 8,800rpm 수준의 백스핀과 약 50° 이상의 가파른 하강각(Descent Angle)으로 런(Run)을 4m 이내로 최소화.
+         안정적인 궤적 (Neutral Path) : 타겟 라인을 벗어나지 않는 정교한 인-아웃 패스로 사이드스핀을 극도로 억제.
+  - 교정 : 다이내믹 로프트 제어 (Dynamic Loft) : 임팩트 순간 캐스팅(Casting)이나 플리핑(Flipping)으로 로프트가 지나치게 누워 맞지 않도록 왼 손목의 평평함(Flat Lead Wrist)을 임팩트 존 통과 시까지 유지할 것.
+
+ 3) wedge s 74m/76m
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742783/2026_08_14_20_28_30_ncdguq.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742790/2026_08_14_20_28_32_q6axcz.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742795/20260814_202842_ntdas4.jpg
+  - 장점 : 고스핀 핀 다이렉트 공략 : 9,400rpm의 초고스핀량으로 착지 후 2m 내에 정지하는 원바운드 스톱 능력 보유.
+         바운스 활용 (Bounce Utilization) : 리딩 엣지가 아닌 솔 바운스를 자연스럽게 지면에 미끄러뜨리는 레벨 릴리즈 감각 우수.
+  - 교정 : 리버스 피벗(Reverse Pivot) 방지 : 짧은 클럽 특성상 백스윙 시 척추각이 타겟 쪽으로 꺾이는 현상이 발생할 수 있으므로, 우측 고관절(Hip Hinge)에 체중을 정확히 적재(Loading)한 후 하체 턴으로 리드할 것.
+
+ 4) driver 196m/212m
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742798/2026_08_14_20_38_16_kqhrpp.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742803/2026_08_14_20_38_19_mqeqy8.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742816/20260814_203828_rsrdnu.jpg
+  - 장점 : 최적의 런치 컨디션 (Optimized Launch Conditions) : 볼 스피드 60.5m/s, 발사각 14.2°, 백스핀 2,450rpm으로 210m 비거리를 뽑아내는 최상의 **어퍼블로우(Upper Blow, Angle of Attack +2~+3°)** 형성.
+         완벽한 베이비 드로우 (Ideal Draw Path) : 샬로잉(Shallow Downswing) 동작이 매끄럽게 연결되며 사이드스핀 L230rpm의 이상적인 비거리형 드로우 구질 완성.
+  - 교정 : 과도한 인-아웃 패스 & 행백(Hang Back) 제어 : 비거리를 늘리려 상체를 뒤에 남겨두고 손목만 돌릴 경우 인-아웃 궤적이 +5° 이상 심해져 푸시 슬라이스나 급격한 훅(Snap Hook)이 나올 위험이 있음. 임팩트 후 왼쪽 골반을 뒤로 과감히 열어주는 힙 클리어링(Hip Clearing)을 통해 피니시까지 체중을 100% 왼발로 전달할 것.
+
+---
+
+### 2. 종합 스윙 분석 및 데이터 요약 (Wedges & Driver)
+
+**[스윙 데이터 비교 추정 요약]**
+
+* **PW (피칭 웨지)**: 비거리 97.0m (캐리 95.0m) / 볼스피드 36.8m/s / 발사각 26.5° / 백스핀 8,100rpm / 사이드스핀 L150rpm / 방향각 L0.3° / 인-아웃 / 페이스 스퀘어 (스트레이트~약드로우 / 런 2m)
+* **AW/GW (어프로치/갭 웨지, W)**: 비거리 88.0m (캐리 84.0m) / 볼스피드 34.2m/s / 발사각 28.2° / 백스핀 8,800rpm / 사이드스핀 L110rpm / 방향각 R0.2° / 인-아웃 / 페이스 스퀘어 (핀 하이 스핀 스톱)
+* **SW (샌드 웨지, S)**: 비거리 76.0m (캐리 74.0m) / 볼스피드 31.5m/s / 발사각 30.5° / 백스핀 9,400rpm / 사이드스핀 R120rpm / 방향각 R0.4° / 인-인 / 페이스 스퀘어 (원바운드 스톱 / 고스핀)
+* **드라이버 (Driver)**: 비거리 212.0m (캐리 196.0m) / 볼스피드 60.5m/s / 발사각 14.2° / 백스핀 2,450rpm / 사이드스핀 L230rpm / 방향각 L0.8° / 인-아웃 / 페이스 스퀘어 (베이비 드로우 / 이상적 비거리 효율)
+
+---
+
+### 📊 클럽별 스윙 데이터 비교 요약
+
+| 항목 (Metrics) | PW (피칭 웨지) | AW/GW (W) | SW (S) | Driver (드라이버) | 이상적인 데이터 특성 평가 |
+| --- | --- | --- | --- | --- | --- |
+| **비거리 (Total)** | **97.0 m** | **88.0 m** | **76.0 m** | **212.0 m** | 웨지 번호별 약 10~12m 일정한 거리 갭 형성 (매우 우수) |
+| **캐리 (Carry)** | **95.0 m** | **84.0 m** | **74.0 m** | **196.0 m** | 런이 2~4m 이내로 제어되며 뛰어난 스톱핑 파워 발휘 |
+| **최고 높이 (Apex)** | **28.0 m** | **28.5 m** | **29.0 m** | **28.2 m** | 숏게임 클럽일수록 가파른 하강각(Descent Angle) 확보 |
+| **볼 스피드 (Ball Speed)** | **36.8 m/s** | **34.2 m/s** | **31.5 m/s** | **60.5 m/s** | 드라이버 60m/s 돌파로 210m+ 비거리 창출 |
+| **발사각 (Launch Angle)** | **26.5°** | **28.2°** | **30.5°** | **14.2°** | 웨지는 로프트에 맞는 고탄도, 드라이버는 이상적 어퍼블로우 탄도 |
+| **백스핀 (Back Spin)** | **8,100 rpm** | **8,800 rpm** | **9,400 rpm** | **2,450 rpm** | 웨지의 고스핀 핀 공략력 및 드라이버의 저스핀(Low Spin) 캐리 극대화 |
+| **사이드 스핀 (Side Spin)** | **L150 rpm** | **L110 rpm** | **R120 rpm** | **L230 rpm** | 전 클럽 스핀 축(Tilt Axis)이 안정적으로 중앙 타겟 지향 |
+| **방향각 (Launch Dir)** | **L0.3°** | **R0.2°** | **R0.4°** | **L0.8°** | 임팩트 시 페이스 앵글 정렬 안정화 |
+| **클럽 패스 (Club Path)** | **인-아웃** | **인-아웃** | **인-인** | **인-아웃** | 다운블로우(Wedges) vs 어퍼블로우(Driver) 조화 |
+| **페이스 앵글 (Face Angle)** | **스퀘어** | **스퀘어** | **스퀘어** | **스퀘어** | 센터 임팩트(Smash Factor) 확보 우수 |
+
+---
+

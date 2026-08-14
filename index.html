@@ -590,62 +590,78 @@
 
         <!-- Video Filter Tabs (NO ALL TAB) -->
         <div id="video-tabs" class="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="클럽별 베스트 영상 구분">
-          <button type="button" role="tab" aria-selected="true" data-club="9i"
+          <button type="button" role="tab" aria-selected="true" data-club="driver"
             class="video-tab active px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            9번 아이언
+            드라이버
           </button>
-          <button type="button" role="tab" aria-selected="false" data-club="8i"
+          <button type="button" role="tab" aria-selected="false" data-club="3w"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            8번 아이언
-          </button>
-          <button type="button" role="tab" aria-selected="false" data-club="7i"
-            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            7번 아이언
-          </button>
-          <button type="button" role="tab" aria-selected="false" data-club="6i"
-            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            6번 아이언
-          </button>
-          <button type="button" role="tab" aria-selected="false" data-club="5i"
-            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            5번 아이언
-          </button>
-          <button type="button" role="tab" aria-selected="false" data-club="4u"
-            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            4번 유틸리티
+            3번 우드
           </button>
           <button type="button" role="tab" aria-selected="false" data-club="3u"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
             3번 유틸리티
           </button>
-          <button type="button" role="tab" aria-selected="false" data-club="3w"
+          <button type="button" role="tab" aria-selected="false" data-club="4u"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            3번 우드
+            4번 유틸리티
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="5i"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            5번 아이언
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="6i"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            6번 아이언
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="7i"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            7번 아이언
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="8i"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            8번 아이언
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="9i"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            9번 아이언
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="pw"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            피칭 웨지 (PW)
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="aw"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            어프로치 웨지 (W)
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-club="sw"
+            class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            샌드 웨지 (S)
           </button>
         </div>
 
         <!-- Video Cards Grid -->
         <div class="space-y-6">
 
-          <!-- Best 1: Iron 9 (Default Active) -->
-          <div class="video-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="9i">
+          <!-- Best 1: Driver (Default Active) -->
+          <div class="video-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="driver">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 9</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 9번 아이언 Best 스윙</h3>
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Driver</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 드라이버 Best 스윙</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 110m / 비거리: 114m
+                캐리: 196m / 비거리: 212m
               </div>
             </div>
 
-            <!-- Media Grid (Videos: 5/12 width each, Image: 2/12 width) -->
+            <!-- Media Grid -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
               <div class="md:col-span-5">
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320300/2026_08_10_06_49_05_cjv3gk.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742798/2026_08_14_20_38_16_kqhrpp.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -653,14 +669,14 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320309/2026_08_10_06_49_08_n9ee1k.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742803/2026_08_14_20_38_19_mqeqy8.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320324/20260810_064924_fkqknw.jpg" alt="9번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742816/20260814_203828_rsrdnu.jpg" alt="드라이버 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
@@ -671,27 +687,27 @@
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
                 <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
                 <p class="text-gray-700 leading-relaxed">
-                  강력한 스톱핑 파워(7,300 rpm 백스핀 / 런 4m 이내)로 핀 직접 공략 용이, 일관된 핸드 퍼스트 임팩트로 디센딩 블로우 컴프레션 형성.
+                  볼 스피드 60.5m/s, 발사각 14.2°, 백스핀 2,450rpm으로 210m+ 비거리를 창출하는 최상의 어퍼블로우(+2~+3°) 및 이상적인 베이비 드로우(L230rpm) 구질.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
                 <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
                 <p class="text-gray-700 leading-relaxed">
-                  과도한 인-아웃 풀(Pull) 감김 방지를 위해 다운스윙 트랜지션 시 하체 회전을 적극적으로 활용해 타겟 정면 방향으로 몸 열어주기.
+                  상체가 뒤에 남는 행백(Hang Back) 제어를 위해 임팩트 후 왼쪽 골반을 뒤로 과감히 열어주는 힙 클리어링으로 체중 100% 왼발 전달.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Best 2: Iron 8 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="8i">
+          <!-- Best 2: Wood 3 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="3w">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 8</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 8번 아이언 Best 스윙</h3>
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wood 3</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.09 — 3번 우드 Best 스윙</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 118m / 비거리: 124m
+                캐리: 168.0m / 비거리: 190.0m
               </div>
             </div>
 
@@ -700,7 +716,7 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320264/2026_08_10_06_44_33_dyewvd.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267816/2026_08_09_17_49_28_ckyjfj.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -708,14 +724,14 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320281/2026_08_10_06_44_36_z75jfo.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267825/2026_08_09_17_49_30_rzhqao.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320291/20260810_064447_yz9lwf.jpg" alt="8번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267835/20260809_174938_kmjwmg.jpg" alt="3번 우드 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
@@ -725,27 +741,27 @@
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
                 <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
                 <p class="text-gray-700 leading-relaxed">
-                  충분한 백스핀(6,600 rpm)과 스퀘어 페이스로 정교한 스트레이트~베이비 드로우 형성, 높은 최고 높이(Apex ~27m)로 최상급 그린 안착률.
+                  볼 스피드 56.2 m/s 및 총 비거리 190m 창출 스피드 메커니즘, 페어웨이 롱 런 및 티샷 대용 유용성.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
                 <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
                 <p class="text-gray-700 leading-relaxed">
-                  다운스윙 시 왼발 축 체중 이동 후 피니시 끝까지 몸의 밸런스를 견고하게 잡고 유지하는 코어 안정성 지속 확보.
+                  퍼 올리기 방지 &amp; 레벨 블로우(Level Blow) 타격으로 발사각(14.5°+) / Apex(25m) 확보, 과도한 인-아웃 훅 제어.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Best 3: Iron 7 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="7i">
+          <!-- Best 3: Util 3 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="3u">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 7</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 7번 아이언 Best 스윙</h3>
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Utility 3</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.09 — 3번 유틸리티 Best 스윙</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 131m / 비거리: 138m
+                캐리: 165.0m / 비거리: 182.0m
               </div>
             </div>
 
@@ -754,7 +770,7 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320204/2026_08_10_06_40_08_szrlcb.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267785/2026_08_09_17_46_24_stu0il.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -762,14 +778,14 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320216/2026_08_10_06_40_10_ioa57i.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267797/2026_08_09_17_46_26_jioie5.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320254/20260810_064024_dqdtwo.jpg" alt="7번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267807/20260809_174635_lmngbg.jpg" alt="3번 유틸리티 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
@@ -779,121 +795,13 @@
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
                 <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
                 <p class="text-gray-700 leading-relaxed">
-                  캐리 131m / 비거리 138m 안정적 거리 및 최고 높이 ~26m 탄도 형성, 덮어치기 없는 중립적 스윙 궤적(In-to-In) 유지.
+                  볼 스피드 54.8 m/s 기반 완벽한 베이비 드로우(L280 rpm) 구질 달성, 4번 유틸 대비 명확한 15m 캐리 갭 형성.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
                 <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
                 <p class="text-gray-700 leading-relaxed">
-                  임팩트 시 페이스가 살짝 열리는 푸시 페이드(Push-Fade) 보정을 위해 다운스윙 시 오른팔 전완근(Forearm) 릴리즈 타이밍 조정.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Best 2: Iron 6 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="6i">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
-              <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 6</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.08 — 6번 아이언 Best 스윙</h3>
-              </div>
-              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 140m / 비거리: 147.4m
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
-              <div class="md:col-span-5">
-                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
-                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
-                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188026/2026_08_08_19_47_16_gqs6it.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-              <div class="md:col-span-5">
-                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
-                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
-                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188040/2026_08_08_19_47_18_sf6yfh.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-              <div class="md:col-span-2 flex flex-col">
-                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
-                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188051/20260808_194737_wlrl6d.jpg" alt="6번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
-                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-4 text-xs">
-              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1">👍 주요 장점</p>
-                <p class="text-gray-700 leading-relaxed">
-                  인-아웃 궤적과 스퀘어 페이스의 조합으로 이상적인 베이비 드로우(L176 rpm) 구질 달성, 트랜지션 템포 매우 안정적.
-                </p>
-              </div>
-              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1">🛠️ 교정 포인트</p>
-                <p class="text-gray-700 leading-relaxed">
-                  7번 대비 백스핀(4,673 rpm) 감소 보정을 위해 디센딩 블로우 입사각 유지, 왼발 축으로 완전한 피니시 밸런스 유지.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Best 3: Iron 5 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="5i">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
-              <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 5</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.08 — 5번 아이언 Best 스윙</h3>
-              </div>
-              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 150.3m / 비거리: 162.3m
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
-              <div class="md:col-span-5">
-                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
-                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
-                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188064/2026_08_08_19_54_25_ez2e9f.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-              <div class="md:col-span-5">
-                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
-                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
-                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188073/2026_08_08_19_54_28_cpwewg.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-              <div class="md:col-span-2 flex flex-col">
-                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
-                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188082/20260808_195440_rjhzuo.jpg" alt="5번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
-                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-4 text-xs">
-              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1">👍 주요 장점</p>
-                <p class="text-gray-700 leading-relaxed">
-                  볼 스피드 49.0 m/s 및 비거리 162m 창출 스피드, 롱아이언 발사각 18.1° 및 25.2m 최고 높이 확보.
-                </p>
-              </div>
-              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1">🛠️ 교정 포인트</p>
-                <p class="text-gray-700 leading-relaxed">
-                  백스핀 급감(3,151 rpm / 런 12m) 유발 플립 임팩트 교정(핸드 퍼스트), 과도한 인-아웃 풀 훅 방지 하체 골반 턴.
+                  그린 안착 목적 유틸리티 스펙 고려 백스핀 하한선(3,000 rpm 이상) 유지, 지나친 핑거 쓸어치기 궤적 유의.
                 </p>
               </div>
             </div>
@@ -953,15 +861,15 @@
             </div>
           </div>
 
-          <!-- Best 5: Util 3 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="3u">
+          <!-- Best 5: Iron 5 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="5i">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Utility 3</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.09 — 3번 유틸리티 Best 스윙</h3>
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 5</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.08 — 5번 아이언 Best 스윙</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 165.0m / 비거리: 182.0m
+                캐리: 150.3m / 비거리: 162.3m
               </div>
             </div>
 
@@ -970,7 +878,7 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267785/2026_08_09_17_46_24_stu0il.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188064/2026_08_08_19_54_25_ez2e9f.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -978,14 +886,14 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267797/2026_08_09_17_46_26_jioie5.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188073/2026_08_08_19_54_28_cpwewg.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267807/20260809_174635_lmngbg.jpg" alt="3번 유틸리티 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188082/20260808_195440_rjhzuo.jpg" alt="5번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
@@ -993,29 +901,29 @@
 
             <div class="grid md:grid-cols-2 gap-4 text-xs">
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <p class="font-bold text-green-700 mb-1">👍 주요 장점</p>
                 <p class="text-gray-700 leading-relaxed">
-                  볼 스피드 54.8 m/s 기반 완벽한 베이비 드로우(L280 rpm) 구질 달성, 4번 유틸 대비 명확한 15m 캐리 갭 형성.
+                  볼 스피드 49.0 m/s 및 비거리 162m 창출 스피드, 롱아이언 발사각 18.1° 및 25.2m 최고 높이 확보.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="font-bold text-orange-700 mb-1">🛠️ 교정 포인트</p>
                 <p class="text-gray-700 leading-relaxed">
-                  그린 안착 목적 유틸리티 스펙 고려 백스핀 하한선(3,000 rpm 이상) 유지, 지나친 핑거 쓸어치기 궤적 유의.
+                  백스핀 급감(3,151 rpm / 런 12m) 유발 플립 임팩트 교정(핸드 퍼스트), 과도한 인-아웃 풀 훅 방지 하체 골반 턴.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Best 6: Wood 3 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="3w">
+          <!-- Best 6: Iron 6 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="6i">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
-                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wood 3</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.09 — 3번 우드 Best 스윙</h3>
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 6</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.08 — 6번 아이언 Best 스윙</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
-                캐리: 168.0m / 비거리: 190.0m
+                캐리: 140m / 비거리: 147.4m
               </div>
             </div>
 
@@ -1024,7 +932,7 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267816/2026_08_09_17_49_28_ckyjfj.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188026/2026_08_08_19_47_16_gqs6it.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
@@ -1032,14 +940,68 @@
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
                 <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
                   <video class="w-full h-full object-contain bg-black" controls preload="metadata">
-                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267825/2026_08_09_17_49_30_rzhqao.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188040/2026_08_08_19_47_18_sf6yfh.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267835/20260809_174938_kmjwmg.jpg" alt="3번 우드 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188051/20260808_194737_wlrl6d.jpg" alt="6번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <p class="font-bold text-green-700 mb-1">👍 주요 장점</p>
+                <p class="text-gray-700 leading-relaxed">
+                  인-아웃 궤적과 스퀘어 페이스의 조합으로 이상적인 베이비 드로우(L176 rpm) 구질 달성, 트랜지션 템포 매우 안정적.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1">🛠️ 교정 포인트</p>
+                <p class="text-gray-700 leading-relaxed">
+                  7번 대비 백스핀(4,673 rpm) 감소 보정을 위해 디센딩 블로우 입사각 유지, 왼발 축으로 완전한 피니시 밸런스 유지.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best 7: Iron 7 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="7i">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 7</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 7번 아이언 Best 스윙</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 131m / 비거리: 138m
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320300/2026_08_10_06_49_05_cjv3gk.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320309/2026_08_10_06_49_08_n9ee1k.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320324/20260810_064924_fkqknw.jpg" alt="7번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
@@ -1049,13 +1011,285 @@
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
                 <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
                 <p class="text-gray-700 leading-relaxed">
-                  볼 스피드 56.2 m/s 및 총 비거리 190m 창출 스피드 메커니즘, 페어웨이 롱 런 및 티샷 대용 유용성.
+                  캐리 131m / 비거리 138m 안정적 거리 및 최고 높이 ~26m 탄도 형성, 덮어치기 없는 중립적 스윙 궤적(In-to-In) 유지.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
                 <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
                 <p class="text-gray-700 leading-relaxed">
-                  퍼 올리기 방지 &amp; 레벨 블로우(Level Blow) 타격으로 발사각(14.5°+) / Apex(25m) 확보, 과도한 인-아웃 훅 제어.
+                  임팩트 시 페이스가 살짝 열리는 푸시 페이드(Push-Fade) 보정을 위해 다운스윙 시 오른팔 전완근(Forearm) 릴리즈 타이밍 조정.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best 8: Iron 8 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="8i">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 8</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 8번 아이언 Best 스윙</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 118m / 비거리: 124m
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320264/2026_08_10_06_44_33_dyewvd.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320281/2026_08_10_06_44_36_z75jfo.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320291/20260810_064447_yz9lwf.jpg" alt="8번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <p class="text-gray-700 leading-relaxed">
+                  충분한 백스핀(6,600 rpm)과 스퀘어 페이스로 정교한 스트레이트~베이비 드로우 형성, 높은 최고 높이(Apex ~27m)로 최상급 그린 안착률.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="text-gray-700 leading-relaxed">
+                  다운스윙 시 왼발 축 체중 이동 후 피니시 끝까지 몸의 밸런스를 견고하게 잡고 유지하는 코어 안정성 지속 확보.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best 9: Iron 9 -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="9i">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 9</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 9번 아이언 Best 스윙</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 110m / 비거리: 114m
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320204/2026_08_10_06_40_08_szrlcb.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320216/2026_08_10_06_40_10_ioa57i.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320254/20260810_064024_dqdtwo.jpg" alt="9번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concise Pros & Corrections -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <p class="text-gray-700 leading-relaxed">
+                  강력한 스톱핑 파워(7,300 rpm 백스핀 / 런 4m 이내)로 핀 직접 공략 용이, 일관된 핸드 퍼스트 임팩트로 디센딩 블로우 컴프레션 형성.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="text-gray-700 leading-relaxed">
+                  과도한 인-아웃 풀(Pull) 감김 방지를 위해 다운스윙 트랜지션 시 하체 회전을 적극적으로 활용해 타겟 정면 방향으로 몸 열어주기.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best 10: Wedge P -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="pw">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge P</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 피칭 웨지(P) Best 스윙</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 95m / 비거리: 97m
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742730/2026_08_14_20_22_36_iiqhro.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742743/2026_08_14_20_22_39_cireip.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742752/20260814_202251_msc6wv.jpg" alt="피칭 웨지 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <p class="text-gray-700 leading-relaxed">
+                  9번 아이언(Carry 110m)과 15m 차이의 정확한 거리 갭핑 형성, 핸드 퍼스트 임팩트로 8,000rpm 이상의 강력한 스핀 &amp; 다운블로우 타격.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="text-gray-700 leading-relaxed">
+                  비거리를 채우려는 무리한 풀스윙 대신 3/4 백스윙과 단단한 체간 회전(Core Rotation)으로 오버스윙 및 스쿠핑 방지.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best 11: Wedge W -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="aw">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge W</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 어프로치 웨지(W) Best 스윙</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 84m / 비거리: 88m
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742760/2026_08_14_20_26_57_pn8sse.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742769/2026_08_14_20_27_00_gz2jcc.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742778/20260814_202711_yln0fo.jpg" alt="어프로치 웨지 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <p class="text-gray-700 leading-relaxed">
+                  8,800rpm 수준의 백스핀과 50° 이상의 가파른 하강각으로 런 4m 이내 스톱, 정교한 인-아웃 패스로 사이드스핀 극소화.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="text-gray-700 leading-relaxed">
+                  임팩트 순간 캐스팅/플리핑으로 로프트가 지나치게 눕지 않도록 왼 손목의 평평함(Flat Lead Wrist) 유지 다이내믹 로프트 제어.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best 12: Wedge S -->
+          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="sw">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge S</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 샌드 웨지(S) Best 스윙</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 74m / 비거리: 76m
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742783/2026_08_14_20_28_30_ncdguq.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742790/2026_08_14_20_28_32_q6axcz.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742795/20260814_202842_ntdas4.jpg" alt="샌드 웨지 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <p class="text-gray-700 leading-relaxed">
+                  9,400rpm 초고스핀량으로 착지 후 2m 내 정지하는 원바운드 스톱 능력, 솔 바운스를 자연스럽게 지면에 미끄러뜨리는 레벨 릴리즈.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="text-gray-700 leading-relaxed">
+                  짧은 클럽 백스윙 시 척추각이 꺾이는 리버스 피벗(Reverse Pivot) 방지를 위해 우측 고관절 체중 적재 후 하체 턴 리드.
                 </p>
               </div>
             </div>
@@ -1098,111 +1332,111 @@
                 <!-- Table rows -->
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">드라이버 (Driver)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">190 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">55 m/s</td>
+                  <td class="px-3 py-3 text-center text-gray-700">210 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">59 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">230 m</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">60 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-40 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-5.0 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-20 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-1.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">3번 우드 (3W)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">180 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">52 m/s</td>
+                  <td class="px-3 py-3 text-center text-gray-700">190 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">55 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">190 m</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">55 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-3.0 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-green-600">0 m 🎯</td>
+                  <td class="px-3 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">3번 유틸 (3U)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">170 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">52 m/s</td>
+                  <td class="px-3 py-3 text-center text-gray-700">180 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">53 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">180 m</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">54 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-green-600">0 m 🎯</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-1.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">4번 유틸 (4U)</td>
                   <td class="px-3 py-3 text-center text-gray-700">160 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">50 m/s</td>
+                  <td class="px-3 py-3 text-center text-gray-700">52 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">170 m</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">52 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/40 transition-colors">
+                  <td class="px-4 py-3 font-bold text-gray-900">5번 아이언 (5I)</td>
+                  <td class="px-3 py-3 text-center text-gray-700">150 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">49 m/s</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">160 m</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">50 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-1.0 m/s</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/40 transition-colors">
+                  <td class="px-4 py-3 font-bold text-gray-900">6번 아이언 (6I)</td>
+                  <td class="px-3 py-3 text-center text-gray-700">140 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">48 m/s</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">150 m</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">48 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
+                </tr>
+                <tr class="hover:bg-fairway-light/40 transition-colors">
+                  <td class="px-4 py-3 font-bold text-gray-900">7번 아이언 (7I)</td>
+                  <td class="px-3 py-3 text-center text-gray-700">130 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">43 m/s</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">140 m</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">45 m/s</td>
                   <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
                   <td class="px-3 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-4 py-3 font-bold text-gray-900">5번 아이언 (5I)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">140 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">47 m/s</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">160 m</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">50 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-20 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-3.0 m/s</td>
-                </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-4 py-3 font-bold text-gray-900">6번 아이언 (6I)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">130 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">45 m/s</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">150 m</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">47.5 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-20 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.5 m/s</td>
-                </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-4 py-3 font-bold text-gray-900">7번 아이언 (7I)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">125 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">43 m/s</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">140 m</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">45 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-15 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
-                </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">8번 아이언 (8I)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">115 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">120 m</td>
                   <td class="px-3 py-3 text-center text-gray-700">40 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">130 m</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">42.5 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-15 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.5 m/s</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">43 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-3.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">9번 아이언 (9I)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">105 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">37 m/s</td>
+                  <td class="px-3 py-3 text-center text-gray-700">110 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">38 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">120 m</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">40 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-15 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-3.0 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">PW (Pitching Wedge - 44°)</td>
                   <td class="px-3 py-3 text-center text-gray-700">95 m</td>
                   <td class="px-3 py-3 text-center text-gray-700">35 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">110 m</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">37.5 m/s</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">38 m/s</td>
                   <td class="px-3 py-3 text-center font-bold text-orange-600">-15 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.5 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-3.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">AW (Approach Wedge - 50°)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">80 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">85 m</td>
                   <td class="px-3 py-3 text-center text-gray-700">33 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">90 m</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">35 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-10 m</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-5 m</td>
                   <td class="px-3 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
                 </tr>
                 <tr class="hover:bg-fairway-light/40 transition-colors">
                   <td class="px-4 py-3 font-bold text-gray-900">SW (Sand Wedge - 56°)</td>
-                  <td class="px-3 py-3 text-center text-gray-700">65 m</td>
-                  <td class="px-3 py-3 text-center text-gray-700">30 m/s</td>
+                  <td class="px-3 py-3 text-center text-gray-700">70 m</td>
+                  <td class="px-3 py-3 text-center text-gray-700">32 m/s</td>
                   <td class="px-3 py-3 text-center font-semibold text-fairway">70 m</td>
-                  <td class="px-3 py-3 text-center font-semibold text-fairway">32.5 m/s</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-5 m</td>
-                  <td class="px-3 py-3 text-center font-bold text-orange-600">-2.5 m/s</td>
+                  <td class="px-3 py-3 text-center font-semibold text-fairway">33 m/s</td>
+                  <td class="px-3 py-3 text-center font-bold text-green-600">0 m 🎯</td>
+                  <td class="px-3 py-3 text-center font-bold text-orange-600">-1.0 m/s</td>
                 </tr>
               </tbody>
             </table>
@@ -1277,11 +1511,42 @@
         <!-- Container for Paginated Practice Cards -->
         <div id="practice-logs-container" class="space-y-6">
 
-          <!-- Log 1: 2026.08.10 Iron (7I / 8I / 9I) -->
+          <!-- Log 1: 2026.08.14 Wedges & Driver -->
+          <article class="practice-item bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden p-6" data-page="1">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-gray-100">
+              <time class="text-base font-bold text-fairway-dark">2026. 08. 14 — 웨지(PW/AW/SW) &amp; 드라이버 스윙 분석 및 런치모니터 데이터</time>
+              <span class="px-3 py-1 bg-fairway-light text-fairway text-xs font-bold rounded-full">최신 연습</span>
+            </div>
+            <div class="space-y-4 text-xs sm:text-sm text-gray-700">
+              <p class="text-gray-600">
+                피칭(PW 95m/97m), 어프로치(AW 84m/88m), 샌드(SW 74m/76m) 웨지의 고스핀 핀 공략력과 드라이버(196m/212m) 어퍼블로우 드로우 구질 런치모니터 데이터를 바탕으로 클럽별 거리가 명확히 형성됨을 확인하고 다이내믹 로프트 및 힙 클리어링을 정밀 분석함.
+              </p>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-200">
+                  <p class="font-bold text-gray-900 mb-1">PW (피칭 웨지)</p>
+                  <p class="text-xs text-gray-600">비거리 97m (캐리 95m) / 볼스피드 36.8m/s / 백스핀 8,100rpm. 9번 아이언과 15m 갭핑 형성, 3/4 백스윙 오버스윙 제어.</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-200">
+                  <p class="font-bold text-gray-900 mb-1">AW/GW (어프로치 W)</p>
+                  <p class="text-xs text-gray-600">비거리 88m (캐리 84m) / 볼스피드 34.2m/s / 백스핀 8,800rpm. 런 4m 이내 스톱핑 파워, 왼 손목 평평함 유지 다이내믹 로프트 제어.</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-200">
+                  <p class="font-bold text-gray-900 mb-1">SW (샌드 웨지 S)</p>
+                  <p class="text-xs text-gray-600">비거리 76m (캐리 74m) / 볼스피드 31.5m/s / 백스핀 9,400rpm. 원바운드 스톱 고스핀, 우측 고관절 체중 적재 및 하체 턴.</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-xl border border-gray-200">
+                  <p class="font-bold text-gray-900 mb-1">Driver (드라이버)</p>
+                  <p class="text-xs text-gray-600">비거리 212m (캐리 196m) / 볼스피드 60.5m/s / 백스핀 2,450rpm. 어퍼블로우(+2~3°) 베이비 드로우, 힙 클리어링 체중 전달.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Log 2: 2026.08.10 Iron (7I / 8I / 9I) -->
           <article class="practice-item bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden p-6" data-page="1">
             <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-gray-100">
               <time class="text-base font-bold text-fairway-dark">2026. 08. 10 — 7번, 8번, 9번 숏/미들 아이언 스윙 분석 및 런치모니터 데이터</time>
-              <span class="px-3 py-1 bg-fairway-light text-fairway text-xs font-bold rounded-full">최신 연습</span>
+              <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-bold rounded-full">아이언 분석</span>
             </div>
             <div class="space-y-4 text-xs sm:text-sm text-gray-700">
               <p class="text-gray-600">

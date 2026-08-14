@@ -7,44 +7,15 @@
 
 3. Best Swing Videos
 
- 1) 2026.08.08 연습장 - iron 7 : 130m/136m (캐리/비거리)
-  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786187985/2026_08_08_19_40_17_jitpc0.mp4
-  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786187996/2026_08_08_19_40_21_sp8njc.mp4
-  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188016/20260808_194039_ifav8z.jpg
-  - 장점 : 셋업 및 스파인 앵글의 안정성, 높고 안정적인 백스핀(5,904 rpm) 및 탄도로 우수한 그린 스탑핑 파워 확보, 과도한 덮어치기 없는 인-인(In-to-In) 클럽 궤적.
-  - 교정 : 다운스윙 시 페이스 릴리즈 타이밍 지연으로 인한 페이스 앵글 오픈(Push Fade 구질) 보정, 임팩트 시 오른쪽 체중 잔류 보정을 위한 하체 체중 이동(Weight Shift) 및 핸드 퍼스트 임팩트 강조.
+ 1) 2026.08.14 연습장 - driver : 196m/212m/59 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742798/2026_08_14_20_38_16_kqhrpp.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742803/2026_08_14_20_38_19_mqeqy8.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742816/20260814_203828_rsrdnu.jpg
+  - 장점 : 최적의 런치 컨디션 (Optimized Launch Conditions) : 볼 스피드 60.5m/s, 발사각 14.2°, 백스핀 2,450rpm으로 210m 비거리를 뽑아내는 최상의 **어퍼블로우(Upper Blow, Angle of Attack +2~+3°)** 형성.
+         완벽한 베이비 드로우 (Ideal Draw Path) : 샬로잉(Shallow Downswing) 동작이 매끄럽게 연결되며 사이드스핀 L230rpm의 이상적인 비거리형 드로우 구질 완성.
+  - 교정 : 과도한 인-아웃 패스 & 행백(Hang Back) 제어 : 비거리를 늘리려 상체를 뒤에 남겨두고 손목만 돌릴 경우 인-아웃 궤적이 +5° 이상 심해져 푸시 슬라이스나 급격한 훅(Snap Hook)이 나올 위험이 있음. 임팩트 후 왼쪽 골반을 뒤로 과감히 열어주는 힙 클리어링(Hip Clearing)을 통해 피니시까지 체중을 100% 왼발로 전달할 것.
 
- 2) 2026.08.08 연습장 - iron 6 : 140m/147m (캐리/비거리)
-  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188026/2026_08_08_19_47_16_gqs6it.mp4
-  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188040/2026_08_08_19_47_18_sf6yfh.mp4
-  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188051/20260808_194737_wlrl6d.jpg
-  - 장점 : 인-아웃 궤적과 스퀘어 페이스의 조합으로 이상적인 베이비 드로우(L176 rpm) 형성, 명확한 10m 캐리 거리 갭 형성, 백스윙 탑-다운스윙 트랜지션 템포 안정.
-  - 교정 : 7번 대비 백스핀(4,673 rpm) 감소 보정을 위한 디센딩 블로우(Descending Blow) 입사각 유지, 임팩트 후 왼발 축으로 완전한 체중 전달 및 피니시 밸런스 유지.
-
- 3) 2026.08.08 연습장 - iron 5 : 150m/162m (캐리/비거리)
-  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188064/2026_08_08_19_54_25_ez2e9f.mp4
-  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188073/2026_08_08_19_54_28_cpwewg.mp4
-  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188082/20260808_195440_rjhzuo.jpg
-  - 장점 : 볼 스피드 49.0 m/s 및 비거리 162m 이상을 창출하는 클럽 스피드 및 파워, 롱아이언임에도 18.1°의 발사각과 25.2m 높이 확보.
-  - 교정 : 백스핀 급감(3,151 rpm / 런 12m 발생)을 유발하는 캐스팅/플립(Flipping) 임팩트 교정(핸드 퍼스트 임팩트 강조), 과도한 인-아웃 궤적으로 인한 풀 훅(Side Spin L364 rpm) 완화를 위해 다운스윙 시 하체 골반 먼저 턴(Shift & Turn).
-
- 4) 2026.08.09 연습장 - util 4 : 150m/163m (캐리/비거리)
-  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267661/2026_08_09_17_27_42_wj6nri.mp4
-  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267676/2026_08_09_17_27_46_hjeaac.mp4
-  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267696/20260809_172717_dhfbmo.jpg
-  - 장점 : 우수한 안착 능력 & 고탄도: 최고 높이(24.5m)와 적정 백스핀(3,850 rpm)을 확보하여 그린을 직접 공략할 때 공을 세우기 용이합니다.
-         안정적인 스윙 궤적: 롱아이언에서 유틸리티로 전환되는 구간에서 과도하게 감기지 않고 일관된 인-인(In-to-In) 궤적을 유지합니다.
-  - 교정 : 페이스 릴리즈 타임 보정: 임팩트 시 클럽 페이스가 미세하게 열려 타격(방향각 R1.2°, 사이드스핀 R220 rpm)되므로, 임팩트 구간에서 전완근 로테이션(Forearm Rotation) 템포를 약간 앞당겨 페이스를 스퀘어로 맞추는 연습이 필요합니다.
-
- 5) 2026.08.09 연습장 - util 3 : 165m/182m (캐리/비거리)
-  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267785/2026_08_09_17_46_24_stu0il.mp4
-  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267797/2026_08_09_17_46_26_jioie5.mp4
-  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267807/20260809_174635_lmngbg.jpg
-  - 장점 : 이상적인 구질 & 높은 비거리 효율: 볼 스피드(54.8 m/s)가 훌륭하며, 인-아웃 궤적과 스퀘어 페이스의 조합으로 완벽한 베이비 드로우(Baby Draw) 구질을 형성합니다.
-         명확한 거리 갭 확보: 4번 유틸리티 대비 캐리 15m, 총거리 19m의 확실한 비거리 차이를 만들어냅니다.
-  - 교정 : 적정 백스핀 하한선 유지: 쓸어치는 타격 방식으로 인해 백스핀(3,210 rpm)이 더 떨어지지 않도록 유의해야 합니다. 그린에 안착시켜야 하는 클럽 특성을 고려해 다운스윙 시 스핀량이 3,000 rpm 이하로 낮아지지 않게 수평 쓸어치기 궤적을 일정하게 유지합니다.
-
- 6) 2026.08.09 연습장 - wood 3 : 168m/190m (캐리/비거리)
+ 2) 2026.08.09 연습장 - wood 3 : 168m/190m/57 (캐리/비거리/볼스피드)
   - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267816/2026_08_09_17_49_28_ckyjfj.mp4
   - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267825/2026_08_09_17_49_30_rzhqao.mp4
   - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267835/20260809_174938_kmjwmg.jpg
@@ -53,22 +24,100 @@
   - 교정 : 낮은 발사각 & 백스핀 저하 보정 (캐리 거리 확보): 공을 띄우려고 아래에서 위로 퍼 올리는 스윙으로 인해 최고 높이(22.8m)가 낮아지고 백스핀(2,750 rpm)이 감소하여 런이 22m나 발생합니다. 퍼 올리기보다 스윙 최저점에서 평평하게 지나가는 레벨 블로우(Level Blow) 타격으로 발사각(14.5° 이상)과 백스핀을 확보해 캐리 비거리를 늘려야 합니다.
          과도한 인-아웃 및 훅 구질 제어: 클럽 길이에 의해 스윙 궤적이 +4°~+5° 이상 과도하게 들어오면서 페이스가 감겨 풀 훅(사이드스핀 L410 rpm)이 발생합니다. 다운스윙 시 왼쪽 골반을 먼저 트랜지션(Shift & Turn)하여 몸 안쪽 공간을 확보하고 인-아웃 궤적을 타이트하게 잡아줄 필요가 있습니다.
 
+ 3) 2026.08.09 연습장 - util 3 : 165m/182m/53.5 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267785/2026_08_09_17_46_24_stu0il.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267797/2026_08_09_17_46_26_jioie5.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267807/20260809_174635_lmngbg.jpg
+  - 장점 : 이상적인 구질 & 높은 비거리 효율: 볼 스피드(54.8 m/s)가 훌륭하며, 인-아웃 궤적과 스퀘어 페이스의 조합으로 완벽한 베이비 드로우(Baby Draw) 구질을 형성합니다.
+         명확한 거리 갭 확보: 4번 유틸리티 대비 캐리 15m, 총거리 19m의 확실한 비거리 차이를 만들어냅니다.
+  - 교정 : 적정 백스핀 하한선 유지: 쓸어치는 타격 방식으로 인해 백스핀(3,210 rpm)이 더 떨어지지 않도록 유의해야 합니다. 그린에 안착시켜야 하는 클럽 특성을 고려해 다운스윙 시 스핀량이 3,000 rpm 이하로 낮아지지 않게 수평 쓸어치기 궤적을 일정하게 유지합니다.
+
+ 4) 2026.08.09 연습장 - util 4 : 150m/163m/52 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267661/2026_08_09_17_27_42_wj6nri.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786267676/2026_08_09_17_27_46_hjeaac.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786267696/20260809_172717_dhfbmo.jpg
+  - 장점 : 우수한 안착 능력 & 고탄도: 최고 높이(24.5m)와 적정 백스핀(3,850 rpm)을 확보하여 그린을 직접 공략할 때 공을 세우기 용이합니다.
+         안정적인 스윙 궤적: 롱아이언에서 유틸리티로 전환되는 구간에서 과도하게 감기지 않고 일관된 인-인(In-to-In) 궤적을 유지합니다.
+  - 교정 : 페이스 릴리즈 타임 보정: 임팩트 시 클럽 페이스가 미세하게 열려 타격(방향각 R1.2°, 사이드스핀 R220 rpm)되므로, 임팩트 구간에서 전완근 로테이션(Forearm Rotation) 템포를 약간 앞당겨 페이스를 스퀘어로 맞추는 연습이 필요합니다.
+
+ 5) 2026.08.08 연습장 - iron 5 : 150m/162m/49 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188064/2026_08_08_19_54_25_ez2e9f.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188073/2026_08_08_19_54_28_cpwewg.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188082/20260808_195440_rjhzuo.jpg
+  - 장점 : 볼 스피드 49.0 m/s 및 비거리 162m 이상을 창출하는 클럽 스피드 및 파워, 롱아이언임에도 18.1°의 발사각과 25.2m 높이 확보.
+  - 교정 : 백스핀 급감(3,151 rpm / 런 12m 발생)을 유발하는 캐스팅/플립(Flipping) 임팩트 교정(핸드 퍼스트 임팩트 강조), 과도한 인-아웃 궤적으로 인한 풀 훅(Side Spin L364 rpm) 완화를 위해 다운스윙 시 하체 골반 먼저 턴(Shift & Turn).
+
+ 6) 2026.08.08 연습장 - iron 6 : 140m/147m/48 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188026/2026_08_08_19_47_16_gqs6it.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786188040/2026_08_08_19_47_18_sf6yfh.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786188051/20260808_194737_wlrl6d.jpg
+  - 장점 : 인-아웃 궤적과 스퀘어 페이스의 조합으로 이상적인 베이비 드로우(L176 rpm) 형성, 명확한 10m 캐리 거리 갭 형성, 백스윙 탑-다운스윙 트랜지션 템포 안정.
+  - 교정 : 7번 대비 백스핀(4,673 rpm) 감소 보정을 위한 디센딩 블로우(Descending Blow) 입사각 유지, 임팩트 후 왼발 축으로 완전한 체중 전달 및 피니시 밸런스 유지.
+
+ 7) 2026.08.10 연습장 - iron 7 : 131m/138m/46 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320300/2026_08_10_06_49_05_cjv3gk.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320309/2026_08_10_06_49_08_n9ee1k.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320324/20260810_064924_fkqknw.jpg
+  - 장점 : 안정적인 비거리 및 탄도 형성 : 캐리 131m, 최고 높이 약 26m를 확보하여 미들 아이언으로서의 명확한 타겟 공략거리를 보유하고 있습니다.
+          우수한 궤적 흐름 (In-to-In) : Out-to-In 덮어치기 없이 깔끔하게 떨어지는 중립적 스윙 궤적을 유지하고 있습니다.
+  - 교정 : 임팩트 시 페이스 릴리즈 타임 조정 : 임팩트 구간에서 클럽 페이스가 살짝 열려 타격(Push-Fade)되므로, 다운스윙 시 오른팔 전완근 로테이션(Forearm Rotation) 릴리즈 타이밍을 약간 일찍 가져가 페이스를 스퀘어로 맞추는 연습이 필요합니다.
+
+ 8) 2026.08.10 연습장 - iron 8 : 118m/124m/43.5 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320264/2026_08_10_06_44_33_dyewvd.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320281/2026_08_10_06_44_36_z75jfo.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320291/20260810_064447_yz9lwf.jpg
+  - 장점 : 완벽한 구질 및 타겟 일관성 : 약 6,600rpm의 충분한 백스핀과 스퀘어 페이스 임팩트로 매우 정교한 스트레이트~베이비 드로우 구질을 보여줍니다.
+          높은 그린 안착률 : 높은 최고 높이(Apex ~27m)와 짧은 런(약 6m)으로 그린 직접 공략 시 가장 신뢰도 높은 퍼포먼스를 냅니다.
+  - 교정 : 피니시 밸런스 유지 : 다운스윙에서 왼발 축으로 체중이 100% 이동한 상태에서 피니시 끝까지 몸의 밸런스를 잡고 유지하는 코어 안정성 확보가 필요합니다.
+
+ 9) 2026.08.10 연습장 - iron 9 : 110m/114m/42 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320204/2026_08_10_06_40_08_szrlcb.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786320216/2026_08_10_06_40_10_ioa57i.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320254/20260810_064024_dqdtwo.jpg
+  - 장점 : 강력한 스톱핑 파워 (High Spin) : 7,000rpm 이상의 높은 백스핀과 가파른 낙하각으로 런이 4m 이내에 불과하여 핀을 직접 공략하기에 매우 유리합니다.
+          일관된 핸드 퍼스트 임팩트 : 다운블로우(Descending Blow)가 잘 형성되어 공을 정확하게 컴프레션(Compression)하는 능력이 뛰어납니다.
+  - 교정 : 과도한 좌측 감김(Pull) 방지 : 숏아이언 특성상 클럽 로프트가 누워있어 스윙 패스가 지나치게 인-아웃이 되거나 페이스가 조금만 닫혀도 타겟 좌측으로 감길 수 있으므로, 하체 회전을 적극적으로 활용해 타겟 정면 방향으로 몸을 열어주는 트랜지션을 유지해야 합니다.
+
+ 10) 2026.08.14 연습장 - wedge p : 95/97m/37.5 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742730/2026_08_14_20_22_36_iiqhro.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742743/2026_08_14_20_22_39_cireip.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742752/20260814_202251_msc6wv.jpg
+  - 장점 : 완벽한 거리 갭핑 (Distance Gapping) : 9번 아이언(Carry 110m)과 15m 차이를 정확히 형성하며 풀스윙 기준 신뢰할 수 있는 100m 안쪽 기준점을 마련함.
+         다운블로우 컴프레션 (Down Blow Compression) : 핸드 퍼스트(Forward Lean) 임팩트를 통해 8,000rpm 이상의 강력한 스핀과 안정적인 디센딩 궤적 형성.
+  - 교정 : 오버 스윙 & 스쿠핑 방지 (Controlled Finish) : 비거리를 100m 채우려는 무리한 풀스윙 대신 3/4 백스윙(Three-Quarter Swing)과 단단한 체간 회전(Core Rotation)으로 일관된 볼 스트라이킹(Smash Factor) 유지.
+
+ 11) 2026.08.14 연습장 - wedge w : 84/88m/33.5 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742760/2026_08_14_20_26_57_pn8sse.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742769/2026_08_14_20_27_00_gz2jcc.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742778/20260814_202711_yln0fo.jpg
+  - 장점 : 스핀 로프트 & 스톱핑 파워 (Stopping Power) : 8,800rpm 수준의 백스핀과 약 50° 이상의 가파른 하강각(Descent Angle)으로 런(Run)을 4m 이내로 최소화.
+         안정적인 궤적 (Neutral Path) : 타겟 라인을 벗어나지 않는 정교한 인-아웃 패스로 사이드스핀을 극도로 억제.
+  - 교정 : 다이내믹 로프트 제어 (Dynamic Loft) : 임팩트 순간 캐스팅(Casting)이나 플리핑(Flipping)으로 로프트가 지나치게 누워 맞지 않도록 왼 손목의 평평함(Flat Lead Wrist)을 임팩트 존 통과 시까지 유지할 것.
+
+ 12) 2026.08.14 연습장 - wedge s : 74m/76m/32 (캐리/비거리/볼스피드)
+  - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742783/2026_08_14_20_28_30_ncdguq.mp4
+  - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1786742790/2026_08_14_20_28_32_q6axcz.mp4
+  - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742795/20260814_202842_ntdas4.jpg
+  - 장점 : 고스핀 핀 다이렉트 공략 : 9,400rpm의 초고스핀량으로 착지 후 2m 내에 정지하는 원바운드 스톱 능력 보유.
+         바운스 활용 (Bounce Utilization) : 리딩 엣지가 아닌 솔 바운스를 자연스럽게 지면에 미끄러뜨리는 레벨 릴리즈 감각 우수.
+  - 교정 : 리버스 피벗(Reverse Pivot) 방지 : 짧은 클럽 특성상 백스윙 시 척추각이 타겟 쪽으로 꺾이는 현상이 발생할 수 있으므로, 우측 고관절(Hip Hinge)에 체중을 정확히 적재(Loading)한 후 하체 턴으로 리드할 것.
+
 
 4. My Stats 
  1) 클럽별 현재 비거리/볼스피드, 목표 비거리/볼스피드, 현재와 목표 비거리 차이를 미터 단위로 표현
  2) 클럽별 현재 비거리/볼스피드 / 목표 비거리/볼스피드 정리
-  - 드라이버(Driver) : 190/55 / 230/60
-  - 3번 우드 (3W) : 180/52 / 190/55
-  - 3번 유틸 (3U) : 170/52 / 180/54
-  - 4번 유틸 (4U) : 160/50 / 170/52
-  - 5번 아이언 (5I) : 140/47 / 160/50
-  - 6번 아이언 (6I) : 130/45 / 150/47.5
-  - 7번 아이언 (7I) : 125/43 / 140/45
-  - 8번 아이언 (8I) : 115/40 / 130/42.5
-  - 9번 아이언 (9I) : 105/37 / 120/40
-  - PW (Pitching Wedge-44) : 95/35 / 110/37.5
-  - AW (Approach Wedge-50) : 80/33 / 90/35
-  - SW (Send Wedge-56) : 65/30 / 70/32.5
+  - 드라이버(Driver) : 210/59 / 230/60
+  - 3번 우드 (3W) : 190/55 / 190/55
+  - 3번 유틸 (3U) : 180/53 / 180/54
+  - 4번 유틸 (4U) : 160/52 / 170/52
+  - 5번 아이언 (5I) : 150/49 / 160/50
+  - 6번 아이언 (6I) : 140/48 / 150/48
+  - 7번 아이언 (7I) : 130/43 / 140/45
+  - 8번 아이언 (8I) : 120/40 / 130/43
+  - 9번 아이언 (9I) : 110/38 / 120/40
+  - PW (Pitching Wedge-44) : 95/35 / 110/38
+  - AW (Approach Wedge-50) : 85/33 / 90/35
+  - SW (Send Wedge-56) : 70/32 / 70/33
 
 4. Field Notes 
  - docs/fieldnotes 폴더 하위에 fieldnotes.txt, field-*.txt 파일 참고
