@@ -143,7 +143,7 @@
         <!-- Content Panels -->
         <div class="space-y-6">
 
-          <!-- IRON MISSION -->
+          <!-- 1. IRON MISSION -->
           <div id="mission-panel-iron" class="mission-panel bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron Mission</span>
@@ -241,7 +241,7 @@
             </div>
           </div>
 
-          <!-- WEDGE MISSION -->
+          <!-- 2. WEDGE MISSION -->
           <div id="mission-panel-wedge" class="mission-panel hidden bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge Mission</span>
@@ -255,70 +255,326 @@
               </p>
             </div>
 
-            <div class="grid sm:grid-cols-2 gap-4 text-sm mb-5">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm mb-5">
               <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
-                <p class="font-bold text-gray-900 mb-1">1) 왼발 지지 (체중 6:4 ~ 7:3 고정)</p>
-                <p class="text-gray-600 text-xs">셋업부터 체중 60~70%를 왼발에 두고 스윙 내내 유지하여 축 흔들림을 막고 뒷땅/탑볼 방지.</p>
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">1</span>
+                  왼발 지지 (체중 6:4 ~ 7:3 고정)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 어프로치(10~50m) 셋업 시 체중 60~70%를 왼발에 두고 스윙 내내 그대로 유지.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 축 흔들림을 차단하여 뒷땅/탑볼을 방지하고 정교한 콘택트 형성.</p>
               </div>
 
               <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
-                <p class="font-bold text-gray-900 mb-1">2) 머리 및 시선 고정 (헤드업 금지)</p>
-                <p class="text-gray-600 text-xs">공이 떠나고 디봇을 확인한 후에도 시선을 바닥에 유지하여 상체 들림 및 탑볼 예방.</p>
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">2</span>
+                  머리 및 시선 고정 (헤드업 금지)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 공이 떠나고 디봇을 확인한 후에도 시선을 바닥에 잠시 머무르게 함.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 조급한 헤드업으로 인한 클럽 날 타격(탑볼/홈런) 미스샷 예방.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">3</span>
+                  시계추 몸통 회전 (몸통 회전 중심)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 손목 쓰임을 자제하고 가슴(흉추)과 양손, 헤드의 삼각형이 함께 움직임.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 손목 개입 억제로 낙하 지점 및 탄도의 정교한 일관성 확보.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">4</span>
+                  핸드 퍼스트 &amp; 다운블로 임팩트
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 어드레스 및 임팩트 순간 손이 공보다 앞(왼쪽 허벅지 안쪽)에 위치하여 눌러 침.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 로프트각을 살려 깨끗한 백스핀 형성 (퍼올리는 스쿠핑 방지).</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs sm:col-span-2 lg:col-span-2">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">5</span>
+                  대칭 스윙 (1:1 크기 유지)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 백스윙 크기(예: 8시/9시)와 팔로스루 크기(4시/3시)를 좌우 대칭으로 일정하게 가져감.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 임팩트 시 감속이나 툭 때리는 문제 교정, 일정한 가속 리듬으로 거리 조절.</p>
+              </div>
+            </div>
+
+            <!-- Wedge Distance Guide Box -->
+            <div class="bg-white rounded-xl p-4 border border-fairway/30 bg-fairway-light/10 text-xs text-gray-700 space-y-2">
+              <p class="font-bold text-fairway-dark flex items-center gap-1.5 text-xs">
+                <span>💡</span> 웨지 거리 조절 연습 가이드 (나만의 데이터 세팅)
+              </p>
+              <p>• <strong>1단계 (시계 바늘 공식):</strong> 손 위치 기준 8시-4시(하프 미만), 9시-3시(하프 스윙), 10시-2시(쓰리쿼터 스윙) 구분</p>
+              <p>• <strong>2단계 (거리 기록):</strong> 보유 웨지(56°, 50°, PW)별 3가지 스윙 캐리(Carry) 거리 암기 및 고정 기준점 세팅</p>
+            </div>
+          </div>
+
+          <!-- 3. PUTTER MISSION -->
+          <div id="mission-panel-putter" class="mission-panel hidden bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Putter Mission</span>
+              <h3 class="text-lg font-bold text-gray-900">퍼터 스트로크 핵심</h3>
+            </div>
+
+            <div class="bg-white rounded-xl p-4 border border-gray-200 mb-5 shadow-xs">
+              <p class="text-xs font-bold text-fairway uppercase tracking-wide mb-1">💡 연습 시 팁 (Pendulum Rule)</p>
+              <p class="text-sm font-medium text-gray-800">
+                하체와 머리는 완전히 고정한 채, 양 어깨와 팔이 만드는 시계추 운동(Pendulum Motion)으로만 스트로크한다!
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">1</span>
+                  숄더 리드 스트로크
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 손목 쓰임을 차단(No Wrist Hinge)하고 양 어깨와 팔의 상체 회전으로 굴림.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 손목 변형 방지로 일관된 거리와 방향성 확보.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">2</span>
+                  스퀘어 페이스 임팩트
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 백스윙부터 피니시까지 퍼터 페이스가 타겟 라인과 항상 직각(Square) 유지.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 퍼팅 방향성의 80% 이상은 임팩트 페이스 각도에 의해 결정됨.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">3</span>
+                  1:1.5 스트로크 비율
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 백스윙 크기보다 피니시(Follow-Through)를 약 1.5배 길고 일정하게 밀어줌.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 임팩트 감속(Deceleration) 방지로 공이 곧게 굴러감.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">4</span>
+                  롤백 타구감 (Top Spin)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 공을 때리지 않고 Sweet Spot으로 가볍게 밀어 올려 순회전(Top Spin)을 검.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 공이 튀지 않고 매끄럽게 굴러가 바닥 잔디 영향을 줄임.</p>
               </div>
             </div>
           </div>
 
-          <!-- UTILITY MISSION -->
+          <!-- 4. UTILITY MISSION -->
           <div id="mission-panel-utility" class="mission-panel hidden bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Utility Mission</span>
               <h3 class="text-lg font-bold text-gray-900">유틸리티 : 4번 - 3번</h3>
             </div>
+
             <div class="bg-white rounded-xl p-4 border border-gray-200 mb-5 shadow-xs">
               <p class="text-xs font-bold text-fairway uppercase tracking-wide mb-1">💡 한 줄 요약</p>
               <p class="text-sm font-medium text-gray-800">
-                "공은 중앙보다 살짝 왼쪽에 두고, 백스윙은 낮고 길게 뺐다가, 힘 빼고 아이언처럼 공을 향해 완만하게 툭 떨어뜨린다!"
+                "공은 중앙보다 살짝 왼쪽에 두고, 백스윙은 낮고 길게 뺐다가, 힘 빼고 아이언처럼 공을 향해 완만하게 툭 떨어뜨리며 왼발로 넘어간다!"
               </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm mb-5">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">1</span>
+                  공 위치 (중앙과 왼발 사이)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 7번 아이언 공 위치(중앙)에서 공 1~1.5개만 왼쪽에 둠.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 완만하게 내려오며 공을 먼저 타격하는 최적 궤도 형성.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">2</span>
+                  낮고 긴 테이크백 &amp; 상체 회전
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 시작 시 헤드를 낮고 길게 빼주며 몸통을 충분히 회전.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 손목으로 급격히 들어 올리는 가파른 찍혀맞음/뒷땅 방지.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">3</span>
+                  완만한 다운블로 (아이언 느낌)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 걷어 올리지 않고 공 앞 잔디를 클럽 바닥(솔)으로 빗자루질하듯 지나감.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 솔의 관용성을 바탕으로 깨끗한 임팩트와 고탄도 확보.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">4</span>
+                  하체 리드 &amp; 과감한 체중 이동
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 다운스윙 시작을 왼쪽 골반 회전과 하체 리드로 진행.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 체중이 왼발로 넘어가야 퍼올리는 탑볼 및 훅(Pull) 방지.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs sm:col-span-2 lg:col-span-2">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">5</span>
+                  부드러운 템포 &amp; 70%의 힘
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 세게 휘두르지 않고 7번 아이언 템포(70%의 힘)로 부드럽게 통과.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 클럽 자체의 반발력과 로프트가 우수하여 정타만 맞으면 알아서 비거리 창출.</p>
+              </div>
+            </div>
+
+            <!-- Utility Guide Box -->
+            <div class="bg-white rounded-xl p-4 border border-fairway/30 bg-fairway-light/10 text-xs text-gray-700 space-y-2">
+              <p class="font-bold text-fairway-dark flex items-center gap-1.5 text-xs">
+                <span>💡</span> 유틸리티 핵심 연습 팁
+              </p>
+              <p>• <strong>A) 숏티 치기 연습:</strong> 숏티(1~1.5cm) 위에 공을 올려두고 공만 깨끗하게 걷어내는 연습으로 정타 감각 확보</p>
+              <p>• <strong>B) 우드와의 차이점:</strong> 우드는 '쓸어치는(Sweep)' 샷, 유틸리티는 잔디를 '밀어내는(Thru)' 아이언의 연장선</p>
             </div>
           </div>
 
-          <!-- WOOD MISSION -->
+          <!-- 5. WOOD MISSION -->
           <div id="mission-panel-wood" class="mission-panel hidden bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wood Mission</span>
               <h3 class="text-lg font-bold text-gray-900">우드 : 5번 - 3번</h3>
             </div>
+
             <div class="bg-white rounded-xl p-4 border border-gray-200 mb-5 shadow-xs">
               <p class="text-xs font-bold text-fairway uppercase tracking-wide mb-1">💡 한 줄 요약</p>
               <p class="text-sm font-medium text-gray-800">
                 "공은 왼발 뒤꿈치 안쪽에 두고, 상체를 숙인 채 헤드 바닥으로 잔디를 넓고 완만하게 쓸고 지나간다!"
               </p>
             </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm mb-5">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">1</span>
+                  공 위치 (왼발 뒤꿈치 안쪽)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 왼발 뒤꿈치 선상에서 공 반 개 정도 오른쪽에 배치.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 완만한 스윙 최저점에서 공이 타격되는 최적 위치 확보.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">2</span>
+                  빗자루질 '쓸어 치기 (Sweep)'
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 낮고 긴 테이크백 후 헤드 바닥(솔)으로 잔디를 넓게 스쳐 지나감.</p>
+                <p class="text-gray-500 text-xs"><strong>팁:</strong> 바닥의 먼지/낙엽을 슥 쓸어낸다는 이미지 적용.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">3</span>
+                  상체 들림 방지 (척추각 유지)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 임팩트 순간까지 어드레스 척추각을 그대로 유지.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 공을 띄우려는 상체 들림/스쿠핑 방지 (로프트가 공을 띄움).</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">4</span>
+                  흔들리지 않는 스윙 축 &amp; 템포
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 머리와 척추를 중심으로 제자리 회전하며 70% 힘 템포 유지.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 긴 샤프트 스윙 축 흔들림 차단으로 정타 맞춤.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs sm:col-span-2 lg:col-span-2">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">5</span>
+                  피니시까지 회전 지속
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 임팩트에서 멈추지 않고 헤드 무게를 따라 피니시까지 끝까지 돌아줌.</p>
+                <p class="text-gray-500 text-xs"><strong>이유:</strong> 임팩트 멈춤 현상으로 인한 페이스 열림/닫힘 (와이파이 구질) 예방.</p>
+              </div>
+            </div>
+
+            <!-- Wood Guide Box -->
+            <div class="bg-white rounded-xl p-4 border border-fairway/30 bg-fairway-light/10 text-xs text-gray-700 space-y-2">
+              <p class="font-bold text-fairway-dark flex items-center gap-1.5 text-xs">
+                <span>💡</span> 우드 정타율 연습 팁
+              </p>
+              <p>• <strong>A) 오른발 뒤꿈치 붙이고 치기:</strong> 하프스윙 시 오른발 뒤꿈치를 바닥에 완전히 붙여 상체 덤빔/배치기 치료</p>
+              <p>• <strong>B) 실전 팁:</strong> 페어웨이 좋은 라이에서만 우드를 사용하고, 잔디에 파묻히면 유틸리티/롱아이언 활용</p>
+            </div>
           </div>
 
-          <!-- DRIVER MISSION -->
+          <!-- 6. DRIVER MISSION -->
           <div id="mission-panel-driver" class="mission-panel hidden bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
             <div class="flex items-center gap-2 mb-4">
               <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Driver Mission</span>
               <h3 class="text-lg font-bold text-gray-900">드라이버 스윙 핵심</h3>
             </div>
+
             <div class="bg-white rounded-xl p-4 border border-gray-200 mb-5 shadow-xs">
-              <p class="text-xs font-bold text-fairway uppercase tracking-wide mb-1">💡 핵심 요약</p>
+              <p class="text-xs font-bold text-fairway uppercase tracking-wide mb-1">💡 핵심 요약 (이미지 트레이닝)</p>
               <p class="text-sm font-medium text-gray-800">
-                오른발로 버티면서 상체를 충분히 꼬아주고, 다운스윙은 머리를 공 뒤에 둔 채 왼쪽 골반으로 시작하여 멋지게 피니시를 잡는다!
+                오른발로 버티면서 상체를 충분히 꼬아주고, 다운스윙은 머리를 공 뒤에 둔 채 왼쪽 골반으로 시작하여, 왼발로 체중을 보내며 과감하게 던지고 멋지게 피니시를 잡는다!
               </p>
             </div>
-          </div>
 
-          <!-- PUTTER MISSION -->
-          <div id="mission-panel-putter" class="mission-panel hidden bg-gradient-to-br from-gray-50 to-fairway-light/30 rounded-2xl border border-gray-200 p-6 shadow-sm">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Putter Mission</span>
-              <h3 class="text-lg font-bold text-gray-900">퍼터 스트로크 핵심</h3>
-            </div>
-            <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs text-sm">
-              <p class="font-bold text-gray-900 mb-2">💡 퍼터 원칙</p>
-              <p class="text-gray-700 text-xs">어드레스 시 왼쪽 눈 아래 공을 두고 1:1 진자 템포 스트로크 유지.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">1</span>
+                  오른발 지지
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 백스윙 탑에서 체중 70~80%가 오른발 안쪽에 실림.</p>
+                <p class="text-gray-500 text-xs"><strong>중요성:</strong> 스웨이 축 무너짐을 방지하고 상체 꼬임(X-Factor)을 단단히 지탱.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">2</span>
+                  머리 고정 (축 유지)
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 척추 틸트 및 머리 위치를 임팩트까지 공 뒤(오른쪽)에 고정.</p>
+                <p class="text-gray-500 text-xs"><strong>중요성:</strong> 덤벼 치는 아웃-인 방지 및 자연스러운 어퍼블로(상향 타격) 완성.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">3</span>
+                  충분한 상체 회전
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 척추 중심 왼쪽 어깨가 오른발 무릎까지 회전 (등이 타깃을 봄).</p>
+                <p class="text-gray-500 text-xs"><strong>중요성:</strong> 드라이버 비거리의 원동력. 가슴/어깨 근육 꼬임으로 폭발적 헤드 스피드 창출.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">4</span>
+                  하체 리드 &amp; 골반 회전
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 전환 동작 시 왼쪽 골반을 타깃 방향으로 열며 시작.</p>
+                <p class="text-gray-500 text-xs"><strong>중요성:</strong> 엎어 치기(Over the top) 차단 및 인-아웃 궤도 공간 확보.</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">5</span>
+                  왼발 체중 이동
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 다운스윙과 임팩트 시 체중이 왼발 뒤꿈치로 과감히 이동.</p>
+                <p class="text-gray-500 text-xs"><strong>중요성:</strong> 단단한 왼발 벽 지지로 올려치는 샷에 비거리 파워 전달 (배치기 방지).</p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-xs">
+                <div class="flex items-center gap-2 font-bold text-gray-900 mb-1">
+                  <span class="w-6 h-6 rounded-full bg-fairway-light text-fairway flex items-center justify-center text-xs shrink-0">6</span>
+                  밸런스 피니시
+                </div>
+                <p class="text-gray-600 text-xs mb-1"><strong>설명:</strong> 왼발로 완전히 지탱하며 타깃을 향해 3초 이상 편안하게 피니시 버팀.</p>
+                <p class="text-gray-500 text-xs"><strong>중요성:</strong> 과도한 힘을 빼고 스윙 전체 템포 및 정타율을 몰라보게 향상.</p>
+              </div>
             </div>
           </div>
 
