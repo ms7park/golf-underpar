@@ -1316,179 +1316,226 @@
 
         <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
           <div class="overflow-x-auto">
-            <table class="w-full text-xs sm:text-sm">
+            <table class="w-full text-xs sm:text-sm border-collapse">
               <thead>
-                <tr class="bg-fairway text-white text-xs">
-                  <th class="text-left px-3 py-3.5 font-semibold whitespace-nowrap">클럽 종류</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">로프트</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">현재 캐리</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">현재 비거리</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">현재 볼스피드</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">목표 캐리</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">목표 비거리</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">목표 볼스피드</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">캐리 차이</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">비거리 차이</th>
-                  <th class="text-center px-2 py-3.5 font-semibold whitespace-nowrap">볼스피드 차이</th>
+                <!-- Group Level 1 Header -->
+                <tr class="text-white text-xs font-bold divide-x divide-white/20">
+                  <th colspan="2" class="text-center py-2.5 bg-fairway-dark align-middle whitespace-nowrap border-r-2 border-fairway-dark">클럽 스펙</th>
+                  <th colspan="3" class="text-center py-2.5 bg-slate-700 tracking-wider uppercase border-r-2 border-slate-600">📊 현재 (Current)</th>
+                  <th colspan="3" class="text-center py-2.5 bg-fairway tracking-wider uppercase border-r-2 border-fairway-dark">🎯 목표 (Target)</th>
+                  <th colspan="3" class="text-center py-2.5 bg-slate-800 tracking-wider uppercase">⚡ 목표 대비 차이 (Diff)</th>
+                </tr>
+                <!-- Metric Level 2 Header -->
+                <tr class="text-white text-[11px] divide-x divide-white/10 border-b border-gray-200">
+                  <th class="text-left px-3 py-2 bg-fairway-dark font-semibold whitespace-nowrap">클럽 종류</th>
+                  <th class="text-center px-2 py-2 bg-fairway-dark font-semibold whitespace-nowrap border-r-2 border-emerald-900">로프트</th>
+                  <!-- 현재 -->
+                  <th class="text-center px-2 py-2 bg-slate-600 font-semibold whitespace-nowrap">캐리</th>
+                  <th class="text-center px-2 py-2 bg-slate-600 font-semibold whitespace-nowrap">비거리</th>
+                  <th class="text-center px-2 py-2 bg-slate-600 font-semibold whitespace-nowrap border-r-2 border-slate-500">볼스피드</th>
+                  <!-- 목표 -->
+                  <th class="text-center px-2 py-2 bg-fairway/90 font-semibold whitespace-nowrap">캐리</th>
+                  <th class="text-center px-2 py-2 bg-fairway/90 font-semibold whitespace-nowrap">비거리</th>
+                  <th class="text-center px-2 py-2 bg-fairway/90 font-semibold whitespace-nowrap border-r-2 border-emerald-900">볼스피드</th>
+                  <!-- 차이 -->
+                  <th class="text-center px-2 py-2 bg-gray-700 font-semibold whitespace-nowrap">캐리</th>
+                  <th class="text-center px-2 py-2 bg-gray-700 font-semibold whitespace-nowrap">비거리</th>
+                  <th class="text-center px-2 py-2 bg-gray-700 font-semibold whitespace-nowrap">볼스피드</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-100 text-xs">
+              <tbody class="divide-y divide-gray-200 text-xs">
                 <!-- Table rows -->
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">드라이버 (Driver)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">10.5°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">180 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">200 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">55 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">200 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">220 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">60 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-20 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-20 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-5.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">드라이버 (Driver)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">10.5°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">180 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">200 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">55 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">200 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">220 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">60 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-20 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-20 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-5.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">3번 우드 (3W)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">15°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">170 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">180 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">55 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">180 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">190 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">58 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-3.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">3번 우드 (3W)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">15°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">170 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">180 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">55 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">180 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">190 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">58 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-3.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">3번 유틸 (3U)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">19°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">160 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">170 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">53 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">170 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">180 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">55 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">3번 유틸 (3U)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">19°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">160 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">170 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">53 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">170 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">180 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">55 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-2.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">4번 유틸 (4U)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">22°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">150 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">160 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">52 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">160 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">170 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">52 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">4번 유틸 (4U)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">22°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">150 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">160 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">52 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">160 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">170 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">52 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0.0 m/s 🎯</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">5번 아이언 (5I)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">24°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">140 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">150 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">49 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">150 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">160 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">50 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-1.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">5번 아이언 (5I)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">24°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">140 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">150 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">49 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">150 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">160 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">50 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-1.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">6번 아이언 (6I)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">27°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">130 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">140 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">48 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">140 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">150 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">48 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">6번 아이언 (6I)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">27°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">130 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">140 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">48 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">140 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">150 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">48 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0.0 m/s 🎯</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">7번 아이언 (7I)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">30°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">120 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">130 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">43 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">130 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">140 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">45 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">7번 아이언 (7I)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">30°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">120 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">130 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">43 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">130 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">140 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">45 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-2.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">8번 아이언 (8I)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">34°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">110 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">115 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">40 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">120 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">125 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">42 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">8번 아이언 (8I)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">34°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">110 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">115 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">40 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">120 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">125 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">42 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-2.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">9번 아이언 (9I)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">39°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">100 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">105 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">38 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">110 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">115 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">40 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-10 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-2.0 m/s</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">9번 아이언 (9I)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">39°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">100 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">105 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">38 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">110 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">115 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">40 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-10 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-2.0 m/s</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">PW (Pitching Wedge)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">44°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">95 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">100 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">35 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">100 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">105 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">35 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-5 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-orange-600">-5 m</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">PW (Pitching Wedge)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">44°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">95 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">100 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">35 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">100 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">105 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">35 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-5 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-orange-600 bg-orange-50/20">-5 m</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0.0 m/s 🎯</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">AW (Approach Wedge)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">50°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">85 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">90 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">33 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">85 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">90 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">33 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0 m 🎯</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0 m 🎯</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0.0 m/s 🎯</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">AW (Approach Wedge)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">50°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">85 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">90 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">33 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">85 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">90 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">33 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0 m 🎯</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0 m 🎯</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0.0 m/s 🎯</td>
                 </tr>
-                <tr class="hover:bg-fairway-light/40 transition-colors">
-                  <td class="px-3 py-3 font-bold text-gray-900 whitespace-nowrap">SW (Sand Wedge)</td>
-                  <td class="px-2 py-3 text-center text-fairway font-bold bg-fairway-light/20">56°</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">70 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">70 m</td>
-                  <td class="px-2 py-3 text-center text-gray-700 font-medium">32 m/s</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">70 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">70 m</td>
-                  <td class="px-2 py-3 text-center font-semibold text-fairway">30 m/s</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0 m 🎯</td>
-                  <td class="px-2 py-3 text-center font-bold text-green-600">0 m 🎯</td>
-                  <td class="px-2 py-3 text-center font-bold text-blue-600">+2.0 m/s 🚀</td>
+                <tr class="hover:bg-gray-100/70 transition-colors">
+                  <td class="px-3 py-2.5 font-bold text-gray-900 whitespace-nowrap bg-gray-50/50">SW (Sand Wedge)</td>
+                  <td class="px-2 py-2.5 text-center text-fairway font-bold bg-fairway-light/20 border-r-2 border-gray-200">56°</td>
+                  <!-- 현재 -->
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">70 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50">70 m</td>
+                  <td class="px-2 py-2.5 text-center text-gray-700 font-medium bg-slate-50/50 border-r-2 border-gray-200">32 m/s</td>
+                  <!-- 목표 -->
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">70 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30">70 m</td>
+                  <td class="px-2 py-2.5 text-center font-semibold text-fairway bg-emerald-50/30 border-r-2 border-gray-200">30 m/s</td>
+                  <!-- 차이 -->
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0 m 🎯</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-green-600 bg-orange-50/20">0 m 🎯</td>
+                  <td class="px-2 py-2.5 text-center font-bold text-blue-600 bg-orange-50/20">+2.0 m/s 🚀</td>
                 </tr>
               </tbody>
             </table>
