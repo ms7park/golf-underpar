@@ -119,10 +119,13 @@
   - AW (Approach Wedge-50) : 85/90/33 / 85/90/33
   - SW (Send Wedge-56) : 70/70/32 / 70/70/30
 
-4. Field Notes 
+5. Screen Round
+ - docs/screenround 폴더 하위에 screenround-*.png 파일 참고
+
+6. Field Notes
  - docs/fieldnotes 폴더 하위에 fieldnotes.txt, field-*.txt 파일 참고
 
-5. Practice Logs 
+7. Practice Logs
  - docs/practice 폴더 하위에 practice.txt, yyyymm-*.txt 파일 참고
  - yyyymm : 년월 
 
