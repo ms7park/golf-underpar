@@ -1921,42 +1921,70 @@
                 </div>
               </div>
 
-              <!-- Round Analysis Images Carousel Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <!-- Image 1: Scorecard -->
-                <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
-                  <p class="text-[11px] font-bold text-gray-800 mb-1.5">📊 스코어 카드</p>
-                  <div class="w-full h-36 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
-                    <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828201/Screenshot_20260816_060153_bzbdar.jpg" alt="라운딩 기록 스코어카드" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
-                    <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+              <!-- Round Analysis Images 2x2 Grid -->
+              <div class="space-y-4">
+                <!-- Row 1: 라운딩 기록 & 라운드 분석 -->
+                <div>
+                  <p class="text-xs font-bold text-gray-700 mb-2 flex items-center gap-1">
+                    <span>📌</span> Row 1 — 라운딩 기록 &amp; 라운드 분석
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 1. 라운딩 기록 (스코어카드) -->
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
+                      <p class="text-xs font-bold text-gray-900 mb-2 flex items-center justify-between w-full">
+                        <span>📊 라운딩 기록 (스코어카드)</span>
+                        <span class="text-[10px] text-gray-500 font-normal">한원 CC 86타</span>
+                      </p>
+                      <div class="w-full h-52 sm:h-60 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828201/Screenshot_20260816_060153_bzbdar.jpg" alt="라운딩 기록 스코어카드" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                        <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur pointer-events-none">🔍 크게보기</span>
+                      </div>
+                    </div>
+
+                    <!-- 2. 라운드 분석 (종합 리포트) -->
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
+                      <p class="text-xs font-bold text-gray-900 mb-2 flex items-center justify-between w-full">
+                        <span>📈 라운드 분석 (종합 리포트)</span>
+                        <span class="text-[10px] text-gray-500 font-normal">지표 종합 분석</span>
+                      </p>
+                      <div class="w-full h-52 sm:h-60 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828218/Screenshot_20260816_060319_qs1903.jpg" alt="라운드 분석 종합 이미지" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                        <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur pointer-events-none">🔍 크게보기</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Image 2: Driver Shot Data -->
-                <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
-                  <p class="text-[11px] font-bold text-gray-800 mb-1.5">🚀 드라이버 샷 분석</p>
-                  <div class="w-full h-36 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
-                    <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828208/Screenshot_20260816_060204_skosua.jpg" alt="드라이버 샷 분석 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
-                    <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
-                  </div>
-                </div>
+                <!-- Row 2: 샷 분석 (드라이버 & 유틸/아이언) -->
+                <div>
+                  <p class="text-xs font-bold text-gray-700 mb-2 flex items-center gap-1">
+                    <span>📌</span> Row 2 — 샷 분석 (드라이버 &amp; 유틸/아이언)
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 3. 드라이버 샷 분석 -->
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
+                      <p class="text-xs font-bold text-gray-900 mb-2 flex items-center justify-between w-full">
+                        <span>🚀 샷 분석 — 드라이버</span>
+                        <span class="text-[10px] text-gray-500 font-normal">티샷 궤적 &amp; 정타율</span>
+                      </p>
+                      <div class="w-full h-52 sm:h-60 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828208/Screenshot_20260816_060204_skosua.jpg" alt="드라이버 샷 분석 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                        <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur pointer-events-none">🔍 크게보기</span>
+                      </div>
+                    </div>
 
-                <!-- Image 3: Iron/Utility Data -->
-                <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
-                  <p class="text-[11px] font-bold text-gray-800 mb-1.5">🎯 아이언/유틸 샷 분석</p>
-                  <div class="w-full h-36 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
-                    <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828213/Screenshot_20260816_060225_cbrmlm.jpg" alt="유틸 아이언 샷 분석 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
-                    <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                    <!-- 4. 유틸/아이언 샷 분석 -->
+                    <div class="bg-white p-3.5 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
+                      <p class="text-xs font-bold text-gray-900 mb-2 flex items-center justify-between w-full">
+                        <span>🎯 샷 분석 — 유틸 / 아이언</span>
+                        <span class="text-[10px] text-gray-500 font-normal">세컨샷 탄착군 &amp; GIR</span>
+                      </p>
+                      <div class="w-full h-52 sm:h-60 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828213/Screenshot_20260816_060225_cbrmlm.jpg" alt="유틸 아이언 샷 분석 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                        <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur pointer-events-none">🔍 크게보기</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              <!-- Full Round Analysis Banner -->
-              <div class="bg-white p-3 rounded-xl border border-gray-200 shadow-2xs flex flex-col items-center">
-                <p class="text-[11px] font-bold text-gray-800 mb-1.5">📈 종합 라운드 분석 리포트</p>
-                <div class="w-full h-44 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786828218/Screenshot_20260816_060319_qs1903.jpg" alt="라운드 분석 종합 이미지" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
-                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
             </div>
