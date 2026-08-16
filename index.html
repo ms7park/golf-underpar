@@ -599,8 +599,12 @@
 
         <!-- Reduced Size Day Tabs -->
         <div id="day-tabs" class="flex flex-wrap gap-1.5 mb-6" role="tablist" aria-label="레슨 일차 선택">
-          <button type="button" role="tab" aria-selected="true" data-day="5"
+          <button type="button" role="tab" aria-selected="true" data-day="6"
             class="day-tab active px-3 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
+            Day 6
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-day="5"
+            class="day-tab px-3 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
             Day 5
           </button>
           <button type="button" role="tab" aria-selected="false" data-day="4"
@@ -623,15 +627,141 @@
 
         <div class="space-y-6">
 
-          <!-- Day 5 Panel -->
-          <article id="lesson-day-5" role="tabpanel" class="lesson-panel lesson-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200">
+          <!-- Day 6 Panel -->
+          <article id="lesson-day-6" role="tabpanel" class="lesson-panel lesson-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200">
             <div class="p-6">
               <!-- Top Metadata: Date, Badge, Title -->
               <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-100">
                 <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">Day 5</span>
-                  <time class="text-xs font-bold text-gray-500">2026. 08. 09</time>
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">Day 6</span>
+                  <time class="text-xs font-bold text-gray-500">2026. 08. 16</time>
                   <span class="px-2 py-0.5 bg-fairway-light text-fairway text-xs font-bold rounded-md">최신 레슨</span>
+                </div>
+                <span class="text-xs font-semibold text-fairway bg-fairway-light px-2.5 py-0.5 rounded-full">유틸리티 스윙 메커니즘 레슨</span>
+              </div>
+
+              <h3 class="font-bold text-xl text-gray-900 mb-2">4번 유틸리티 (Util 4) — 힙 로테이션 &amp; 와이드 테이크어웨이 / 피니시 밸런스</h3>
+              <p class="text-sm text-gray-600 leading-relaxed mb-5">
+                미들/롱아이언의 정타 감각에 이어, 4번 유틸리티의 낮고 컴팩트한 백스윙과 하체 리드 힙 로테이션, 그리고 다이내믹 밸런스 피니시를 구축하여 볼스피드 53m/s 및 캐리 160m(총비거리 176m)의 폭발적인 퍼포먼스를 달성한 레슨입니다.
+              </p>
+
+              <!-- Videos & Data Image Grid -->
+              <div class="grid md:grid-cols-12 gap-6 mb-6">
+                <!-- Videos Container (Front / Side Videos + Launch Monitor Data) -->
+                <div class="md:col-span-5 flex flex-col space-y-3">
+                  <div class="grid grid-cols-2 gap-2">
+                    <!-- Front Video -->
+                    <div class="video-frame bg-gray-900 rounded-lg overflow-hidden shadow">
+                      <video class="w-full h-32 object-contain bg-black" controls preload="metadata">
+                        <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786885489/2026_08_16_18_43_47_w5vnsc.mp4" type="video/mp4">
+                      </video>
+                      <p class="text-[10px] text-gray-300 text-center py-1 bg-gray-900">🎬 정면 (힙턴 &amp; 암스피드)</p>
+                    </div>
+                    <!-- Side Video -->
+                    <div class="video-frame bg-gray-900 rounded-lg overflow-hidden shadow">
+                      <video class="w-full h-32 object-contain bg-black" controls preload="metadata">
+                        <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1786885497/2026_08_16_18_43_49_t3kggd.mp4" type="video/mp4">
+                      </video>
+                      <p class="text-[10px] text-gray-300 text-center py-1 bg-gray-900">🎬 측면 (스윙 플레인)</p>
+                    </div>
+                  </div>
+                  <!-- Launch Monitor Image -->
+                  <div class="w-full h-24 bg-gray-900 rounded-lg overflow-hidden relative group flex items-center justify-center border border-gray-200">
+                    <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786885509/20260816_184402_hzvjs9.jpg" alt="4번 유틸리티 런치모니터 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                    <span class="absolute bottom-1 right-1 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded pointer-events-none">📊 데이터 크게보기</span>
+                  </div>
+                </div>
+
+                <!-- Correction Points (교정 포인트) -->
+                <div class="md:col-span-7 flex flex-col justify-between">
+                  <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 space-y-3">
+                    <h4 class="text-xs font-bold text-fairway-dark uppercase tracking-wide flex items-center gap-1.5">
+                      <span>🎯</span> 핵심 레슨 포인트 &amp; 메커니즘
+                    </h4>
+                    <ul class="space-y-2 text-xs text-gray-700">
+                      <li class="flex gap-2">
+                        <span class="text-fairway font-bold shrink-0">•</span>
+                        <div><strong>낮고 컴팩트한 백스윙 (Wide Takeaway &amp; Compact Top):</strong> 손목 코킹을 성급히 꺾지 않고 지면을 따라 낮고 길게 테이크어웨이를 가져가 큰 회전 아크 형성. 샤프트가 긴 유틸리티의 오버스윙 및 척추각 흔들림 차단.</div>
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="text-fairway font-bold shrink-0">•</span>
+                        <div><strong>다운스윙 힙 로테이션 &amp; 암 스피드 (Kinematic Sequence):</strong> 전환 시 하체 골반 회전(힙 로테이션) 선행 시동 후 지연 타격(Lagging)과 채찍질하듯 빠른 암 스윙으로 볼스피드 53 m/s 창출.</div>
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="text-fairway font-bold shrink-0">•</span>
+                        <div><strong>릴리스 후 다이내믹 밸런스 (Dynamic Balance &amp; Left Post):</strong> 상체 덤빔(Lunging)을 방지하고 피벗 센터를 유지한 채 왼발 뒤꿈치 축 100% 체중 이동으로 완벽한 아이 레벨 피니시 완성.</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Mechanism Deep Dive & Evolution Table -->
+            <div class="border-t border-gray-100 bg-gray-50/60 px-6 py-5 space-y-4">
+              <p class="text-xs font-semibold text-fairway uppercase tracking-wide">전문 용어 및 메커니즘 심화 분석 (AI 정리)</p>
+              <div class="term-block pl-4 space-y-3 text-xs text-gray-700">
+                <div>
+                  <p class="font-bold text-gray-900 mb-0.5">1) 와이드 테이크어웨이 (Wide Takeaway) &amp; 컴팩트 백스윙 탑 (Compact Top of Swing)</p>
+                  <p class="text-gray-600">스윙 아크(Swing Arc)를 극대화하는 동시에 오버스윙 및 리버스 피벗(Reverse Pivot)을 억제하여 다운스윙 시 일관된 스윙 플레인으로 복귀하는 궤도 안정성 확보.</p>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-900 mb-0.5">2) 키네마틱 시퀀스 (Kinematic Sequence) &amp; 지면 반력 암 스피드 가속</p>
+                  <p class="text-gray-600">발-골반-상체-팔-클럽 순서로 에너지가 전달되는 올바른 파워 시퀀스를 구현하여 임팩트 순간 클럽 헤드 스피드와 볼스피드(53 m/s)를 폭발적으로 가속.</p>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-900 mb-0.5">3) 다이내믹 밸런스 (Dynamic Balance) &amp; 왼발 피벗 (Left Side Post)</p>
+                  <p class="text-gray-600">상체 덤빔(Lunging) 및 스웨이(Sway)를 차단하고 왼발 축으로 100% 체중이 이동하여 흔들림 없는 아이 레벨 피니시 형성.</p>
+                </div>
+              </div>
+
+              <!-- Lesson Evolution Summary Table -->
+              <div class="pt-3 border-t border-gray-200/80">
+                <p class="text-xs font-bold text-fairway-dark mb-2">📋 레슨 5일차 ~ 6일차 스윙 진화 과정 요약</p>
+                <div class="overflow-x-auto">
+                  <table class="w-full text-xs text-left text-gray-700 border-collapse">
+                    <thead>
+                      <tr class="bg-gray-100 text-gray-800 font-bold border-b border-gray-200">
+                        <th class="p-2">클럽</th>
+                        <th class="p-2">핵심 스윙 큐 (Feel)</th>
+                        <th class="p-2">적용 메커니즘 (Real)</th>
+                        <th class="p-2">기대 효과</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 bg-white">
+                      <tr>
+                        <td class="p-2 font-bold text-gray-900">7번 아이언</td>
+                        <td class="p-2">힘 빼고 휘두르기, 자연스러운 릴리스</td>
+                        <td class="p-2">그립 프레셔 완화 &amp; 힌징 해제</td>
+                        <td class="p-2 text-emerald-700 font-semibold">임팩트 효율 &amp; 볼스피드 증가</td>
+                      </tr>
+                      <tr>
+                        <td class="p-2 font-bold text-gray-900">5·6번 아이언</td>
+                        <td class="p-2">낮고 컴팩트한 백스윙, 부드러운 트랜지션</td>
+                        <td class="p-2">스윙 플레인 안정화 &amp; 샬로윙</td>
+                        <td class="p-2 text-blue-700 font-semibold">롱아이언 정타율(Smash Factor) 확보</td>
+                      </tr>
+                      <tr>
+                        <td class="p-2 font-bold text-fairway-dark">4번 유틸리티</td>
+                        <td class="p-2 font-medium">힙턴 + 빠른 팔 스윙 + 피니시 밸런스</td>
+                        <td class="p-2 font-medium">키네마틱 시퀀스 &amp; 다이내믹 밸런스</td>
+                        <td class="p-2 text-fairway font-bold">캐리 160m / 총 176m / 볼스피드 53m/s</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Day 5 Panel -->
+          <article id="lesson-day-5" role="tabpanel" hidden class="lesson-panel lesson-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200">
+            <div class="p-6">
+              <!-- Top Metadata: Date, Badge, Title -->
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 bg-fairway-dark text-white text-xs font-bold rounded-md">Day 5</span>
+                  <time class="text-xs font-bold text-gray-500">2026. 08. 09</time>
                 </div>
                 <span class="text-xs font-semibold text-fairway bg-fairway-light px-2.5 py-0.5 rounded-full">아이언 풀 릴리스 레슨</span>
               </div>
