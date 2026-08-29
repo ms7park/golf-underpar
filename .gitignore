@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+work/**/data/*.json
+work/**/data/raw_prices/
+work/**/reports/*.csv
+credentials.json
+.idea/
+test-gemini.js
