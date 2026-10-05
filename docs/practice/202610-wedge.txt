@@ -7,65 +7,65 @@
  2) 클럽별 / 거리별 전체 URL 목록 (Wedge-S, Wedge-W, Wedge-P, Iron 9)
 
   [1] Wedge-S (샌드웨지 : 20m ~ 50m)
-   (1) 20m
+   (1) 20m : 15.0m/19.1m/12.7 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980435/2026_10_03_07_27_03_fof8f1.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980462/2026_10_03_07_28_36_zdorn0.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980701/20261002_060947_wkulzx.jpg
-   (2) 30m
+   (2) 30m : 23.6m/29.2m/16.3 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980477/2026_10_03_07_28_40_zktkmy.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980489/2026_10_03_07_28_43_siuwqd.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980702/20261002_061304_v1fyni.jpg
-   (3) 40m
+   (3) 40m : 35.1m/39.7m/19.7 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980507/2026_10_03_07_29_02_ldctk4.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980526/2026_10_03_07_29_05_y95zgq.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980704/20261002_061459_t04kd6.jpg
-   (4) 50m
+   (4) 50m : 45.6m/49.5m/23.0 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980544/2026_10_03_07_29_10_xohuuk.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980559/2026_10_03_07_29_12_cosuv2.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980703/20261002_061805_qmxyms.jpg
 
   [2] Wedge-W / Wedge-A (어프로치웨지 : 50m ~ 80m)
-   (1) 50m
+   (1) 50m : 46.0m/50.7m/22.8 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980576/2026_10_03_07_29_16_cgojkc.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980593/2026_10_03_07_29_19_cfkvnb.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980705/20261002_062118_j2jhjr.jpg
-   (2) 60m
+   (2) 60m : 56.5m/61.4m/25.6 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980606/2026_10_03_07_29_24_axrwv1.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980650/2026_10_03_07_29_27_wb0o49.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980704/20261002_062605_kopphv.jpg
-   (3) 70m
+   (3) 70m : 63.7m/71.2m/27.1 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980651/2026_10_03_07_29_31_bpoxzu.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980652/2026_10_03_07_29_33_v8issf.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980705/20261002_062822_ded3uy.jpg
-   (4) 80m
+   (4) 80m : 75.3m/82.3m/30.0 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980652/2026_10_03_07_29_37_vmsjxe.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980652/2026_10_03_07_29_39_plr2i1.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980705/20261002_063032_vbw6ja.jpg
 
   [3] Wedge-P (피칭웨지 : 80m ~ 90m)
-   (1) 80m
+   (1) 80m : 71.6m/80.7m/28.8 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980653/2026_10_03_07_29_43_df7z0g.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980654/2026_10_03_07_29_45_nvfcyg.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980706/20261002_063227_sir1ou.jpg
-   (2) 90m
+   (2) 90m : 79.9m/87.5m/31.3 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980655/2026_10_03_07_29_49_rfm3iq.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980656/2026_10_03_07_29_51_sjzhhf.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980707/20261002_063432_xt1gzu.jpg
-   (3) 90m (스퀘어 스탠스)
+   (3) 90m (스퀘어 스탠스) : 82.6m/87.5m/33.2 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980657/2026_10_03_07_29_55_o85hvm.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980657/2026_10_03_07_29_57_rwys0h.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980709/20261002_063807_zytdwi.jpg
 
   [4] Iron 9 (9번 아이언 : 90m ~ 105m)
-   (1) 90m
+   (1) 90m : 86.7m/92.7m/33.7 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980658/2026_10_03_07_30_02_oofctf.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980659/2026_10_03_07_30_07_rncakh.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980709/20261002_064047_qkmajn.jpg
-   (2) 90m (스퀘어 스탠스)
+   (2) 90m (스퀘어 스탠스) : 78.9m/90.1m/32.9 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980660/2026_10_03_07_30_10_a1ynuz.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980660/2026_10_03_07_30_12_kzt2zw.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980710/20261002_064319_bujtge.jpg
-   (3) 105m (스퀘어 스탠스 Best)
+   (3) 105m (스퀘어 스탠스 Best) : 100.0m/106.8m/37.6 (캐리/비거리/볼스피드)
     - 정면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980661/2026_10_03_07_30_16_utyn7j.mp4
     - 측면 : https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980662/2026_10_03_07_30_18_gicw7l.mp4
     - 스윙 데이터 : https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980711/20261002_065504_niuc7j.jpg
