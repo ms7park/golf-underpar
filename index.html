@@ -2310,19 +2310,19 @@
           </button>
           <button type="button" role="tab" aria-selected="false" data-club="9i"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            9번 아이언
+            9번 아이언 <span class="ml-1 px-1.5 py-0.5 text-[10px] rounded-full bg-fairway-light text-fairway font-bold">4</span>
           </button>
           <button type="button" role="tab" aria-selected="false" data-club="pw"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            피칭 웨지 (PW)
+            피칭 웨지 (PW) <span class="ml-1 px-1.5 py-0.5 text-[10px] rounded-full bg-fairway-light text-fairway font-bold">4</span>
           </button>
           <button type="button" role="tab" aria-selected="false" data-club="aw"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            어프로치 웨지 (W)
+            어프로치 웨지 (W) <span class="ml-1 px-1.5 py-0.5 text-[10px] rounded-full bg-fairway-light text-fairway font-bold">5</span>
           </button>
           <button type="button" role="tab" aria-selected="false" data-club="sw"
             class="video-tab px-3.5 py-1.5 text-xs font-bold rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-fairway hover:text-fairway transition-all shadow-xs">
-            샌드 웨지 (S)
+            샌드 웨지 (S) <span class="ml-1 px-1.5 py-0.5 text-[10px] rounded-full bg-fairway-light text-fairway font-bold">5</span>
           </button>
         </div>
 
@@ -2768,12 +2768,44 @@
             </div>
           </div>
 
-          <!-- Best 9: Iron 9 -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="9i">
+          <!-- Best 9: Iron 9 (Multi-Distance: 110m, 105m, 90m) -->
+          <div class="video-card-item hidden space-y-6" data-club="9i">
+          <!-- Distance Sub-Filter Bar for 9i -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold text-gray-700 flex items-center gap-1.5 mr-1">
+                <span class="w-2 h-2 rounded-full bg-fairway inline-block"></span>
+                <span>거리별 스윙:</span>
+              </span>
+              <div class="flex flex-wrap gap-1.5 sub-distance-filter" data-parent-club="9i">
+              <button type="button" class="sub-dist-btn active px-3 py-1.5 text-xs font-bold rounded-lg bg-fairway text-white shadow-xs transition-all" data-target-dist="all">
+                전체 보기 (4)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="9i-110m">
+                110m (스퀘어 Best)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="9i-105m">
+                105m (스퀘어 Best)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="9i-90m-open">
+                90m (오픈 스탠스)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="9i-90m-sq">
+                90m (스퀘어 스탠스)
+              </button>
+              </div>
+            </div>
+            <div class="text-[11px] font-medium text-gray-500 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-200">
+              2026.10.02 연습 분석 반영
+            </div>
+          </div>
+          <!-- 2026.08.10 — 9번 아이언 110m (스퀘어 스탠스 Best) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="9i-110m">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 9</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 9번 아이언 Best 스윙</h3>
+                <span class="px-2 py-0.5 bg-blue-600 text-white text-xs font-bold rounded-md shadow-2xs">Best</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.10 — 9번 아이언 110m (스퀘어 스탠스 Best)</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
                 캐리: 110.0m / 비거리: 114.0m (볼스피드 42.0 m/s)
@@ -2801,41 +2833,255 @@
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320254/20260810_064024_dqdtwo.jpg" alt="9번 아이언 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786320254/20260810_064024_dqdtwo.jpg" alt="2026.08.10 — 9번 아이언 110m (스퀘어 스탠스 Best) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
             </div>
 
-            <!-- Concise Pros & Corrections -->
+            <!-- Metrics & Analysis -->
             <div class="grid md:grid-cols-2 gap-4 text-xs">
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 ~25.0m · 발사각 ~26.0° · 백스핀 7,300rpm · 방향각 0.0°</span>
+                </div>
                 <p class="text-gray-700 leading-relaxed">
                   강력한 스톱핑 파워(7,300 rpm 백스핀 / 런 4m 이내)로 핀 직접 공략 용이, 일관된 핸드 퍼스트 임팩트로 디센딩 블로우 컴프레션 형성.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
                 <p class="text-gray-700 leading-relaxed">
                   과도한 인-아웃 풀(Pull) 감김 방지를 위해 다운스윙 트랜지션 시 하체 회전을 적극적으로 활용해 타겟 정면 방향으로 몸 열어주기.
                 </p>
               </div>
             </div>
           </div>
+          <!-- 2026.10.02 — 9번 아이언 105m (스퀘어 스탠스 Best) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="9i-105m">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 9</span>
+                <span class="px-2 py-0.5 bg-blue-600 text-white text-xs font-bold rounded-md shadow-2xs">Best</span>
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 9번 아이언 105m (스퀘어 스탠스 Best)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 100.0m / 비거리: 106.8m (볼스피드 37.6 m/s)
+              </div>
+            </div>
 
-          <!-- Best 10: Wedge P -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="pw">
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980661/2026_10_03_07_30_16_utyn7j.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980662/2026_10_03_07_30_18_gicw7l.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980711/20261002_065504_niuc7j.jpg" alt="2026.10.02 — 9번 아이언 105m (스퀘어 스탠스 Best) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 21.9m · 발사각 29.1° · 백스핀 4,317rpm · 방향각 L1.4°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  캐리 정확히 100.0m 기록 및 총거리 106.8m 도달, 볼스피드 37.6 m/s &amp; 백스핀 4,317 rpm의 최적 런치 조건으로 105m 기준 완벽한 Best 샷 달성.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  100m 이상 타겟 공략 시 일관된 비거리를 위해 피니시 끝까지 왼발 축 다이내믹 밸런스 유지 및 상체 들림 제어.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 9번 아이언 90m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="9i-90m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 9</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 9번 아이언 90m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 86.7m / 비거리: 92.7m (볼스피드 33.7 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980658/2026_10_03_07_30_02_oofctf.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980659/2026_10_03_07_30_07_rncakh.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980709/20261002_064047_qkmajn.jpg" alt="2026.10.02 — 9번 아이언 90m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 23.9m · 발사각 37.2° · 백스핀 2,770rpm · 방향각 L3.2°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  오픈 스탠스로 궤도를 안정화하여 37.2°의 높은 고탄도(최고높이 23.9m)와 캐리 86.7m를 확보, 90m 타겟 존에 부드러운 소프트 랜딩 형성.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  오픈 스탠스 시 페이스가 열려 푸시가 나지 않도록 다운스윙 시 오른팔 전완근 로테이션과 스퀘어 임팩트 타이밍 집중.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 9번 아이언 90m (스퀘어 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="9i-90m-sq">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Iron 9</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 9번 아이언 90m (스퀘어 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 78.9m / 비거리: 90.1m (볼스피드 32.9 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980660/2026_10_03_07_30_10_a1ynuz.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980660/2026_10_03_07_30_12_kzt2zw.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980710/20261002_064319_bujtge.jpg" alt="2026.10.02 — 9번 아이언 90m (스퀘어 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 11.6m · 발사각 22.8° · 백스핀 5,293rpm · 방향각 L1.8°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  스퀘어 셋업을 통한 높은 백스핀(5,293 rpm)과 견고한 정타 컨택으로 정확히 90.1m 총 비거리 도달.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  발사각(22.8°)과 최고높이(11.6m)가 낮아 런이 11m 발생하므로 상체 덤빔을 제어하고 완만한 입사각으로 캐리 비중 증대.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Best 10: Wedge P (Multi-Distance: 95m, 90m, 80m) -->
+          <div class="video-card-item hidden space-y-6" data-club="pw">
+          <!-- Distance Sub-Filter Bar for pw -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold text-gray-700 flex items-center gap-1.5 mr-1">
+                <span class="w-2 h-2 rounded-full bg-fairway inline-block"></span>
+                <span>거리별 스윙:</span>
+              </span>
+              <div class="flex flex-wrap gap-1.5 sub-distance-filter" data-parent-club="pw">
+              <button type="button" class="sub-dist-btn active px-3 py-1.5 text-xs font-bold rounded-lg bg-fairway text-white shadow-xs transition-all" data-target-dist="all">
+                전체 보기 (4)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="pw-95m">
+                95m (오픈 Best)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="pw-90m-sq">
+                90m (스퀘어)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="pw-90m-open">
+                90m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="pw-80m-open">
+                80m (오픈)
+              </button>
+              </div>
+            </div>
+            <div class="text-[11px] font-medium text-gray-500 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-200">
+              2026.10.02 연습 분석 반영
+            </div>
+          </div>
+          <!-- 2026.08.14 — 피칭 웨지(PW) 95m (오픈 스탠스 Best) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="pw-95m">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge P</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 피칭 웨지(P) Best 스윙</h3>
+                <span class="px-2 py-0.5 bg-blue-600 text-white text-xs font-bold rounded-md shadow-2xs">Best</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 피칭 웨지(PW) 95m (오픈 스탠스 Best)</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
                 캐리: 95.0m / 비거리: 97.0m (볼스피드 37.5 m/s)
               </div>
             </div>
 
+            <!-- Media Grid -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
               <div class="md:col-span-5">
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
@@ -2856,40 +3102,258 @@
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742752/20260814_202251_msc6wv.jpg" alt="피칭 웨지 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742752/20260814_202251_msc6wv.jpg" alt="2026.08.14 — 피칭 웨지(PW) 95m (오픈 스탠스 Best) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
             </div>
 
+            <!-- Metrics & Analysis -->
             <div class="grid md:grid-cols-2 gap-4 text-xs">
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 ~24.0m · 발사각 ~30.0° · 백스핀 8,000rpm · 방향각 0.0°</span>
+                </div>
                 <p class="text-gray-700 leading-relaxed">
                   9번 아이언(Carry 110m)과 15m 차이의 정확한 거리 갭핑 형성, 핸드 퍼스트 임팩트로 8,000rpm 이상의 강력한 스핀 &amp; 다운블로우 타격.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
                 <p class="text-gray-700 leading-relaxed">
                   비거리를 채우려는 무리한 풀스윙 대신 3/4 백스윙과 단단한 체간 회전(Core Rotation)으로 오버스윙 및 스쿠핑 방지.
                 </p>
               </div>
             </div>
           </div>
+          <!-- 2026.10.02 — 피칭 웨지(PW) 90m (스퀘어 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="pw-90m-sq">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge P</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 피칭 웨지(PW) 90m (스퀘어 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 82.6m / 비거리: 87.5m (볼스피드 33.2 m/s)
+              </div>
+            </div>
 
-          <!-- Best 11: Wedge W -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="aw">
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980657/2026_10_03_07_29_55_o85hvm.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980657/2026_10_03_07_29_57_rwys0h.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980709/20261002_063807_zytdwi.jpg" alt="2026.10.02 — 피칭 웨지(PW) 90m (스퀘어 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 23.5m · 발사각 37.5° · 백스핀 3,349rpm · 방향각 0.0°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  좌우 방향각 0.0°의 완벽한 직진 궤도 실현, 최고높이 23.5m의 고탄도와 캐리 82.6m로 런 5m 이내 정교한 핀 직접 공략.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  스퀘어 셋업에서 페이스가 닫혀 감기지 않도록 다운스윙 시 몸통 회전과 함께 자연스러운 로테이션 유지.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 피칭 웨지(PW) 90m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="pw-90m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge P</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 피칭 웨지(PW) 90m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 79.9m / 비거리: 87.5m (볼스피드 31.3 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980655/2026_10_03_07_29_49_rfm3iq.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980656/2026_10_03_07_29_51_sjzhhf.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980707/20261002_063432_xt1gzu.jpg" alt="2026.10.02 — 피칭 웨지(PW) 90m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 17.3m · 발사각 32.3° · 백스핀 3,200rpm · 방향각 L0.4°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  오픈 스탠스로 궤도를 안정화하여 방향각 L0.4°의 정밀한 샷 형성, 캐리 79.9m / 총거리 87.5m로 안정적인 90m 안쪽 공략.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  어깨 높이 스윙 시 상체와 하체의 꼬임 일체감을 유지하여 안정적인 임팩트 파워 전달.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 피칭 웨지(PW) 80m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="pw-80m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge P</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 피칭 웨지(PW) 80m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 71.6m / 비거리: 80.7m (볼스피드 28.8 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980653/2026_10_03_07_29_43_df7z0g.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980654/2026_10_03_07_29_45_nvfcyg.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980706/20261002_063227_sir1ou.jpg" alt="2026.10.02 — 피칭 웨지(PW) 80m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 14.5m · 발사각 32.2° · 백스핀 2,795rpm · 방향각 R0.6°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  가슴 높이(3/4 스윙)로 총거리 80.7m에 정확히 배달, 방향각 R0.6°의 중립적 탄도 형성.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  캐리 75m를 목표로 다운스윙 시 손목 풀림을 방지하고 가슴 턴으로 볼을 눌러치는 다운블로우 강화.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Best 11: Wedge W (Multi-Distance: 85m, 80m, 70m, 60m, 50m) -->
+          <div class="video-card-item hidden space-y-6" data-club="aw">
+          <!-- Distance Sub-Filter Bar for aw -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold text-gray-700 flex items-center gap-1.5 mr-1">
+                <span class="w-2 h-2 rounded-full bg-fairway inline-block"></span>
+                <span>거리별 스윙:</span>
+              </span>
+              <div class="flex flex-wrap gap-1.5 sub-distance-filter" data-parent-club="aw">
+              <button type="button" class="sub-dist-btn active px-3 py-1.5 text-xs font-bold rounded-lg bg-fairway text-white shadow-xs transition-all" data-target-dist="all">
+                전체 보기 (5)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="aw-85m">
+                85m (스퀘어 Best)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="aw-80m-open">
+                80m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="aw-70m-open">
+                70m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="aw-60m-open">
+                60m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="aw-50m-open">
+                50m (오픈)
+              </button>
+              </div>
+            </div>
+            <div class="text-[11px] font-medium text-gray-500 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-200">
+              2026.10.02 연습 분석 반영
+            </div>
+          </div>
+          <!-- 2026.08.14 — 어프로치 웨지(W) 85m (스퀘어 스탠스 Best) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="aw-85m">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge W</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 어프로치 웨지(W) Best 스윙</h3>
+                <span class="px-2 py-0.5 bg-blue-600 text-white text-xs font-bold rounded-md shadow-2xs">Best</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 어프로치 웨지(W) 85m (스퀘어 스탠스 Best)</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
                 캐리: 84.0m / 비거리: 88.0m (볼스피드 33.5 m/s)
               </div>
             </div>
 
+            <!-- Media Grid -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
               <div class="md:col-span-5">
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
@@ -2910,40 +3374,317 @@
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742778/20260814_202711_yln0fo.jpg" alt="어프로치 웨지 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742778/20260814_202711_yln0fo.jpg" alt="2026.08.14 — 어프로치 웨지(W) 85m (스퀘어 스탠스 Best) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
             </div>
 
+            <!-- Metrics & Analysis -->
             <div class="grid md:grid-cols-2 gap-4 text-xs">
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 ~23.0m · 발사각 ~34.0° · 백스핀 8,800rpm · 방향각 0.0°</span>
+                </div>
                 <p class="text-gray-700 leading-relaxed">
                   8,800rpm 수준의 백스핀과 50° 이상의 가파른 하강각으로 런 4m 이내 스톱, 정교한 인-아웃 패스로 사이드스핀 극소화.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
                 <p class="text-gray-700 leading-relaxed">
                   임팩트 순간 캐스팅/플리핑으로 로프트가 지나치게 눕지 않도록 왼 손목의 평평함(Flat Lead Wrist) 유지 다이내믹 로프트 제어.
                 </p>
               </div>
             </div>
           </div>
+          <!-- 2026.10.02 — 어프로치 웨지(W) 80m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="aw-80m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge W</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 어프로치 웨지(W) 80m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 75.3m / 비거리: 82.3m (볼스피드 30.0 m/s)
+              </div>
+            </div>
 
-          <!-- Best 12: Wedge S -->
-          <div class="video-card-item hidden bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-club="sw">
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980652/2026_10_03_07_29_37_vmsjxe.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980652/2026_10_03_07_29_39_plr2i1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980705/20261002_063032_vbw6ja.jpg" alt="2026.10.02 — 어프로치 웨지(W) 80m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 17.1m · 발사각 34.0° · 백스핀 2,934rpm · 방향각 L4.1°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  어깨 높이 스윙으로 볼스피드 30.0 m/s 창출, 캐리 75.3m / 총거리 82.3m로 80m 거리 확실한 정복.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  좌측으로 감기는 현상(L4.1°) 방지를 위해 임팩트 후 양팔을 타겟 쪽으로 길게 익스텐션할 것.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 어프로치 웨지(W) 70m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="aw-70m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge W</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 어프로치 웨지(W) 70m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 63.7m / 비거리: 71.2m (볼스피드 27.1 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980651/2026_10_03_07_29_31_bpoxzu.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980652/2026_10_03_07_29_33_v8issf.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980705/20261002_062822_ded3uy.jpg" alt="2026.10.02 — 어프로치 웨지(W) 70m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 14.7m · 발사각 35.0° · 백스핀 2,978rpm · 방향각 L1.2°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  가슴 높이(3/4 스윙)와 하체 리드로 백스핀 2,978 rpm 확보, 캐리 63.7m / 비거리 71.2m의 이상적인 70m 안착.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  임팩트 구간에서 손목 장난을 치지 않고 몸통 회전 축을 끝까지 지키는 일관성 확보.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 어프로치 웨지(W) 60m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="aw-60m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge W</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 어프로치 웨지(W) 60m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 56.5m / 비거리: 61.4m (볼스피드 25.6 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980606/2026_10_03_07_29_24_axrwv1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980650/2026_10_03_07_29_27_wb0o49.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980704/20261002_062605_kopphv.jpg" alt="2026.10.02 — 어프로치 웨지(W) 60m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 15.7m · 발사각 40.3° · 백스핀 2,405rpm · 방향각 R0.2°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  가슴 중간 높이 백스윙, 방향각 R0.2°의 똑바른 탄도와 캐리 56.5m / 총거리 61.4m로 60m 정밀 공략.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  40.3°의 높은 발사각을 살려 그린 위에 런 없이 부드럽게 세우는 다운블로우 터치 집중.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 어프로치 웨지(W) 50m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="aw-50m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge W</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 어프로치 웨지(W) 50m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 46.0m / 비거리: 50.7m (볼스피드 22.8 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980576/2026_10_03_07_29_16_cgojkc.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980593/2026_10_03_07_29_19_cfkvnb.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980705/20261002_062118_j2jhjr.jpg" alt="2026.10.02 — 어프로치 웨지(W) 50m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 11.2m · 발사각 37.6° · 백스핀 2,655rpm · 방향각 R0.3°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  허리 높이 하프 스윙, 캐리 46.0m / 비거리 50.7m 및 방향각 R0.3°로 오차 없는 50m 핀 하이 공략.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  스윙이 작아져도 헤드를 감속하지 않고 팔로우스루까지 자연스러운 가슴 턴 연결.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- Best 12: Wedge S (Multi-Distance: 75m, 50m, 40m, 30m, 20m) -->
+          <div class="video-card-item hidden space-y-6" data-club="sw">
+          <!-- Distance Sub-Filter Bar for sw -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold text-gray-700 flex items-center gap-1.5 mr-1">
+                <span class="w-2 h-2 rounded-full bg-fairway inline-block"></span>
+                <span>거리별 스윙:</span>
+              </span>
+              <div class="flex flex-wrap gap-1.5 sub-distance-filter" data-parent-club="sw">
+              <button type="button" class="sub-dist-btn active px-3 py-1.5 text-xs font-bold rounded-lg bg-fairway text-white shadow-xs transition-all" data-target-dist="all">
+                전체 보기 (5)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="sw-75m">
+                75m (스퀘어 Best)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="sw-50m-open">
+                50m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="sw-40m-open">
+                40m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="sw-30m-open">
+                30m (오픈)
+              </button>
+              <button type="button" class="sub-dist-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-fairway transition-all" data-target-dist="sw-20m-open">
+                20m (오픈)
+              </button>
+              </div>
+            </div>
+            <div class="text-[11px] font-medium text-gray-500 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-200">
+              2026.10.02 연습 분석 반영
+            </div>
+          </div>
+          <!-- 2026.08.14 — 샌드 웨지(SW) 75m (스퀘어 스탠스 Best) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="sw-75m">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
               <div class="flex items-center gap-2">
                 <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge S</span>
-                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 샌드 웨지(S) Best 스윙</h3>
+                <span class="px-2 py-0.5 bg-blue-600 text-white text-xs font-bold rounded-md shadow-2xs">Best</span>
+                <h3 class="font-bold text-base text-gray-900">2026.08.14 — 샌드 웨지(SW) 75m (스퀘어 스탠스 Best)</h3>
               </div>
               <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
                 캐리: 74.0m / 비거리: 76.0m (볼스피드 32.0 m/s)
               </div>
             </div>
 
+            <!-- Media Grid -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
               <div class="md:col-span-5">
                 <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
@@ -2964,30 +3705,268 @@
               <div class="md:col-span-2 flex flex-col">
                 <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
                 <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
-                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742795/20260814_202842_ntdas4.jpg" alt="샌드 웨지 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1786742795/20260814_202842_ntdas4.jpg" alt="2026.08.14 — 샌드 웨지(SW) 75m (스퀘어 스탠스 Best) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
                   <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
                 </div>
               </div>
             </div>
 
+            <!-- Metrics & Analysis -->
             <div class="grid md:grid-cols-2 gap-4 text-xs">
               <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
-                <p class="font-bold text-green-700 mb-1 flex items-center gap-1">👍 주요 장점</p>
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 ~22.0m · 발사각 ~36.0° · 백스핀 9,400rpm · 방향각 0.0°</span>
+                </div>
                 <p class="text-gray-700 leading-relaxed">
                   9,400rpm 초고스핀량으로 착지 후 2m 내 정지하는 원바운드 스톱 능력, 솔 바운스를 자연스럽게 지면에 미끄러뜨리는 레벨 릴리즈.
                 </p>
               </div>
               <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
-                <p class="font-bold text-orange-700 mb-1 flex items-center gap-1">🛠️ 교정 포인트</p>
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
                 <p class="text-gray-700 leading-relaxed">
                   짧은 클럽 백스윙 시 척추각이 꺾이는 리버스 피벗(Reverse Pivot) 방지를 위해 우측 고관절 체중 적재 후 하체 턴 리드.
                 </p>
               </div>
             </div>
           </div>
+          <!-- 2026.10.02 — 샌드 웨지(SW) 50m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="sw-50m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge S</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 샌드 웨지(SW) 50m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 45.6m / 비거리: 49.5m (볼스피드 23.0 m/s)
+              </div>
+            </div>
 
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980544/2026_10_03_07_29_10_xohuuk.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980559/2026_10_03_07_29_12_cosuv2.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980703/20261002_061805_qmxyms.jpg" alt="2026.10.02 — 샌드 웨지(SW) 50m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
 
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 12.7m · 발사각 40.8° · 백스핀 2,786rpm · 방향각 L1.5°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  가슴 높이 3/4 스윙으로 캐리 45.6m / 총거리 49.5m 달성, 샌드웨지 기준 높은 스핀량과 안정된 탄도 형성.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  50m 풀 웨지 샷에서 헤드업을 방지하고 상체 회전 축을 끝까지 지키는 임팩트 유지.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 샌드 웨지(SW) 40m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="sw-40m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge S</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 샌드 웨지(SW) 40m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 35.1m / 비거리: 39.7m (볼스피드 19.7 m/s)
+              </div>
+            </div>
 
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980507/2026_10_03_07_29_02_ldctk4.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980526/2026_10_03_07_29_05_y95zgq.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980704/20261002_061459_t04kd6.jpg" alt="2026.10.02 — 샌드 웨지(SW) 40m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 9.1m · 발사각 41.0° · 백스핀 1,863rpm · 방향각 R1.7°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  가슴 중간(하프~3/4) 크기로 몸통 회전과 헤드 스피드를 부드럽게 가속, 캐리 35.1m / 비거리 39.7m 완성.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  41.0°의 충분한 로프트 탄도를 활용하되, 체중을 왼발에 안정적으로 지탱하여 뒷땅 방지.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 샌드 웨지(SW) 30m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="sw-30m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge S</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 샌드 웨지(SW) 30m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 23.6m / 비거리: 29.2m (볼스피드 16.3 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980477/2026_10_03_07_28_40_zktkmy.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980489/2026_10_03_07_28_43_siuwqd.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980702/20261002_061304_v1fyni.jpg" alt="2026.10.02 — 샌드 웨지(SW) 30m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 4.6m · 발사각 34.4° · 백스핀 1,941rpm · 방향각 L0.9°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  허리 높이 하프 스윙에서 일정한 리듬과 정타 컨택, 캐리 23.6m / 비거리 29.2m로 30m 숏게임 공략 최적화.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  백스윙과 팔로우스루 크기를 1:1로 맞추어 손목 감속 없이 부드럽게 헤드를 던져주는 릴리스.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2026.10.02 — 샌드 웨지(SW) 20m (오픈 스탠스) -->
+          <div class="dist-card-item bg-gray-50 rounded-2xl border border-gray-200 p-6 shadow-sm" data-dist="sw-20m-open">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-200">
+              <div class="flex items-center gap-2">
+                <span class="px-3 py-1 bg-fairway text-white text-xs font-bold rounded-full">Wedge S</span>
+                
+                <h3 class="font-bold text-base text-gray-900">2026.10.02 — 샌드 웨지(SW) 20m (오픈 스탠스)</h3>
+              </div>
+              <div class="text-xs font-bold text-fairway-dark bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-2xs">
+                캐리: 15.0m / 비거리: 19.1m (볼스피드 12.7 m/s)
+              </div>
+            </div>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-5 items-stretch">
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 정면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980435/2026_10_03_07_27_03_fof8f1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-5">
+                <p class="text-xs font-semibold text-gray-600 mb-1">📹 측면 스윙 영상</p>
+                <div class="video-frame bg-gray-900 rounded-xl overflow-hidden shadow">
+                  <video class="w-full h-full object-contain bg-black" controls preload="metadata">
+                    <source src="https://res.cloudinary.com/dn8qzpehj/video/upload/v1790980462/2026_10_03_07_28_36_zdorn0.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="md:col-span-2 flex flex-col">
+                <p class="text-xs font-semibold text-gray-600 mb-1 truncate">📊 스윙 데이터</p>
+                <div class="flex-1 min-h-[140px] bg-gray-900 rounded-xl overflow-hidden shadow flex items-center justify-center relative group">
+                  <img src="https://res.cloudinary.com/dn8qzpehj/image/upload/v1790980701/20261002_060947_wkulzx.jpg" alt="2026.10.02 — 샌드 웨지(SW) 20m (오픈 스탠스) 스윙 데이터" class="w-full h-full object-contain bg-black cursor-pointer group-hover:scale-[1.02] transition-transform" onclick="window.open(this.src, '_blank')" title="클릭시 원본 크게보기">
+                  <span class="absolute bottom-1.5 right-1.5 bg-black/75 text-white text-[9px] px-1.5 py-0.5 rounded backdrop-blur pointer-events-none">🔍 확대</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Metrics & Analysis -->
+            <div class="grid md:grid-cols-2 gap-4 text-xs">
+              <div class="bg-white rounded-xl p-4 border border-green-200 shadow-2xs">
+                <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                  <p class="font-bold text-green-700 flex items-center gap-1">👍 주요 장점 &amp; 런치 데이터</p>
+                  <span class="text-[10px] text-gray-500 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">최고높이 3.0m · 발사각 36.6° · 백스핀 1,986rpm · 방향각 L1.6°</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                  허리 아래 컴팩트한 시계추 모션으로 손목 장난을 배제하고 바운스를 부드럽게 활용한 정밀한 20m 샷.
+                </p>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-orange-200 shadow-2xs">
+                <p class="font-bold text-orange-700 mb-1.5 flex items-center gap-1">🛠️ 교정 포인트 &amp; 스윙 가이드</p>
+                <p class="text-gray-700 leading-relaxed">
+                  임팩트 후 급격하게 고개를 들지 않고 공이 있던 자리를 끝까지 주시하는 숏어프로치 집중력 유지.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </section>
@@ -4066,7 +5045,44 @@
           t.setAttribute('aria-selected', isActive);
         });
         videoCards.forEach(card => {
-          card.classList.toggle('hidden', card.dataset.club !== club);
+          const isMatch = card.dataset.club === club;
+          card.classList.toggle('hidden', !isMatch);
+          if (!isMatch) {
+            card.querySelectorAll('video').forEach(v => v.pause());
+          }
+        });
+      });
+    });
+
+    // 4-1. Sub-distance filter tabs within clubs (9I, PW, AW, SW)
+    document.querySelectorAll('.sub-distance-filter').forEach(filterContainer => {
+      const parentClub = filterContainer.dataset.parentClub;
+      const clubWrapper = document.querySelector(`.video-card-item[data-club="${parentClub}"]`);
+      if (!clubWrapper) return;
+
+      const buttons = filterContainer.querySelectorAll('.sub-dist-btn');
+      const cards = clubWrapper.querySelectorAll('.dist-card-item');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetDist = btn.dataset.targetDist;
+          buttons.forEach(b => {
+            const isTarget = b === btn;
+            b.classList.toggle('active', isTarget);
+            b.classList.toggle('bg-fairway', isTarget);
+            b.classList.toggle('text-white', isTarget);
+            b.classList.toggle('shadow-xs', isTarget);
+            b.classList.toggle('bg-gray-100', !isTarget);
+            b.classList.toggle('text-gray-700', !isTarget);
+          });
+
+          cards.forEach(c => {
+            const show = targetDist === 'all' || c.dataset.dist === targetDist;
+            c.classList.toggle('hidden', !show);
+            if (!show) {
+              c.querySelectorAll('video').forEach(v => v.pause());
+            }
+          });
         });
       });
     });
