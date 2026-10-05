@@ -1,0 +1,9 @@
+
+1. 2026.10.02 Wedge 별 20m ~ 100m 연습 동영상 추가
+ 1) 연습 동영상 폴더
+  - https://console.cloudinary.com/app/c-e9ce328f0f28ab6c3c356762abc263/assets/media_library/folders/d07f5f52ff8948189f147f16720615ba03?view_mode=list
+  - wedge와 iron 9 의 거리별 동영상(정면/측면)과 스윙 분석 데이터 이미지 폴더
+  - wedge s : 20m ~ 50m
+  - wedge a : 50m ~ 80m
+  - wedge p : 80m ~ 90m
+  - iron 9 : 90m ~ 100m
