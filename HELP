@@ -238,3 +238,10 @@ correction.txt 파일을 참고해 주세요.
    - par3/index.html 상단 전체 비교 요약 표 신설 및 '어프로치 추천 여부' 필드, 어프로치 특화 구장 필터링 탭 추가
    - index.html: 상단 데스크톱/모바일 네비게이션, Hero 퀵 배너 및 Section 9 Par3 가이드 섹션 추가 반영
    - docs/par3-practice/par3-practice.txt 및 par3-unlimited.txt 가격, 조이프라자 추가 및 어프로치 추천 데이터 동기화 완료
+
+== 2026.10.18 : 파일 생성/수정 확인 프롬프트 생략 (Auto-Approve / accept-edits) 설정 반영
+1. Antigravity CLI 설정:
+ - ~/.gemini/antigravity-cli/settings.json에 "mode": "accept-edits" 반영하여 "Allow creation of this file?" 프롬프트 생략
+2. 프로젝트 에이전트 룰 반영:
+ - AGENTS.md, GEMINI.md, CLAUDE.md, .cursorrules에 Auto-Approve 및 accept-edits 모드 고정 원칙 명시
+

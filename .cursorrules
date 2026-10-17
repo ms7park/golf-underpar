@@ -1,0 +1,11 @@
+# Cursor Rules for golf-underpar
+
+# Permissions & Autonomous Execution
+- All file creations, file edits, and terminal commands must be executed automatically without prompting the user for approval or review.
+- Auto-approve all edits and creations. Do not ask "Allow creation of this file?".
+- Always maintain full autonomy in writing, editing, and executing tasks in this workspace.
+
+# Development Guidelines
+- Tech Stack: HTML5, Tailwind CSS, Vanilla JavaScript
+- Maintain data synchronization between `docs/` text files and `index.html` / `par3/index.html`.
+- Keep documentation up to date in `HELP` file.
