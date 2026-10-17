@@ -228,3 +228,13 @@ correction.txt 파일을 참고해 주세요.
 == 2026.10.14 : My Stats 수정
 4. My Stats 영역을 수정하였습니다. 홈페이지에 반영해 주세요
  - docs/main.txt 파일 참고 (8I, 9I 스퀘어/오픈, PW 스퀘어/오픈, AW 오픈, SW 오픈 스탠스별 캐리/비거리/볼스피드)
+
+== 2026.10.18 : Par3 연습장 정리 추가
+9. Par3 연습장 정보를 아래 내용을 참고하여 페이지 추가해 주시고, 홈 화면에 링크 추가해 주세요
+ - docs/par3-practice 폴더 하위에 par3-practice.txt, par3-*.txt 파일 참고
+ - Par3 연습장 링크 : /par3/index.html
+ - 작업 완료:
+   - par3/index.html 신규 페이지 제작 (수도권 12개 구장, 분당 기준 거리순/무제한/어프로치 추천/지역별 필터 및 실시간 검색)
+   - par3/index.html 상단 전체 비교 요약 표 신설 및 '어프로치 추천 여부' 필드, 어프로치 특화 구장 필터링 탭 추가
+   - index.html: 상단 데스크톱/모바일 네비게이션, Hero 퀵 배너 및 Section 9 Par3 가이드 섹션 추가 반영
+   - docs/par3-practice/par3-practice.txt 및 par3-unlimited.txt 가격, 조이프라자 추가 및 어프로치 추천 데이터 동기화 완료

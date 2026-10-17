@@ -42,3 +42,6 @@
  - docs/practice 폴더 하위에 practice.txt, yyyymm-*.txt 파일 참고
  - yyyymm : 년월 
 
+9. Par3 연습장 링크
+ - docs/par3-practice 폴더 하위에 par3-practice.txt, par3-*.txt 파일 참고
+ - Par3 연습장 링크 : /par3/index.html

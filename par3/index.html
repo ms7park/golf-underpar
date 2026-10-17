@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수도권 Par3 연습장 가이드 — golf-underpar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fairway: {
+              DEFAULT: '#1b5e20',
+              dark: '#004d40',
+              light: '#e8f5e9',
+              accent: '#2e7d32'
+            }
+          },
+          fontFamily: {
+            sans: ['"Pretendard"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    .venue-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .venue-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+    .tab-btn.active {
+      background-color: #1b5e20;
+      color: #ffffff;
+      border-color: #1b5e20;
+    }
+    .region-chip.active {
+      background-color: #1b5e20;
+      color: #ffffff;
+      border-color: #1b5e20;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 group">
+          <span class="w-8 h-8 rounded-full bg-fairway flex items-center justify-center text-white text-sm font-bold shadow">⛳</span>
+          <span class="text-lg font-bold text-fairway-dark tracking-tight group-hover:text-fairway transition-colors">golf-underpar</span>
+          <span class="text-xs bg-fairway-light text-fairway font-semibold px-2 py-0.5 rounded-full ml-1">Par3 Guide</span>
+        </a>
+        <div class="flex items-center gap-3">
+          <a href="/" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-medium text-gray-700 hover:text-fairway hover:bg-fairway-light border border-gray-200 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            홈 대시보드
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1">
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-fairway-light/80 via-white to-gray-50 py-10 sm:py-12 border-b border-fairway-light">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-fairway/10 text-fairway text-xs font-semibold rounded-full mb-3">
+          <span>⛳</span>
+          <span>수도권 숏게임 &amp; 어프로치 실전 훈련</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-fairway-dark mb-3 tracking-tight">
+          수도권 Par3 골프 연습장 가이드
+        </h1>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-6">
+          우리집(분당) 기준 거리순 정렬부터 종일 무제한 코스까지, 실전 라운드 전 숏게임 감각을 완성할 수 있는 최적의 연습장을 한눈에 비교해 보세요.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+          <div class="bg-white rounded-xl p-3 border border-gray-200 shadow-xs">
+            <p class="text-xs text-gray-500 font-medium">총 등록 구장</p>
+            <p class="text-xl font-bold text-fairway-dark mt-0.5">12개소</p>
+          </div>
+          <div class="bg-white rounded-xl p-3 border border-gray-200 shadow-xs">
+            <p class="text-xs text-gray-500 font-medium">최단 거리(집 기준)</p>
+            <p class="text-xl font-bold text-fairway mt-0.5">7km <span class="text-xs text-gray-400 font-normal">남서울CC</span></p>
+          </div>
+          <div class="bg-white rounded-xl p-3 border border-gray-200 shadow-xs">
+            <p class="text-xs text-gray-500 font-medium">종일 무제한</p>
+            <p class="text-xl font-bold text-emerald-600 mt-0.5">4개소 <span class="text-xs text-gray-400 font-normal">집중 훈련</span></p>
+          </div>
+          <div class="bg-white rounded-xl p-3 border border-gray-200 shadow-xs">
+            <p class="text-xs text-gray-500 font-medium">최장 롱홀</p>
+            <p class="text-xl font-bold text-amber-600 mt-0.5">220m+ <span class="text-xs text-gray-400 font-normal">남양골프</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Table Section: 전체 연습장 간략 요약정보 표 -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8">
+      <div class="bg-white rounded-2xl border border-gray-200 p-5 sm:p-6 shadow-xs">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-gray-100">
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-fairway-dark flex items-center gap-2">
+              <span>📊 전체 파3 연습장 한눈에 비교하기</span>
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-500 mt-0.5">우리집(분당) 기준 거리순 정렬 · 12개 주요 구장 스펙, 요금 및 어프로치 추천 여부 요약</p>
+          </div>
+          <span class="text-[11px] text-gray-400 self-start sm:self-auto bg-gray-50 px-2.5 py-1 rounded-lg border border-gray-200">
+            ↔ 모바일에서는 좌우로 스크롤하여 확인 가능
+          </span>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-gray-50/90 border-b border-gray-200 text-gray-700">
+                <th class="py-3 px-3.5 font-bold text-center w-12">순번</th>
+                <th class="py-3 px-3.5 font-bold">연습장</th>
+                <th class="py-3 px-3.5 font-bold">위치</th>
+                <th class="py-3 px-3.5 font-bold text-center">거리</th>
+                <th class="py-3 px-3.5 font-bold text-center">소요시간</th>
+                <th class="py-3 px-3.5 font-bold">주말 9홀 가격 (무제한 포함)</th>
+                <th class="py-3 px-3.5 font-bold text-center">무제한 여부</th>
+                <th class="py-3 px-3.5 font-bold text-center">어프로치 추천</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 text-gray-700">
+              <!-- 1. 남서울 CC 제2연습장 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">1</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-1" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>남서울 CC 제2연습장</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 성남</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">7km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">15분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">38,000원</span>
+                  <span class="text-[11px] text-gray-400 block">(타석 패키지 주중 4.3만)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">★★★★★ 적극추천</span>
+                  <span class="text-[10px] text-gray-500 block">정규그린·벙커</span>
+                </td>
+              </tr>
+
+              <!-- 2. 분당 그린피아 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">2</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-2" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>분당 그린피아</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 성남</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">8km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">15분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">28,000원</span>
+                  <span class="text-[11px] text-gray-400 block">(타석 패키지 주말 3.5만)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-100 text-blue-800">★★★★☆ 추천</span>
+                  <span class="text-[10px] text-gray-500 block">30~75m 웨지</span>
+                </td>
+              </tr>
+
+              <!-- 3. 수원 CC -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">3</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-3" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>수원 CC 파3</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 용인</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">12km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">25분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">30,000원</span>
+                  <span class="text-[11px] text-gray-400 block">(타석 패키지 주말 4.2만)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200">★★★☆☆ 보통</span>
+                  <span class="text-[10px] text-gray-400 block">시간제한(20분)</span>
+                </td>
+              </tr>
+
+              <!-- 4. 88 CC -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">4</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-4" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>88 CC 파3</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 용인</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">13km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">25분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">28,000원</span>
+                  <span class="text-[11px] text-gray-400 block">(퍼팅그린 10,000원)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-100 text-blue-800">★★★★☆ 추천</span>
+                  <span class="text-[10px] text-gray-500 block">퍼팅/어프로치그린</span>
+                </td>
+              </tr>
+
+              <!-- 5. 코리아 퍼블릭 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">5</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-5" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>코리아 퍼블릭 CC</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 용인</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">16km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">25분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">95,000원~</span>
+                  <span class="text-[11px] text-gray-400 block">(카트 5만 / 캐디 7만 별도)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">★★☆☆☆ 미추천</span>
+                  <span class="text-[10px] text-gray-400 block">정규 9홀 실전용</span>
+                </td>
+              </tr>
+
+              <!-- 6. 조이프라자 골프클럽 -->
+              <tr class="bg-amber-50/40 hover:bg-fairway-light/40 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-amber-600">6</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-6" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>조이프라자 골프클럽</span>
+                    <span class="text-[10px] bg-fairway text-white px-1.5 py-0.2 rounded font-medium">추천</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 용인</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">20km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">35분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">26,000원</span>
+                  <span class="text-[11px] text-emerald-700 font-medium block">(BIG3 3.7만 / 온천사우나 무료)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-100 text-blue-800">★★★★☆ 추천</span>
+                  <span class="text-[10px] text-gray-500 block">천연잔디퍼팅·웨지</span>
+                </td>
+              </tr>
+
+              <!-- 7. 리베라 CC 파3 코스 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">7</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-7" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>리베라 CC 파3 코스</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 화성</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">22km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">35분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">30,000원 (7홀)</span>
+                  <span class="text-[11px] text-emerald-700 font-bold block">무제한: 주말 80,000원</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">가능 ♾️</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">★★★★★ 적극추천</span>
+                  <span class="text-[10px] text-gray-500 block">전홀웨지·벙커특화</span>
+                </td>
+              </tr>
+
+              <!-- 8. 남양골프랜드 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">8</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-8" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>남양골프랜드</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 화성</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">48km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">55분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">35,000원</span>
+                  <span class="text-[11px] text-gray-400 block">(18홀 50,000원)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">★★☆☆☆ 미추천</span>
+                  <span class="text-[10px] text-gray-400 block">220m 롱홀/드라이버</span>
+                </td>
+              </tr>
+
+              <!-- 9. 이포 CC 클럽하우스 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">9</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-9-ipo" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>이포 CC 퍼블릭 6홀</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 여주</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">55km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">56분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">25,000원 (6홀)</span>
+                  <span class="text-[11px] text-blue-700 font-semibold block">하프(3h): 주말 35,000원</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-100 text-blue-800">시간제(3h)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200">★★★☆☆ 보통</span>
+                  <span class="text-[10px] text-gray-400 block">하프 3시간제</span>
+                </td>
+              </tr>
+
+              <!-- 10. 루이힐스 골프클럽 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">10</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-9" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>루이힐스 골프클럽</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 양주</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">65km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">75분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">39,000원</span>
+                  <span class="text-[11px] text-gray-400 block">(18홀 69,000원)</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 text-gray-500">불가</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">★★★★★ 적극추천</span>
+                  <span class="text-[10px] text-gray-500 block">어프로치전용장 구비</span>
+                </td>
+              </tr>
+
+              <!-- 11. 영재 파3 골프랜드 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">11</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-10" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>영재 파3 골프랜드</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 여주</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">66km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">60분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">35,000원 (18홀)</span>
+                  <span class="text-[11px] text-emerald-700 font-bold block">무제한: 주말 65,000원</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">가능 ♾️</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">★★★★★ 적극추천</span>
+                  <span class="text-[10px] text-gray-500 block">그린우수·무제한</span>
+                </td>
+              </tr>
+
+              <!-- 12. 미리내 파3 골프클럽 -->
+              <tr class="hover:bg-fairway-light/30 transition-colors">
+                <td class="py-3 px-3.5 text-center font-bold text-gray-400">12</td>
+                <td class="py-3 px-3.5 font-bold text-gray-900">
+                  <a href="#venue-card-11-mirinae" class="hover:text-fairway transition-colors flex items-center gap-1.5">
+                    <span>미리내 파3 골프클럽</span>
+                    <span class="text-[10px] text-fairway font-normal">↓</span>
+                  </a>
+                </td>
+                <td class="py-3 px-3.5 text-gray-600">경기도 양평</td>
+                <td class="py-3 px-3.5 text-center font-bold text-fairway">70km</td>
+                <td class="py-3 px-3.5 text-center text-gray-600">80분</td>
+                <td class="py-3 px-3.5">
+                  <span class="font-semibold text-gray-900">23,000원 (1.5h)</span>
+                  <span class="text-[11px] text-emerald-700 font-bold block">무제한: 주말 60,000원</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">가능 ♾️</span>
+                </td>
+                <td class="py-3 px-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">★★★★★ 최고추천</span>
+                  <span class="text-[10px] text-emerald-700 block font-semibold">잔디티샷·2볼</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Approach Quick Tip -->
+        <div class="mt-4 p-3 bg-blue-50/70 rounded-xl border border-blue-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-blue-900">
+          <div class="flex items-start sm:items-center gap-2">
+            <span class="text-base shrink-0">🎯</span>
+            <p>
+              <strong class="text-blue-900">어프로치 실전 연습 BEST:</strong>
+              천연 잔디 티샷 &amp; 2볼 플레이 공식 허용의 <strong class="text-emerald-700">미리내</strong>, 정규홀급 에이프런·벙커의 <strong class="text-fairway">남서울CC</strong>, 전홀 웨지거리 &amp; 종일 무제한의 <strong class="text-emerald-700">리베라CC</strong>를 추천합니다.
+            </p>
+          </div>
+          <button type="button" onclick="document.getElementById('tab-approach').click();" class="text-fairway hover:underline font-bold shrink-0 self-end sm:self-auto">
+            어프로치 특화 구장 필터링 →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Section: Tabs, Region Filters, Search -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-4">
+      <div class="bg-white rounded-2xl border border-gray-200 p-5 shadow-xs space-y-4">
+        
+        <!-- Main Tabs -->
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-gray-100 pb-4">
+          <div class="flex flex-wrap gap-2" role="tablist">
+            <button type="button" id="tab-distance" data-tab="distance"
+              class="tab-btn active px-4 py-2 text-xs sm:text-sm font-bold rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-fairway transition-all shadow-xs flex items-center gap-1.5">
+              <span>📍</span>
+              <span>우리집 기준 거리순 (10곳)</span>
+            </button>
+            <button type="button" id="tab-approach" data-tab="approach"
+              class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-fairway transition-all shadow-xs flex items-center gap-1.5">
+              <span>🎯</span>
+              <span>어프로치 특화 추천 (8곳)</span>
+            </button>
+            <button type="button" id="tab-unlimited" data-tab="unlimited"
+              class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-fairway transition-all shadow-xs flex items-center gap-1.5">
+              <span>♾️</span>
+              <span>종일 무제한 &amp; 시간제 (4곳)</span>
+            </button>
+            <button type="button" id="tab-all" data-tab="all"
+              class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-fairway transition-all shadow-xs flex items-center gap-1.5">
+              <span>📋</span>
+              <span>전체 보기 (12곳)</span>
+            </button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="relative w-full sm:w-64">
+            <input type="text" id="search-input" placeholder="골프장명, 지역, 특징 검색..."
+              class="w-full pl-9 pr-4 py-2 text-xs sm:text-sm border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-fairway focus:border-transparent transition-all">
+            <svg class="w-4 h-4 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Region Chips -->
+        <div class="flex flex-wrap items-center gap-1.5 text-xs">
+          <span class="text-gray-500 font-semibold mr-1">지역 필터:</span>
+          <button type="button" class="region-chip active px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="all">전체</button>
+          <button type="button" class="region-chip px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="성남">성남/분당 (2)</button>
+          <button type="button" class="region-chip px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="용인">용인 (4)</button>
+          <button type="button" class="region-chip px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="화성">화성 (2)</button>
+          <button type="button" class="region-chip px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="여주">여주 (2)</button>
+          <button type="button" class="region-chip px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="양평">양평 (1)</button>
+          <button type="button" class="region-chip px-3 py-1 rounded-full border border-gray-200 bg-white font-medium text-gray-700 hover:border-fairway" data-region="양주">양주 (1)</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Venues Grid -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
+      
+      <!-- List Count / Status -->
+      <div class="flex items-center justify-between mb-4 px-1">
+        <p class="text-xs sm:text-sm text-gray-500">
+          총 <span id="visible-count" class="font-bold text-fairway">10</span>개의 골프장이 표시 중입니다.
+        </p>
+        <span class="text-xs text-gray-400">※ 이동 거리 및 시간: 분당 기준 자차 기준치</span>
+      </div>
+
+      <!-- Card Container -->
+      <div id="venues-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- 1. 남서울 CC 제2연습장 -->
+        <article id="venue-card-1" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="1" data-distance="7" data-region="성남" data-unlimited="false" data-approach="recommended" data-keywords="남서울 남서울CC 제2연습장 성남 분당 벙커 조경 어프로치 숏게임 웨지">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">1위 · 7km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">성남시 분당구</span>
+                  <span class="text-xs text-gray-400">약 15분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">남서울 CC 제2연습장</h3>
+              </div>
+              <a href="https://nscc.co.kr" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 이용료</span>
+                <span class="font-bold text-gray-800">주중 32,000원 / 주말 38,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">패키지 (파3 9홀 + 타석 30분)</span>
+                <span class="font-bold text-fairway">주중 43,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀 (전장 40m~90m 내외), 매 홀 벙커와 인공폭포/워터해저드가 조화로운 조경</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 현장 선착순 접수, 2인 이상 플레이 가능 (주말/혼잡 시 약 30분 내외 시간 관리)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★★</span>
+                <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.2 rounded-full font-bold">적극 추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">40~90m 웨지 특화</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              40~90m 웨지 거리 위주 구성으로, 정규홀급 에이프런과 벙커에서 핀을 직접 공략하는 피치샷·로브샷 실전 감각 훈련에 최상입니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 정규홀급의 최상급 그린 및 조경 컨디션을 자랑하며 실전 벙커샷과 정교한 어프로치 연습에 최적.
+          </div>
+        </article>
+
+        <!-- 2. 분당 그린피아 -->
+        <article id="venue-card-2" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="2" data-distance="8" data-region="성남" data-unlimited="false" data-approach="recommended" data-keywords="분당 그린피아 분당그린피아 성남 율동공원 숏게임 어프로치 웨지">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">2위 · 8km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">성남시 분당구</span>
+                  <span class="text-xs text-gray-400">약 15분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">분당 그린피아</h3>
+              </div>
+              <a href="http://www.bdgreenpia.co.kr" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 이용료</span>
+                <span class="font-bold text-gray-800">주중 22,000원 / 주말 28,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">패키지 (파3 9홀 + 타석 40분)</span>
+                <span class="font-bold text-fairway">주중 28,000원 / 주말 35,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀 (전장 30m~75m 내외), 짧은 거리 위주의 웨지 어프로치 집중형 코스</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 2인 이상 플레이 가능, 율동공원 뒷편 쾌적한 자연 환경 속 대형 실외 타석 병설</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★☆</span>
+                <span class="text-[11px] bg-blue-100 text-blue-800 px-2 py-0.2 rounded-full font-bold">추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">30~75m 숏게임 집중</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              30~75m 짧은 홀 위주의 웨지 어프로치 집중형 코스로 자연 경사면의 오르막/내리막 라이 적응 훈련에 최적입니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 분당 도심(율동공원 인근)과의 최상의 접근성을 갖추고 있으며 우수한 잔디 및 그린 관리 상태.
+          </div>
+        </article>
+
+        <!-- 3. 수원 CC -->
+        <article id="venue-card-3" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="3" data-distance="12" data-region="용인" data-unlimited="false" data-approach="normal" data-keywords="수원 수원CC 용인 기흥역 스파 숏게임 어프로치">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">3위 · 12km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 용인시</span>
+                  <span class="text-xs text-gray-400">약 25분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">수원 CC 파3</h3>
+              </div>
+              <a href="https://driving-range.suwoncc.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 이용료</span>
+                <span class="font-bold text-gray-800">주중 23,000원 / 주말 30,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">패키지 (파3 9홀 + 타석 30분)</span>
+                <span class="font-bold text-fairway">주중 33,000원 / 주말 42,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀 구성, 기흥역 인근(도보 5분)으로 지하철 및 대중교통 접근성 매우 우수</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 현장 선착순 접수(2인 이상), 약 20분 내외의 타이트한 시간 관리로 신속한 플레이 권장</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs text-gray-800 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-gray-800 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★☆☆</span>
+                <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.2 rounded-full font-bold">보통</span>
+              </span>
+              <span class="text-[10px] text-gray-500 font-semibold bg-white px-2 py-0.5 rounded border border-gray-200">20분 시간제한</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-gray-600">
+              숏게임 전용 홀이나 코스 이용 시간(약 20분)이 타이트하여 다구(멀티볼) 연습은 불가하며, 빠른 1회성 실전 점검에 적합합니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 대중교통 접근성이 매우 뛰어나고 스파, 헬스 등 프리미엄 부대시설과 대형 연습장을 함께 이용 가능.
+          </div>
+        </article>
+
+        <!-- 4. 88 CC -->
+        <article id="venue-card-4" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="4" data-distance="13" data-region="용인" data-unlimited="false" data-approach="recommended" data-keywords="88 88CC 용인 기흥 퍼팅 숏게임 가성비 어프로치 웨지">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">4위 · 13km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 용인시</span>
+                  <span class="text-xs text-gray-400">약 25분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">88 CC 파3</h3>
+              </div>
+              <a href="https://www.88countryclub.co.kr" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 이용료</span>
+                <span class="font-bold text-gray-800">주중 23,000원 / 주말 28,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">천연잔디 퍼팅그린 (60분)</span>
+                <span class="font-bold text-fairway">10,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀 (총 연장 606m, 최장 96m, 최단 36m), 아기자기한 숏게임 코스</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 주말은 현장 조인 필수 운영, 초대형 야외 드라이빙 레인지 및 퍼팅 연습장 병설</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★☆</span>
+                <span class="text-[11px] bg-blue-100 text-blue-800 px-2 py-0.2 rounded-full font-bold">추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">36~96m &amp; 천연잔디 퍼팅그린</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              36~96m 짧은 전장과 부담 없는 요금으로 웨지 어프로치 샷을 집중 연습할 수 있으며, 별도 천연잔디 퍼팅/숏게임 그린이 병설되어 있습니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 매우 저렴하고 합리적인 요금으로 초급자부터 상급자까지 부담 없이 숏게임 실전 감각 연습 가능.
+          </div>
+        </article>
+
+        <!-- 5. 코리아 퍼블릭 -->
+        <article id="venue-card-5" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="5" data-distance="16" data-region="용인" data-unlimited="false" data-approach="not-recommended" data-keywords="코리아 코리아퍼블릭 용인 기흥 드라이버 정규 9홀 카트 캐디 실전라운드">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">5위 · 16km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 용인시</span>
+                  <span class="text-xs text-gray-400">약 25분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">코리아 퍼블릭 CC</h3>
+              </div>
+              <a href="https://gakorea.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 그린피</span>
+                <span class="font-bold text-gray-800">주중 7.5만~9.5만 / 주말 9.5만~</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">카트 / 캐디피 (팀당)</span>
+                <span class="font-bold text-fairway">카트 5만 / 캐디 7만~7.5만 (야간 노캐디)</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 정규 9홀 퍼블릭 코스 (Par 36, 약 2,510m, 파3·파4·파5 혼합 구성)</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 드라이버 등 14개 클럽 전원 사용 가능, 카트 및 캐디 동반 필수(야간 셀프 제외)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs text-gray-800 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-gray-800 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★☆☆☆</span>
+                <span class="text-[11px] bg-gray-200 text-gray-700 px-2 py-0.2 rounded-full font-medium">미추천 (정규홀 실전용)</span>
+              </span>
+              <span class="text-[10px] text-gray-500 font-semibold bg-white px-2 py-0.5 rounded border border-gray-200">정규 9홀 라운드</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-gray-600">
+              파3·4·5 혼합 정규 퍼블릭 코스로 단순 어프로치 반복 연습보다는 드라이버 포함 14개 클럽 정규 실전 라운드 점검에 적합합니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 드라이버부터 퍼팅까지 정규홀과 동일한 환경에서 실전 샷 감각을 점검할 수 있으며 코스 관리 최상.
+          </div>
+        </article>
+
+        <!-- 6. 조이프라자 골프클럽(조일프라자) -->
+        <article id="venue-card-6" class="venue-card scroll-mt-20 bg-white rounded-2xl border-2 border-fairway/40 p-6 flex flex-col justify-between shadow-xs relative"
+          data-venue-id="6" data-distance="20" data-region="용인" data-unlimited="false" data-approach="recommended" data-keywords="조이프라자 조일프라자 용인 처인구 삼가동 온천 사우나 300야드 BIG3 어프로치 웨지 숏게임">
+          <div class="absolute -top-3 right-6 bg-fairway text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+            NEW 추천 구장 🌟
+          </div>
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">6위 · 20km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">용인시 처인구</span>
+                  <span class="text-xs text-gray-400">약 35분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">조이프라자 골프클럽 (조일프라자)</h3>
+              </div>
+              <a href="http://www.joilgolf.com/default/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 / 18홀</span>
+                <span class="font-bold text-gray-800">9홀 2만(주말 2.6만) / 18홀 3.7만(주말 4.9만)</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">BIG 3 패키지 (연습40분+파3 9홀+사우나)</span>
+                <span class="font-bold text-fairway">주중 29,000원 / 주말 37,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-500 text-[11px] pt-1">
+                <span>※ 주중 8시 이전 조조할인 적용 (9홀 1.8만 / 18홀 3.4만), 파3 이용 시 천연 온천 사우나 무료</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀 (총 19,791㎡, 최장 135야드/약 123m, 최단 65야드), 숲과 연못이 어우러진 자연 코스</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>부대시설:</strong> 300야드 3층 90타석 초대형 인도어 연습장, 천연잔디 퍼팅장(60분 9,000원), 천연 온천 사우나</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★☆</span>
+                <span class="text-[11px] bg-blue-100 text-blue-800 px-2 py-0.2 rounded-full font-bold">추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">천연잔디 퍼팅장 (60분)</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              천연잔디 퍼팅그린(60분)이 별도 구비되어 있고, 60~100m 사이 해저드를 넘기는 다양한 거리의 웨지 어프로치 샷 훈련이 가능합니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 100m 이상의 롱 파3 홀이 많아 미들/숏아이언 실전 샷 점검에 최적이며, 라운드 후 천연 온천 사우나까지 즐길 수 있는 뛰어난 가성비.
+          </div>
+        </article>
+
+        <!-- 7. 리베라 CC 파3 코스 -->
+        <article id="venue-card-7" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="7" data-distance="22" data-region="화성" data-unlimited="true" data-approach="recommended" data-keywords="리베라 리베라CC 화성 동탄 트레이닝센터 7홀 무제한 종일권 벙커 어프로치 웨지 숏게임">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">7위 · 22km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 화성시</span>
+                  <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-md">종일 무제한 가능 ♾️</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">리베라 CC 파3 코스</h3>
+              </div>
+              <a href="http://rtc.shinangolf.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">7홀(1.5h) / 14홀(3h)</span>
+                <span class="font-bold text-gray-800">7홀 2만(주말 3만) / 14홀 3만(주말 5.5만)</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">종일 무제한 이용권</span>
+                <span class="font-bold text-emerald-700">주중 65,000원 / 주말 80,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 7홀 (6개 일반홀 + 1개 이벤트홀, 최장 118m), 벙커 및 장애물 연습 특화</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>트레이닝 시설:</strong> 300m 직선형 비거리 인도어 연습장 및 스윙 분석 시스템 완비</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★★</span>
+                <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.2 rounded-full font-bold">적극 추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">전홀 웨지거리 &amp; 종일 무제한</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              전 홀이 웨지/숏아이언 전용 거리(최장 118m)이며 그린 주변 벙커와 트러블 장애물 어프로치에 특화되어 종일 무제한 집중 훈련이 가능합니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 종일권 이용이 가능하며 대형 인도어 연습장과 벙커/어프로치 트레이닝 시설 완비.
+          </div>
+        </article>
+
+        <!-- 8. 남양골프랜드 -->
+        <article id="venue-card-8" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="8" data-distance="48" data-region="화성" data-unlimited="false" data-approach="not-recommended" data-keywords="남양 남양골프랜드 화성 드라이버 220m 산악 가성비 실전티샷">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">8위 · 48km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 화성시</span>
+                  <span class="text-xs text-gray-400">약 55분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">남양골프랜드</h3>
+              </div>
+              <span class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-gray-600 bg-gray-100 rounded-lg shrink-0">
+                <span>031-355-4400</span>
+              </span>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">9홀 이용료</span>
+                <span class="font-bold text-gray-800">주중 25,000원 / 주말 35,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">18홀 (9홀 추가 시)</span>
+                <span class="font-bold text-fairway">주중 35,000원 / 주말 50,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀, 최장 220m 이상의 롱 홀 보유로 드라이버 및 우드 티샷 가능</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 산악 지형 코스로 경사와 고저차가 커 체력 소모가 있고 코스 난도가 높은 편</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs text-gray-800 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-gray-800 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★☆☆☆</span>
+                <span class="text-[11px] bg-gray-200 text-gray-700 px-2 py-0.2 rounded-full font-medium">미추천 (롱홀/드라이버용)</span>
+              </span>
+              <span class="text-[10px] text-gray-500 font-semibold bg-white px-2 py-0.5 rounded border border-gray-200">220m 롱홀/드라이버용</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-gray-600">
+              최장 220m 산악 지형 코스로 짧은 웨지 어프로치 훈련보다는 드라이버, 우드, 롱아이언 실전 티샷 훈련에 특화되어 있습니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 파3임에도 드라이버 티샷이 가능한 롱 홀을 보유하고 있으며 18홀 이용 시 뛰어난 가성비.
+          </div>
+        </article>
+
+        <!-- 9. 이포 CC 클럽하우스 (par3-unlimited) -->
+        <article id="venue-card-9-ipo" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="9-ipo" data-distance="55" data-region="여주" data-unlimited="true" data-approach="normal" data-keywords="이포 이포CC 여주 금사호 6홀 하프 3시간 회원제 어프로치 숏게임">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">55km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 여주시</span>
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-semibold rounded-md">하프(3h) 집중 ⏱️</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">이포 CC 클럽하우스 (퍼블릭 6홀)</h3>
+              </div>
+              <a href="https://www.ipocc.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">6홀 1회 이용권</span>
+                <span class="font-bold text-gray-800">주중 20,000원 / 주말 25,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">하프(3시간) 집중 이용권</span>
+                <span class="font-bold text-fairway">주중 28,000원 / 주말 35,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 6홀 구성, 아름다운 금사호와 야생화가 어우러진 자연 친화적인 숏게임 코스</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 현장접수, 2인 이상 플레이 가능 (무제한은 불가하며 하프 이용권 형태로 운영)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-xs text-gray-800 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-gray-800 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★☆☆</span>
+                <span class="text-[11px] bg-amber-100 text-amber-800 px-2 py-0.2 rounded-full font-bold">보통</span>
+              </span>
+              <span class="text-[10px] text-gray-500 font-semibold bg-white px-2 py-0.5 rounded border border-gray-200">하프 3시간제</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-gray-600">
+              금사호 인근 6개 홀의 아담한 코스로 하프(3시간) 시간제 이용권을 활용한 여유로운 실전 숏게임 연습에 적합합니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 광주-원주 고속도로 개통으로 접근성이 뛰어나며 시간제로 충분한 숏게임 반복 연습 가능.
+          </div>
+        </article>
+
+        <!-- 10. 루이힐스 골프클럽 -->
+        <article id="venue-card-9" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="9" data-distance="65" data-region="양주" data-unlimited="false" data-approach="recommended" data-keywords="루이힐스 루이힐스CC 양주 의정부 18홀 최대규모 카트 어프로치연습장 웨지 숏게임">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">9위 · 65km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 양주시</span>
+                  <span class="text-xs text-gray-400">약 75분</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">루이힐스 골프클럽</h3>
+              </div>
+              <a href="https://www.luihills.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">18홀 그린피</span>
+                <span class="font-bold text-gray-800">주중 3만~4.9만 / 주말 4만~6.9만</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">9홀 / 카트비</span>
+                <span class="font-bold text-fairway">9홀 2.9만(주말 3.9만) / 카트 1인 5천·2인 1만</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 국내 최대 규모 파3 18홀 코스(최장 115m 내외), 정규홀 느낌의 다양한 레이아웃</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 하프 카트 이용, 대형 인도어 및 어프로치/퍼팅 연습장 (주말 혼잡 시 거리 조정 가능)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★★</span>
+                <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.2 rounded-full font-bold">적극 추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">별도 어프로치·퍼팅 연습장</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              18홀 파3 라운드 외에 별도 어프로치 &amp; 퍼팅 전용 연습장이 구비되어 있어 다양한 경사와 거리의 웨지 숏게임 드릴 연습에 최적입니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 정규홀에 버금가는 18홀 구성과 다채로운 언듈레이션으로 다양한 거리의 실전 숏게임 연습 가능.
+          </div>
+        </article>
+
+        <!-- 11. 영재 파3 골프랜드 -->
+        <article id="venue-card-10" class="venue-card scroll-mt-20 bg-white rounded-2xl border border-gray-200 p-6 flex flex-col justify-between shadow-xs"
+          data-venue-id="10" data-distance="66" data-region="여주" data-unlimited="true" data-approach="recommended" data-keywords="영재 영재파3 영재골프랜드 여주 18홀 무제한 종일 그린우수 어프로치 숏게임 웨지">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">10위 · 66km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 여주시</span>
+                  <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-md">종일 무제한 가능 ♾️</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">영재 파3 골프랜드</h3>
+              </div>
+              <a href="http://www.yungjaepar3.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                <span>홈페이지</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">18홀 (3시간)</span>
+                <span class="font-bold text-gray-800">주중 30,000원 / 주말 35,000원</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">종일 무제한 라운드</span>
+                <span class="font-bold text-emerald-700">주중 55,000원 / 주말 65,000원</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 18홀 구성, 전 홀 숏게임 위주 아기자기한 구성, 그린 관리 상태 최상</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 사전 예약 불가(현장 선착순 접수), 2인 이상 플레이 가능, 골프화 착용 필수</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 text-xs text-blue-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★★</span>
+                <span class="text-[11px] bg-emerald-100 text-emerald-800 px-2 py-0.2 rounded-full font-bold">적극 추천</span>
+              </span>
+              <span class="text-[10px] text-blue-700 font-semibold bg-white/80 px-2 py-0.5 rounded border border-blue-100">최상급 그린 &amp; 종일 무제한</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-blue-900/90">
+              18홀 전 홀 숏게임 위주 코스이자 그린 컨디션이 우수하여 칩샷 및 러닝 어프로치의 스핀/런 반응 점검에 최적이며 종일 무제한 라운드가 가능합니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 그린 상태가 매우 우수하며, 종일 무제한 라운드 가능 및 무제한 이용 시 연습장 30분 무료 혜택 제공.
+          </div>
+        </article>
+
+        <!-- 12. 미리내 파3 골프클럽 (par3-unlimited) -->
+        <article id="venue-card-11-mirinae" class="venue-card scroll-mt-20 bg-white rounded-2xl border-2 border-emerald-400/50 p-6 flex flex-col justify-between shadow-xs relative"
+          data-venue-id="11-mirinae" data-distance="70" data-region="양평" data-unlimited="true" data-approach="recommended" data-keywords="미리내 미리내CC 양평 지평면 골프마당 잔디티샷 무제한 1인플레이 어프로치 웨지 숏게임 2볼 투볼">
+          <div class="absolute -top-3 right-6 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+            어프로치 최고 추천 ⭐
+          </div>
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="px-2.5 py-0.5 bg-fairway text-white text-xs font-bold rounded-md">70km</span>
+                  <span class="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-md">경기도 양평군</span>
+                  <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-md">종일 무제한 가능 ♾️</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900">미리내 파3 골프클럽 (골프마당)</h3>
+              </div>
+              <div class="flex items-center gap-1">
+                <a href="https://mirinaegolfclub.com" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-fairway bg-fairway-light hover:bg-fairway hover:text-white rounded-lg transition-colors shrink-0">
+                  <span>홈페이지</span>
+                </a>
+                <a href="https://www.instagram.com/golfmadang" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center px-2 py-1.5 text-xs font-semibold text-pink-600 bg-pink-50 hover:bg-pink-600 hover:text-white rounded-lg transition-colors shrink-0" title="인스타그램">
+                  <span>인스타</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gray-50 rounded-xl p-3 border border-gray-100 mb-4 text-xs space-y-1.5">
+              <div class="flex justify-between items-center text-gray-600">
+                <span class="font-medium">1.5시간(9홀) / 3시간(18홀)</span>
+                <span class="font-bold text-gray-800">9홀 2만(주말 2.3만) / 18홀 3.5만(주말 4.2만)</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-600 pt-1 border-t border-gray-200/60">
+                <span class="font-medium">전일권 무제한 (파3 + 인도어)</span>
+                <span class="font-bold text-emerald-700">주중 50,000원 / 주말 60,000원 (1인 기준)</span>
+              </div>
+              <div class="flex justify-between items-center text-gray-500 text-[11px] pt-1">
+                <span>※ 2인/3인 이상 동반 시 1인당 추가 할인 적용 (9홀 1.5만~, 18홀 2.8만~, 무제한 4만~)</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="space-y-2 text-xs text-gray-600 mb-4">
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>코스 구성:</strong> 9홀 구성, 매트 티샷이 아닌 <strong>천연 잔디 티샷</strong> 가능, 별도 벙커 및 퍼팅 연습장</p>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-fairway font-bold shrink-0">▪</span>
+                <p><strong>이용 안내:</strong> 전화 예약 필수, 1인 플레이 가능(투볼 플레이 원칙 운영), 전일권 무제한 이용</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Approach Box -->
+          <div class="bg-emerald-50/90 border border-emerald-200 rounded-xl p-3 text-xs text-emerald-950 mb-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-emerald-900 flex items-center gap-1.5">
+                <span>🎯 어프로치 추천:</span>
+                <span class="text-amber-500 font-bold">★★★★★</span>
+                <span class="text-[11px] bg-emerald-600 text-white px-2 py-0.2 rounded-full font-bold">최고 추천</span>
+              </span>
+              <span class="text-[10px] text-emerald-800 font-semibold bg-white/90 px-2 py-0.5 rounded border border-emerald-200">천연잔디 티샷 · 2볼 공식 허용</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-emerald-900">
+              인조매트가 아닌 <strong>천연 잔디에서 직접 디봇</strong>을 내며 어프로치 샷이 가능하고, 1인 플레이 및 <strong>투볼(2-ball) 연습이 공식 허용</strong>된 최고의 숏게임 실전 연습장입니다.
+            </p>
+          </div>
+
+          <!-- Highlight Point -->
+          <div class="bg-emerald-50/70 border border-emerald-100 rounded-xl p-3 text-xs text-emerald-900">
+            <span class="font-bold text-emerald-800">💡 핵심 장점:</span> 매트가 아닌 천연 잔디에서 직접 티샷과 어프로치가 가능하며, 1인 플레이와 종일권 가성비가 가장 우수.
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty State -->
+      <div id="no-results" class="hidden text-center py-16 bg-white rounded-2xl border border-gray-200 mt-6">
+        <span class="text-4xl mb-2 block">🔍</span>
+        <h3 class="text-base font-bold text-gray-800 mb-1">검색 결과가 없습니다</h3>
+        <p class="text-xs text-gray-500">다른 검색어나 지역 필터를 선택해 보세요.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center text-sm text-gray-500">
+      <div class="flex items-center justify-center gap-2 mb-2">
+        <span class="w-6 h-6 rounded-full bg-fairway text-white text-xs flex items-center justify-center font-bold">⛳</span>
+        <span class="font-bold text-fairway-dark">golf-underpar</span>
+      </div>
+      <p class="text-xs text-gray-600 mb-3">수도권 Par3 골프 연습장 가이드 — 실전 감각을 완성하고 스코어를 줄이세요.</p>
+      <div class="flex items-center justify-center gap-4 text-xs">
+        <a href="/" class="text-fairway hover:underline font-medium">← 홈 대시보드로 돌아가기</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Filter Logic -->
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const regionChips = document.querySelectorAll('.region-chip');
+    const searchInput = document.getElementById('search-input');
+    const cards = document.querySelectorAll('.venue-card');
+    const visibleCountEl = document.getElementById('visible-count');
+    const noResultsEl = document.getElementById('no-results');
+
+    let currentTab = 'distance'; // 'distance' | 'unlimited' | 'all'
+    let currentRegion = 'all';
+    let searchQuery = '';
+
+    function filterVenues() {
+      let count = 0;
+
+      cards.forEach(card => {
+        const isUnlimited = card.dataset.unlimited === 'true';
+        const venueId = card.dataset.venueId;
+        const region = card.dataset.region;
+        const keywords = card.dataset.keywords.toLowerCase();
+
+        // 1. Tab condition
+        let tabMatch = true;
+        if (currentTab === 'distance') {
+          // Exclude the 2 venues that are only in unlimited list without rank in practice.txt (ipo, mirinae)
+          tabMatch = !venueId.includes('ipo') && !venueId.includes('mirinae');
+        } else if (currentTab === 'approach') {
+          tabMatch = card.dataset.approach === 'recommended';
+        } else if (currentTab === 'unlimited') {
+          tabMatch = isUnlimited;
+        } else if (currentTab === 'all') {
+          tabMatch = true;
+        }
+
+        // 2. Region condition
+        let regionMatch = currentRegion === 'all' || region === currentRegion;
+
+        // 3. Search condition
+        let searchMatch = !searchQuery || keywords.includes(searchQuery);
+
+        const isVisible = tabMatch && regionMatch && searchMatch;
+        card.classList.toggle('hidden', !isVisible);
+        if (isVisible) count++;
+      });
+
+      visibleCountEl.textContent = count;
+      noResultsEl.classList.toggle('hidden', count > 0);
+    }
+
+    // Tab click handlers
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentTab = btn.dataset.tab;
+        filterVenues();
+      });
+    });
+
+    // Region chip handlers
+    regionChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        regionChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentRegion = chip.dataset.region;
+        filterVenues();
+      });
+    });
+
+    // Search input handler
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      filterVenues();
+    });
+
+    // Initial Filter
+    filterVenues();
+
+    // Summary table click: ensure target card is visible
+    document.querySelectorAll('a[href^="#venue-card-"]').forEach(anchor => {
+      anchor.addEventListener('click', () => {
+        const targetId = anchor.getAttribute('href').substring(1);
+        const targetCard = document.getElementById(targetId);
+        if (targetCard && targetCard.classList.contains('hidden')) {
+          tabButtons.forEach(b => b.classList.toggle('active', b.dataset.tab === 'all'));
+          currentTab = 'all';
+          currentRegion = 'all';
+          regionChips.forEach(c => c.classList.toggle('active', c.dataset.region === 'all'));
+          searchQuery = '';
+          searchInput.value = '';
+          filterVenues();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
